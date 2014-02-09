@@ -2050,8 +2050,8 @@ blockquote.bq small {
 .navigation nav ul.nav-list li > a:hover {
   color: #2b77a6;
 }
-.navigation nav .nav-container ul.nav-list li.active > a {
-  background-color: ;
+.navigation nav ul.nav-list li.active > a {
+  color: #2b77a6;
 }
 .navigation.nav-dark nav ul.nav-list li.dd-container li > a:hover,
 .navigation.nav-dark nav ul.nav-list li.dd-container > a {
@@ -2090,6 +2090,10 @@ blockquote.bq small {
 .navigation.nav-light nav ul.nav-list li.dd-container > a:hover {
   background-color: #ededed;
 }
+.navigation.nav-light nav ul.nav-list li.active > a {
+  color: inherit;
+  background-color: #fafafa;
+}
 /* nav-dark */
 .navigation.nav-dark {
   background-color: #232323;
@@ -2116,7 +2120,7 @@ blockquote.bq small {
   border-bottom: none;
 }
 .navigation.nav-dark nav ul.nav-list li a:hover {
-  background-color: #215a7d;
+  background-color: #3a4349;
 }
 .navigation.nav-dark nav ul.nav-list > li a {
   background-color: #232323;
@@ -2124,6 +2128,10 @@ blockquote.bq small {
 }
 .navigation.nav-dark nav ul.nav-list li.dd-container > a:hover {
   background-color: transparent;
+}
+.navigation.nav-dark nav ul.nav-list li.active > a {
+  color: #ffffff;
+  background-color: #3a4349;
 }
 .navigation nav .name h1 {
   font-size: 16px;
@@ -2237,7 +2245,7 @@ blockquote.bq small {
   }
   .navigation nav ul.nav-list ul li.dd-container:hover > a,
   .navigation.nav-dark nav ul.nav-list li.dd-container:hover > a {
-    background-color: #215a7d;
+    background-color: #3a4349;
     color: #ffffff;
   }
   .navigation.nav-light nav ul.nav-list li.dd-container:hover > a {
@@ -2264,7 +2272,7 @@ blockquote.bq small {
     color: #ffffff;
   }
   .navigation nav ul.nav-list > li > ul.dd li > a:hover {
-    background-color: #215a7d;
+    background-color: #3a4349;
   }
   .navigation nav ul.nav-list > li > ul.dd li:first-child,
   .navigation nav ul.nav-list > li > ul.dd li:first-child a {
@@ -2346,7 +2354,7 @@ blockquote.bq small {
   background-color: #515151;
 }
 .link-list li.active a:hover {
-  background-color: #215a7d;
+  background-color: #3a4349;
 }
 .link-list.link-list-blue li a {
   color: #08a1fa;
@@ -2714,19 +2722,6 @@ img.float-left {
   -moz-border-radius: 3px;
   border-radius: 3px;
   margin-right: 6px;
-}
-.note.js:before {
-  content: 'js note :';
-  background-color: #4790bb;
-}
-.emph {
-  background-color: #f0f0f0;
-  -webkit-border-radius: 3px;
-  -moz-border-radius: 3px;
-  border-radius: 3px;
-  padding: 2px 4px;
-  color: #e32376;
-  white-space: nowrap;
 }
 .shadow {
   -webkit-box-shadow:  0 0 2px 0 rgba(0, 0, 0, 0.4) !important;
