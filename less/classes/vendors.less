@@ -1,0 +1,169 @@
+.border-radius(@radius: 3px) {
+	-webkit-border-radius: @radius;
+	   -moz-border-radius: @radius;
+	        border-radius: @radius;
+}
+
+.border-radius-corners(@top-left: 0, @top-right: 0, @bottom-right: 0, @bottom-left: 0) {
+	-webkit-border-radius: @top-left @top-right @bottom-right @bottom-left;
+	   -moz-border-radius: @top-left @top-right @bottom-right @bottom-left;
+	        border-radius: @top-left @top-right @bottom-right @bottom-left;
+}
+
+.border-clip() {
+	-webkit-background-clip: padding-box;
+	   -moz-background-clip: padding;
+			background-clip: padding-box;
+}
+
+.box-shadow(
+	@inset: '',
+	@x: 2px,
+	@y: 2px,
+	@blur: 5px,
+	@spread: 0,
+	@color: rgba(0,0,0,.6)) {
+	-webkit-box-shadow: @inset @x @y @blur @spread @color;
+	   -moz-box-shadow: @inset @x @y @blur @spread @color;
+			box-shadow: @inset @x @y @blur @spread @color;
+}
+
+.box-shadow-double(
+	@inset: '',
+	@x: 0,
+	@y: 0,
+	@blur: 3px,
+	@spread: 0,
+	@color: rgba(0,0,0,.3),
+
+	@inset2: '',
+	@x2: 0,
+	@y2: 0,
+	@blur2: 3px,
+	@spread2: 0,
+	@color2: rgba(0,0,0,.3)) {
+	-webkit-box-shadow: @inset @x @y @blur @spread @color, @inset2 @x2 @y2 @blur2 @spread2 @color2;
+	   -moz-box-shadow: @inset @x @y @blur @spread @color, @inset2 @x2 @y2 @blur2 @spread2 @color2;
+			box-shadow: @inset @x @y @blur @spread @color, @inset2 @x2 @y2 @blur2 @spread2 @color2;
+}
+
+.box-shadow-triple(
+	@inset: '',
+	@x: 0,
+	@y: 0,
+	@blur: 3px,
+	@spread: 0,
+	@color: rgba(0,0,0,.3),
+
+	@inset2: '',
+	@x2: 0,
+	@y2: 0,
+	@blur2: 3px,
+	@spread2: 0,
+	@color2: rgba(0,0,0,.3),
+	
+	@inset3: '',
+	@x3: 0,
+	@y3: 0,
+	@blur3: 3px,
+	@spread3: 0,
+	@color3: rgba(0,0,0,.3)) {
+	-webkit-box-shadow: @inset @x @y @blur @spread @color,
+						@inset2 @x2 @y2 @blur2 @spread2 @color2,
+						@inset3 @x3 @y3 @blur3 @spread3 @color3;
+	   -moz-box-shadow: @inset @x @y @blur @spread @color,
+	   					@inset2 @x2 @y2 @blur2 @spread2 @color2,
+	   					@inset3 @x3 @y3 @blur3 @spread3 @color3;
+			box-shadow: @inset @x @y @blur @spread @color,
+						@inset2 @x2 @y2 @blur2 @spread2 @color2,
+						@inset3 @x3 @y3 @blur3 @spread3 @color3;
+}
+
+.box-shadow-none() {
+	-webkit-box-shadow: none;
+	   -moz-box-shadow: none;
+			box-shadow: none;
+}
+
+.transition(
+	@what: all,
+	@length: 1s,
+	@easing: ease-in-out,
+	@delay: 0s) {
+	-webkit-transition: @what @length @easing @delay;
+	   -moz-transition: @what @length @easing @delay;
+	    -ms-transition: @what @length @easing @delay;
+	     -o-transition: @what @length @easing @delay;
+		  	transition: @what @length @easing @delay;
+}
+
+.transition-none() {
+	-webkit-transition: none;
+	   -moz-transition: none;
+	   	-ms-transition: none;
+	     -o-transition: none;
+		  	transition: none;
+}
+
+.transform(@params) {
+	-webkit-transform: @params;
+  	   -moz-transform: @params;
+  	   	 -o-transform: @params;
+  	        transform: @params;
+}
+
+.resize(@direction) {
+	-webkit-resize: @direction;
+	   -moz-resize: @direction;
+	        resize: @direction;
+}
+
+.linear-gradient(
+	@dir: top,
+	@begin: black,
+	@end: white,
+	@switch: 100%,
+	@default: black) {
+	background-color: @default;
+	background-image: -webkit-linear-gradient(@dir, @begin, @end @switch);
+	background-image: -moz-linear-gradient(@dir, @begin, @end @switch);
+	background-image: -o-linear-gradient(@dir, @begin, @end @switch);
+	background-image: linear-gradient(to @dir, @end, @begin @switch);
+}
+
+.radial-gradient(
+	@pos-x: center,
+	@pos-y: center,
+	@kind: circle,
+	@size: cover,
+	@start: white,
+	@end: darken(white, 10%),
+	@default: darken(white, 10%)) {
+	background-color: @default;
+	background-image: -webkit-radial-gradient(@pos-x @pos-y, @kind @size, @start 0%, @end 100%); /* New WebKit syntax */
+	background-image: -moz-radial-gradient(@pos-x @pos-y, @kind @size, @start 0%, @end 100%);  
+    background-image: -ms-radial-gradient(@pos-x @pos-y, @kind @size, @start 0%, @end 100%); /* IE10+ */  
+    background-image: -o-radial-gradient(@pos-x @pos-y, @kind @size, @start 0%, @end 100%); /* Opera (13?) */
+}
+
+.columns(@count: 3, @gap: 40) {
+	-webkit-column-count: @count;
+	   -moz-column-count: @count;
+	        column-count: @count;
+
+	-webkit-column-gap: @gap;
+	   -moz-column-gap: @gap;
+	        column-gap: @gap;
+}
+
+.box-sizing(@type: border-box) {
+	-webkit-box-sizing: @type;
+	   -moz-box-sizing: @type;
+	        box-sizing: @type;
+}
+
+.appearance(@content: none) {
+	-webkit-appearance: @content;
+	   -moz-appearance: @content;
+	   		appearance: @content;
+}

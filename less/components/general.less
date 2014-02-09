@@ -1,0 +1,40 @@
+@-ms-viewport {
+	width: device-width;
+}
+
+@viewport {
+	width: device-width;
+}
+
+* {
+	-webkit-font-smoothing: antialiased;
+	.box-sizing(border-box);
+}
+
+html {
+	min-height: 100%;
+	position: relative;
+	color: @copy-color;
+}
+
+body {
+	height: 100%;
+}
+
+hr {
+	background-color: #e1e1e1;
+	height: 1px;
+	border: none;
+	clear: both;
+}
+
+// MAKE IMAGES RESPONSIVE
+
+img {
+	max-width: 100%;
+	height: auto;
+}
+
+ul {
+	margin: 0;
+}

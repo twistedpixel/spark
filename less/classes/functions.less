@@ -1,0 +1,34 @@
+.grid(@cols, @index) when (@index > 0) {
+	.container .col.of-@{index} {
+		@width: (100% / @cols) * @index;
+		width: @width;
+	}
+	
+	.grid(@cols, @index - 1);
+}
+	
+.grid(0) {}
+
+.skip(@cols, @index) when (@index > 0) {
+	.container .col.skip-@{index} {
+		@margin: (100% / @cols) * @index;
+		margin-left: @margin;
+	}
+	
+	.skip(@cols, @index - 1);
+}
+	
+.skip(0) {}
+
+// MERGE THIS FUNCTION WITH THE ABOVE WHEN I HAVE A MINUTE TO FIGURE OUT HOW
+.skip-reverse(@cols, @index) when (@index > 0) {
+	.container .row.reverse-stack .col.skip-@{index} {
+		@margin: (100% / @cols) * @index;
+		margin-right: @margin;
+		margin-left: inherit;
+	}
+	
+	.skip-reverse(@cols, @index - 1);
+}
+	
+.skip-reverse(0) {}

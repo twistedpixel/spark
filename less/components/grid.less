@@ -1,0 +1,183 @@
+.container {
+	margin: 0 @container-gutter;
+	padding: 0;
+}
+
+.container.limit .nav-container {
+	max-width: @limit;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.container.limit .row,
+.container.limit .page-heading,
+.container.limit.hero,
+.container.limit .hero {
+	float: none;
+	max-width: @limit;
+	margin-left: auto;
+	margin-right: auto;
+	overflow: hidden;
+}
+
+.container .row.limit {
+	max-width: @limit;
+	padding-left: @left-gutter;
+	padding-right: @left-gutter;
+	float: none;
+	margin: auto;
+}
+
+.container.limit.navigation .row,
+.container.limit.navigation .page-heading,
+.container.limit.hero.navigation {
+	overflow: visible;
+}
+
+.container.limit.hero,
+.container.limit .hero {
+	max-width: @limit-bar-margins;
+	
+}
+
+.container.limit.hero.hero-edgeless,
+.container.limit .hero.hero-edgeless {
+	max-width: 100%;
+}
+
+.container .row {
+	float: left;
+	clear: both;
+	width: 100%;
+	margin-bottom: 0;
+}
+
+.container .row .col {
+	float: left;
+	text-align: left;
+	padding: 0 @right-gutter 0 @left-gutter;
+	display: inline;
+	margin-bottom: 20px;
+	min-height: 1px;
+}
+
+.container .row.reverse-stack .col {
+	float: right;
+}
+
+.container .row .col:empty {
+	margin-bottom: 0;
+}
+
+.container .row .col .col {
+	padding-left: 0;
+	padding-right: 0;
+}
+
+.container .row .col img:last-child {
+	margin-bottom: 20px;
+}
+
+.hero {
+	background-color: lighten(@silver, 3%);
+	padding: 40px 30px;
+	margin-left: @left-gutter;
+	margin-right: @right-gutter;
+	margin-bottom: 40px;
+	.border-radius(6px);
+}
+
+.container .row.hero .col {
+	margin-bottom: 0;
+}
+
+.container .hero.hero-edgeless,
+.container.hero.hero-edgeless,
+.container.hero.hero-edgeless.limit,
+.container.limit .hero.hero-edgeless,
+.hero.hero-edgeless {
+	margin-left: 0;
+	margin-right: 0;
+	.border-radius(0);
+}
+
+.hero.hero-edgeless :last-child {
+	margin-bottom: 0;
+}
+
+.hero.hero-transparent {
+	background: none;
+}
+
+.hero.hero-blue {
+	background-color: @blue;
+}
+
+.hero.hero-green {
+	background-color: @green;
+}
+
+.hero.hero-orange {
+	background-color: @orange;
+}
+
+.hero.hero-red {
+	background-color: @red;
+}
+
+.hero.hero-purple {
+	background-color: @purple;
+}
+
+.hero.hero-lime {
+	background-color: @lime;
+}
+
+.hero.hero-dragonfruit {
+	background-color: @dragonfruit;
+}
+
+.container .col.of-1,
+.container .col.of-2,
+.container .col.of-3,
+.container .col.of-4,
+.container .col.of-5,
+.container .col.of-6,
+.container .col.of-7,
+.container .col.of-8,
+.container .col.of-9,
+.container .col.of-10,
+.container .col.of-11,
+.container .col.of-12 {width: 100%}
+
+@media only screen and (max-width: @limit) {
+	.container.limit.hero,
+	.container.limit .hero {
+		margin-left: @left-gutter;
+		margin-right: @right-gutter;
+	}
+}
+
+@media only screen and (min-width: 768px) {
+	.grid(@num-cols, @num-cols);
+	
+	.skip(@num-cols, @num-cols);
+	
+	.skip-reverse(@num-cols, @num-cols);
+	
+	.container .row .col .col {
+		padding-left: @left-gutter;
+	}
+	
+	.container .row .col .col {
+		padding-right: @right-gutter;
+	}
+	
+	.container .row .col .col:first-of-type {
+		padding-left: 0;
+	}
+	
+	.container .row .col .col:last-of-type {
+		padding-right: 0;
+	}
+}

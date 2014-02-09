@@ -1,0 +1,403 @@
+.navigation {
+	padding: 0;
+}
+
+.navigation a.nav-link {
+	float: right;
+	margin: 7px 0;
+}
+
+.navigation nav {
+	position: relative;
+	clear: both;
+}
+
+.navigation nav a,
+.navigation nav a:hover {
+	text-decoration: none;
+}
+
+.navigation nav .nav-container {
+	padding-left: @left-gutter;
+	padding-right: @right-gutter;
+}
+
+.navigation nav ul {
+	list-style: none;
+	padding-left: 0;
+}
+
+.navigation nav ul.nav-list {
+	display: block;
+	height: 0;
+	overflow: hidden;
+	margin-left: -@left-gutter;
+	margin-right: -@right-gutter;
+	clear: both;
+	.transition(height, 0.3s);
+}
+
+.navigation nav ul.nav-brand {
+	float: left;
+}
+
+.navigation nav ul.nav-brand li.name a {
+	color: @nav-basic;
+	line-height: 2em;
+	font-size: 120%;
+	padding: 0 0 0 0;
+	display: inline-block;
+}
+
+.navigation.nav-dark nav ul.nav-brand li.name a {
+	color: @white;
+}
+
+.navigation nav ul.nav-list li a {
+	text-decoration: none;
+	display: block;
+	padding: 10px 20px 10px 20px;
+	font-weight: 400;
+	line-height: 1.5;
+}
+
+.navigation nav ul.nav-list li:last-child a {
+	border: none;
+}
+
+.navigation nav ul.dd {
+	list-style: none;
+	padding-left: 16px;
+	overflow: hidden;
+}
+
+.navigation nav ul.dd li,
+.navigation nav ul.dd li a {
+	overflow: visible;
+}
+
+.navigation nav ul.dd li a {
+	padding-left: 30px;
+}
+
+.navigation nav ul.nav-list li ul.dd li > a {
+	float: none;
+}
+
+.navigation nav ul.nav-list li ul.dd li {
+	float: left;
+	width: 100%;
+}
+
+.navigation nav ul.nav-list li > a,
+.navigation nav ul.nav-list li.dd-container > a:hover {
+	color: @nav-basic;
+}
+
+.navigation nav ul.nav-list li > a:hover {
+	color: #2b77a6;
+}
+
+.navigation nav .nav-container ul.nav-list li.active > a {
+	background-color: ;
+}
+
+.navigation.nav-dark nav ul.nav-list li.dd-container li > a:hover,
+.navigation.nav-dark nav ul.nav-list li.dd-container > a {
+	color: @white;
+}
+
+/* nav-light */
+
+.navigation.nav-light {
+	background-color: @nav-light-back;
+}
+
+.navigation.nav-light nav,
+.navigation.nav-light nav ul.nav-list li > a {
+	background-color: @nav-light-back;
+}
+
+.navigation.nav-light nav ul.nav-list > li:first-child {
+	border-top: 1px solid @nav-light-border;
+}
+
+.navigation.nav-light nav ul.nav-list li {
+	border-bottom: 1px solid @nav-light-border;
+}
+
+.navigation.nav-light nav ul.nav-list ul.dd li:first-child {
+	border-top: 1px solid @nav-light-border;
+}
+
+.navigation.nav-light nav ul.nav-list li:last-child,
+.navigation.nav-light nav ul.nav-list ul.dd li:last-child {
+	border-bottom: none;
+}
+
+.navigation.nav-light nav ul.nav-list li a {
+	color: @nav-light-font;
+}
+
+.navigation.nav-light nav ul.nav-list li a:hover,
+.navigation.nav-light nav ul.nav-list li a:active {
+	background-color: @white;
+	color: inherit;
+}
+
+.navigation.nav-light nav ul.nav-list li.dd-container > a,
+.navigation.nav-light nav ul.nav-list li.dd-container > a:hover {
+	background-color: @nav-light-back;
+}
+
+
+
+/* nav-dark */
+
+.navigation.nav-dark {
+	background-color: @nav-dark-back;
+}
+
+.navigation.nav-dark nav {
+	background-color: @nav-dark-back;
+}
+
+.navigation.nav-dark nav ul.dd {
+	background-color: @nav-dark-back;
+}
+
+.navigation.nav-dark nav ul.nav-list > li:first-child {
+	border-top: 1px solid @nav-dark-border;
+}
+
+.navigation.nav-dark nav ul.nav-list li {
+	border-bottom: 1px solid @nav-dark-border;
+}
+
+.navigation.nav-dark nav ul.nav-list li:last-child {
+	border-bottom: none;
+}
+
+.navigation.nav-dark nav ul.nav-list ul.dd li:first-child {
+	border-top: 1px solid @nav-dark-border;
+}
+
+.navigation.nav-dark nav ul.nav-list ul.dd li:last-child {
+	border-bottom: none;
+}
+
+.navigation.nav-dark nav ul.nav-list li a:hover {
+	background-color: @nav-dark-hover;
+}
+
+.navigation.nav-dark nav ul.nav-list > li a {
+	background-color: @nav-dark-back;
+	color: @white;
+}
+
+.navigation.nav-dark nav ul.nav-list li.dd-container > a:hover {
+	background-color: transparent;
+}
+
+.navigation nav .name h1 {
+	font-size: 16px;
+	line-height: 1.4em;
+	margin: 0;
+}
+
+.navigation nav .name h1 a {
+	font-weight: 900;
+}
+
+@media only screen and (min-width: 768px) {
+
+	.navigation a.nav-link {
+		display: none;
+	}
+	
+	.navigation nav {
+		display: block !important;
+		border: none;
+		height: auto;
+		clear: none;
+		margin-left: 0;
+		margin-right: 0;
+	}
+	
+	.navigation nav .nav-container {
+		padding-left: 0;
+		padding-right: 0;
+	}
+	
+	.navigation nav ul.nav-brand li.name a {
+		margin-left: @left-gutter;
+	}
+	
+	.navigation nav ul.nav-brand {
+		float: left;
+		margin-right: 30px;
+	}
+	
+	.navigation nav ul.nav-list {
+		display: block !important;
+		height: auto !important;
+		overflow: visible;
+		margin: 0;
+		clear: none;
+	}
+	
+	.navigation.nav-right nav ul.nav-list {
+		float: right;
+	}
+	
+	.navigation nav ul.nav-list > li {
+		float: left;
+	}
+	
+	.navigation nav ul.nav-list li {
+		background-color: transparent;
+	}
+	
+	.navigation nav ul.nav-list > li a {
+		background-color: transparent;
+		float: left;
+		border: none;
+	}
+	
+	.navigation nav li.dd-container ul.dd li {
+		border: none !important;
+	}
+	
+	.navigation nav li.dd-container ul.dd li a {
+		padding-left: 20px;
+	}
+	
+	.navigation nav ul.nav-list li.dd-container li > a:hover {
+		color: @white;
+	}
+	
+	.navigation nav li.dd-container {
+		position: relative;
+		float: left;
+		height: auto;
+		width: auto;
+		padding-bottom: 10px;
+		margin-bottom: -10px;
+	}
+	
+	.navigation nav ul.dd {
+		position: absolute;
+		z-index: 1000;
+		height: auto;
+		width: 100%;
+		top: 50px;
+		left: 0;
+		background-color: transparent;
+		display: none;
+		overflow: visible;
+		padding-left: 0;
+		.border-radius(3px);
+		.box-shadow(~'', 0, 0, 3px, 0, rgba(0,0,0, .2));
+	}
+	
+	.navigation.nav-light nav ul.nav-list > li:first-child,
+	.navigation.nav-dark nav ul.nav-list > li:first-child {
+		border: none;
+	}
+	
+	.navigation.nav-light nav ul.nav-list li,
+	.navigation.nav-dark nav ul.nav-list li {
+		border-bottom: none;
+	}
+	
+	.navigation.nav-light nav ul.nav-list li a {
+		border: none;
+	}
+	
+	.navigation.nav-light nav ul.nav-list li a:hover,
+	.navigation.nav-light nav ul.nav-list li a:active {
+		background-color: @nav-light-hover;
+		color: @white;
+	}
+	
+	.navigation nav li.dd-container:hover > ul.dd,
+	.navigation nav li.dd-container > a:focus + ul.dd {
+		display: block;
+	}
+	
+	.navigation nav ul.nav-list > li.dd-container:hover > a {
+		color: #2b77a6;
+	}
+	
+	.navigation nav ul.nav-list ul li.dd-container:hover > a,
+	.navigation.nav-dark nav ul.nav-list li.dd-container:hover > a {
+		background-color: @nav-dark-hover;
+		color: @white;
+	}
+	
+	.navigation.nav-light nav ul.nav-list li.dd-container:hover > a {
+		background-color: @nav-light-hover;
+		color: @white;
+	}
+	
+	.navigation.nav-dark nav ul.nav-list > li a {
+		border: none;
+	}
+	
+	.navigation nav ul.nav-list > li > ul.dd li > a {
+		float: none;
+		font-size: 76%;
+		background-color: @white;
+	}
+	
+	.navigation.nav-dark nav ul.nav-list > li > ul.dd li > a {
+		background-color: transparent;
+	}
+	
+	.navigation.nav-light nav ul.nav-list > li > ul.dd li > a {
+		background-color: @white;
+		color: @nav-dark-back;
+	}
+	
+	.navigation.nav-light nav ul.nav-list > li > ul.dd li > a:hover {
+		background-color: @nav-light-hover;
+		color: @white;
+	}
+	
+	.navigation nav ul.nav-list > li > ul.dd li > a:hover {
+		background-color: @nav-dark-hover;
+	}
+	
+	.navigation nav ul.nav-list > li > ul.dd li:first-child,
+	.navigation nav ul.nav-list > li > ul.dd li:first-child a {
+		.border-radius-corners(3px, 3px, 0, 0);
+	}
+	
+	.navigation nav ul.nav-list > li > ul.dd ul.dd li:first-child,
+	.navigation nav ul.nav-list > li > ul.dd ul.dd li:first-child a {
+		.border-radius-corners(0, 3px, 0, 0);
+	}
+	
+	.navigation nav ul.nav-list > li > ul.dd li:last-child,
+	.navigation nav ul.nav-list > li > ul.dd li:last-child a {
+		.border-radius-corners(0, 0, 3px, 3px);
+	}
+	
+	.navigation nav ul.dd ul.dd {
+		left: 100%;
+		top: 0;
+	}
+	
+	.navigation nav ul.dd ul.dd li:first-child,
+	.navigation nav ul.dd ul.dd li:first-child a {
+		.border-radius-corners(0, 3px, 0, 0);
+	}
+	
+	.navigation nav ul.dd ul.dd > li > a {
+		padding: 6px 20px;
+	}
+	
+	.navigation nav ul.nav-list li.dd-container.open ul.dd {
+		display: block !important;
+	}
+}

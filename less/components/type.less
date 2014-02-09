@@ -1,0 +1,259 @@
+html {
+	font: 14px/1.5 "Helvetica Neue", Helvetica, Arial, sans-serif;
+	// Calm down, doctor! Now is not the time for Helvetica Neue Light. That comes later.
+	//font: 14px/1.5 "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	line-height: 1.2em;
+	color: #404040;
+}
+
+h1 {
+	font-size: 300%; //36px equiv at 14px base
+	font-weight: 900;
+	margin-top: 0;
+	margin-bottom: 24px;
+}
+
+h2 {
+	font-size: 250%; //27px equiv at 14px base
+	margin-top: 40px;
+}
+
+h2, h3, h4, h5, h6 {
+	font-weight: 700;
+	margin-bottom: 24px;
+}
+
+h3 {
+	font-size: 200%; //21px equiv at 14px base
+	margin-top: 40px;
+}
+
+h4 {
+	font-size: 180%; //nnpx equiv at 14px base
+}
+
+h5 {
+	font-size: 140%; //20px equiv at 14px base
+}
+
+h6 {
+	font-size: 110%; //nnpx equiv at 14px base
+}
+
+.skinny-headers h1,
+.skinny-headers h2,
+.skinny-headers h3,
+.skinny-headers h4,
+.skinny-headers h5,
+.skinny-headers h6 {
+	font-weight: 200;
+}
+
+.super-skinny-headers h1,
+.super-skinny-headers h2,
+.super-skinny-headers h3,
+.super-skinny-headers h4,
+.super-skinny-headers h5,
+.super-skinny-headers h6 {
+	font-weight: 100;
+}
+
+h1.heavy,
+h2.heavy,
+h3.heavy,
+h4.heavy,
+h5.heavy,
+h6.heavy {
+	font-weight: 700;
+}
+
+h1 span.alt,
+h2 span.alt,
+h3 span.alt,
+h4 span.alt {
+	font-size: 90%;
+	font-weight: 400;
+	color: #b7b7b7;
+}
+
+h5 span.alt,
+h6 span.alt {
+	color: #b7b7b7;
+}
+
+.page-heading {
+	padding: 0 @left-gutter;
+	clear: both;
+}
+
+// Fix padding for nested page-headings
+.col .page-heading {
+	padding: 0;
+}
+
+h1.page-heading {
+	margin-bottom: 36px;
+}
+
+.col h1:first-child,
+.col h2:first-child,
+.col h3:first-child,
+.col h4:first-child,
+.col h5:first-child,
+.col h6:first-child {
+	margin-top: 0;
+}
+
+p {
+	text-align: justify;
+	color: @copy-color;
+	margin-top: 0;
+	margin-bottom: 20px;
+}
+
+p:last-child {
+	//margin-bottom: 0;
+}
+
+p.leading {
+	font-size: 150%;
+	font-weight: 200;
+	margin-top: 0;
+	margin-bottom: 20px;
+}
+
+a {
+	padding: 0;
+	margin: 0;
+	color: @darkblue;
+	text-decoration: none;
+}
+
+a:hover {
+	color: lighten(@darkblue, 10%);
+	text-decoration: underline;
+}
+
+.underlined:after {
+	content: '';
+	display: block;
+	margin-top: 14px;
+	height: 1px;
+	background-color: #eeeeee;
+}
+
+.hero p,
+.hero-edgeless p {
+	font-size: 120%;
+	font-weight: lighter;
+}
+
+.skinny {
+	font-weight: 200 !important;
+}
+
+.super-skinny {
+	font-weight: 100 !important;
+}
+
+small,
+.small {
+	font-size: 80%;
+	color: @copy-color;
+}
+
+.text-shadow {
+	text-shadow: 0px 0px 6px rgba(0,0,0,.5);
+}
+
+.text-shadow.subtle {
+	text-shadow: 1px 1px 1px rgba(0,0,0,.3);
+}
+
+.disabled {
+	color: #aeaeae;
+}
+
+h1.herotype,
+h2.herotype {
+	color: @darkergray;
+	letter-spacing: -0.07em;
+	line-height: 0.8em;
+	margin-bottom: 20px;
+}
+
+h3.herotype,
+h4.herotype,
+h5.herotype,
+h6.herotype {
+	color: @darkergray;
+	letter-spacing: -0.07em;
+	line-height: 0.8em;
+	margin-bottom: 10px;
+}
+
+.left {
+	text-align: left;
+}
+
+.right {
+	text-align: right;
+}
+
+.center {
+	text-align: center;
+}
+
+.white {
+	color: @white !important;
+}
+
+.black {
+	color: @black !important;
+}
+
+blockquote.bq {
+	margin: 20px 0;
+	border-left: 5px solid #c3c3c3;
+	padding: 12px 20px;
+	
+	font-size: 150%;
+	font-weight: 200;
+	line-height: 1.2;	
+}
+
+blockquote.bq.alt {
+	background-color: #f8f8f8;
+	border-left: 10px solid #b9b2b9;
+	.border-radius-corners(0, 3px, 3px, 0);
+}
+
+blockquote.bq.right {
+	border-left: none;
+	border-right: 5px solid #6e4c76;
+}
+
+blockquote.bq.right,
+blockquote.bq.right p {
+	text-align: right;
+}
+
+blockquote.bq p {
+	margin: 0;
+}
+
+blockquote.bq.alt.right {
+	border-left: none;
+	border-right: 10px solid #6e4c76;
+	.border-radius-corners(3px, 0, 0, 3px);
+}
+
+blockquote.bq small {
+	color: #878787;
+	font-size: 60%;
+	margin-top: 10px;
+	display: block;
+}

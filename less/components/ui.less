@@ -1,0 +1,552 @@
+/* MAIN SHINY STANDARD BUTTON */
+
+.btn {
+	text-decoration: none;
+	color: @darkgray;
+	line-height: 1.5em;
+	display: inline-block;
+	padding: 4px 14px;
+	margin-bottom: 10px;
+	
+	-webkit-background-size: 100% 170%;
+	   -moz-background-size: 100% 170%;
+	   		background-size: 100% 170%;
+	
+	border-width: 1px;
+	border-style: solid;
+	border-color: darken(@white, 12%) darken(@white, 14%) darken(@white, 22%);
+	
+	.linear-gradient(top, @white, darken(@white, 16%), 100%, darken(@white, 4%));
+	.border-radius(3px);
+	.transition(background-position, 0.2s, ease);
+}
+
+.btn:hover {
+	cursor: pointer;
+	color: @darkgray;
+	text-decoration: none;
+	background-color: darken(@white, 8%);
+	-webkit-background-position: 0 50%;
+	   -moz-background-position: 0 50%;
+	   		background-position: 0 50%;
+}
+
+.btn:active {
+	background-color: darken(@white, 14%);
+	-webkit-background-position: 0 100%;
+	   -moz-background-position: 0 100%;
+	   		background-position: 0 100%;
+}
+
+.btn.btn-flat {
+	background: none;
+	background-color: darken(@white, 4%);
+	border: none;
+	.appearance(none);
+}
+
+.btn.btn-flat:hover {
+	background-color: darken(@white, 7%);
+}
+
+.btn:active,
+.btn.btn-flat:active {
+	background-color: darken(@white, 10%);
+}
+
+
+
+
+
+/* BUTTON COLORS */
+
+.btn.btn-blue {
+	border-color: darken(@blue, 9%) darken(@blue, 14%) darken(@blue, 22%);
+    color: @white;
+    
+    .linear-gradient(top, @blue, darken(@blue, 30%), 100%, @blue);
+    //.box-shadow(inset, 0, 1px, 0, 0, rgba(255, 255, 255, 0.4));
+}
+
+.btn.btn-flat.btn-blue {
+	background: none;
+	background-color: @blue;
+}
+
+.btn.btn-blue:hover,
+.btn.btn-flat.btn-blue:hover {
+	background-color: darken(@blue, 4%);
+}
+
+.btn.btn-blue:active,
+.btn.btn-flat.btn-blue:active {
+	background-color: darken(@blue, 8%);
+}
+
+
+
+
+.btn.btn-green {
+	border-color: darken(@green, 20%) darken(@green, 20%) darken(@green, 25%);
+    color: @white;
+    
+    .linear-gradient(top, @green, darken(@green, 24%), 100%, @green);
+	//.box-shadow(inset, 0, 1px, 0, 0, rgba(255, 255, 255, .7));
+}
+
+.btn.btn-flat.btn-green {
+	background: none;
+	background-color: @green;
+}
+
+.btn.btn-green:hover,
+.btn.btn-flat.btn-green:hover {
+	background-color: desaturate(darken(@green, 6%), 0%);
+}
+
+.btn.btn-green:active,
+.btn.btn-flat.btn-green:active {
+	background-color: darken(@green, 10%);
+}
+
+
+
+
+.btn.btn-orange {
+	border-color: darken(@orange, 9%) darken(@orange, 14%) darken(@orange, 20%);
+    color: @white;
+    
+    .linear-gradient(top, @orange, darken(@orange, 24%), 100%, @orange);
+    //.box-shadow(inset, 0, 1px, 0, 0, rgba(255, 255, 255, .4));
+}
+
+.btn.btn-flat.btn-orange {
+	background: none;
+	background-color: @orange;
+}
+
+.btn.btn-orange:hover,
+.btn.btn-flat.btn-orange:hover {
+	background-color: saturate(darken(@orange, 2%), 50%);
+}
+
+.btn.btn-orange:active,
+.btn.btn-flat.btn-orange:active {
+	background-color: darken(@orange, 5%);
+}
+
+
+
+
+.btn.btn-red {
+	border-color: darken(@red, 18%) darken(@red, 16%) darken(@red, 22%);
+    color: @white;
+    
+    .linear-gradient(top, @red, darken(@red, 20%), 100%, @red);
+    //.box-shadow(inset, 0, 1px, 0, 0, rgba(255, 255, 255, .4));
+}
+
+.btn.btn-flat.btn-red {
+	background: none;
+	background-color: @red;
+}
+
+.btn.btn-red:hover,
+.btn.btn-flat.btn-red:hover {
+	background-color: saturate(darken(@red, 2%), 50%);
+}
+
+.btn.btn-red:active,
+.btn.btn-flat.btn-red:active {
+	background-color: darken(@red, 5%);
+}
+
+
+
+
+.btn.btn-lime {
+	border-color: darken(@lime, 18%) darken(@lime, 20%) darken(@lime, 23%);
+    color: @white;
+    
+    .linear-gradient(top, @lime, darken(@lime, 26%), 100%, @lime);
+    //.box-shadow(inset, 0, 1px, 0, 0, rgba(255, 255, 255, .9));
+}
+
+.btn.btn-flat.btn-lime {
+	background: none;
+	background-color: @lime;
+}
+
+.btn.btn-lime:hover,
+.btn.btn-flat.btn-lime:hover {
+	background-color: darken(@lime, 6%);
+}
+
+.btn.btn-lime:active,
+.btn.btn-flat.btn-lime:active {
+	background-color: darken(@lime, 14%);
+}
+
+
+
+
+
+.btn.btn-purple {
+	border-color: darken(@purple, 9%) darken(@purple, 14%) darken(@purple, 22%);
+    color: @white;
+    
+    .linear-gradient(top, @purple, darken(@purple, 24%), 100%, @purple);
+    //.box-shadow(inset, 0, 1px, 0, 0, rgba(255, 255, 255, .4));
+}
+
+.btn.btn-flat.btn-purple {
+	background: none;
+	background-color: @purple;
+}
+
+.btn.btn-purple:hover,
+.btn.btn-flat.btn-purple:hover {
+	background-color: saturate(darken(@purple, 2%), 50%);
+}
+
+.btn.btn-purple:active,
+.btn.btn-flat.btn-purple:active {
+	background-color: darken(@purple, 5%);
+}
+
+
+
+
+
+.btn.btn-dragonfruit {
+	border-color: darken(@dragonfruit, 9%) darken(@dragonfruit, 14%) darken(@dragonfruit, 22%);
+    color: @white;
+    
+    .linear-gradient(top, @dragonfruit, darken(@dragonfruit, 24%), 100%, @dragonfruit);
+    //.box-shadow(inset, 0, 1px, 0, 0, rgba(255, 255, 255, .4));
+}
+
+.btn.btn-flat.btn-dragonfruit {
+	background: none;
+	background-color: @dragonfruit;
+}
+
+.btn.btn-dragonfruit:hover,
+.btn.btn-flat.btn-dragonfruit:hover {
+	background-color: saturate(darken(@dragonfruit, 2.5%), 50%);
+}
+
+.btn.btn-dragonfruit:active,
+.btn.btn-flat.btn-dragonfruit:active {
+	background-color: darken(@dragonfruit, 5%);
+}
+
+
+
+/* MAIN SHINY TOUCH BUTTON */
+
+.bar {
+	display: block;
+	height: 1px;
+	width: 20px;
+	margin: 3px 0;
+	.box-sizing(content-box);
+	float: right;
+	clear: both;
+	.border-radius(2px);
+}
+
+.btn-touch {
+	color: @white;
+	background-size: 1px 50px;
+	border: 1px solid;
+	border-color: #cecece #cac9c9 #bcbcbc;
+	padding: .2em .65em;
+	display: block;
+	float: left;
+	margin-top: 0.2em;
+	
+	.border-radius(3px);
+	.linear-gradient(top, @white, darken(@white, 20%), 100%, @white);
+	.box-shadow-double(inset, 0, 1px, 0, 0, @white, inset, 0, -1px, 0, 0, rgba(255, 255, 255, .6));
+	.transition(background, .2s, ease-in-out);
+}
+
+.btn-touch:hover {
+	background-color: darken(@white, 10%);
+	background-position: 0;
+}
+
+.btn-touch:active {
+	border-color: #747474;
+	background-color: darken(@white, 10%);
+	.box-shadow(inset, 0, 0, 4px, 0, rgba(0, 0, 0, .3));
+}
+
+.btn-touch.btn-touch-flat {
+	background: @white;
+	.transition-none();
+	.box-shadow-none() !important;
+}
+
+.btn-touch.btn-touch-flat:hover {
+	background: darken(@white, 6%);
+}
+
+.btn-touch.btn-touch-dark {
+	color: @white;
+	border-color: @darkgray;
+	.linear-gradient(top, #666666, #000000, 100%, @darkgray);
+	.box-shadow-double(inset, 0, 1px, 0, 0, rgba(255, 255, 255, 0.1),
+						inset, 0, -1px, 0, 0, rgba(255, 255, 255, .2));
+}
+
+.btn-touch-dark:hover {
+	background-color: #333333;
+	background-position: 0px;
+	border-color: #333333;
+}
+
+.btn-touch.btn-touch-dark.btn-touch-flat {
+	background: @darkgray;
+	.transition-none();
+}
+
+.btn-touch.btn-touch-dark.btn-touch-flat:hover {
+	background: #333333;
+}
+
+.btn-touch .bar {
+	background: #4a4a4a;
+}
+
+.btn-touch-dark .bar {
+	background: @white;
+}
+
+.btn-touch-dark:active .bar {
+	background: #d3d3d3;
+}
+
+
+
+.btn-touch.btn-touch-blue {
+	border-color: darken(@blue, 30%);
+	.linear-gradient(top, @blue, darken(@blue, 27%), 100%, @blue);
+	.box-shadow-double(inset, 0, 1px, 0, 0, rgba(255, 255, 255, 0.3),
+						inset, 0, -1px, 0, 0, rgba(255, 255, 255, .2));
+}
+
+.btn-touch.btn-touch-blue:hover,
+.btn-touch.btn-touch-blue:active {
+	background-color: darken(@blue, 10%);
+}
+
+.btn-touch.btn-touch-flat.btn-touch-blue {
+	border-color: darken(@blue, 24%);
+	background: none;
+	background-color: @blue;
+}
+
+.btn-touch.btn-touch-flat.btn-touch-blue:hover {
+	background-color: darken(@blue, 10%);
+}
+
+
+
+.btn-touch.btn-touch-green {
+	border-color: darken(@green, 25%);
+	.linear-gradient(top, @green, darken(@green, 27%), 100%, @green);
+	.box-shadow-double(inset, 0, 1px, 0, 0, rgba(255, 255, 255, 0.3),
+						inset, 0, -1px, 0, 0, rgba(255, 255, 255, .2));
+}
+
+.btn-touch.btn-touch-green:hover,
+.btn-touch.btn-touch-green:active {
+	background-color: darken(@green, 10%);
+}
+
+.btn-touch.btn-touch-flat.btn-touch-green {
+	border-color: darken(@green, 25%);
+	background: none;
+	background-color: @green;
+}
+
+.btn-touch.btn-touch-flat.btn-touch-green:hover {
+	background-color: darken(@green, 10%);
+}
+
+
+.btn-touch.btn-touch-orange {
+	border-color: darken(@orange, 25%);
+	.linear-gradient(top, @orange, darken(@orange, 27%), 100%, @orange);
+	.box-shadow-double(inset, 0, 1px, 0, 0, rgba(255, 255, 255, 0.3),
+						inset, 0, -1px, 0, 0, rgba(255, 255, 255, .2));
+}
+
+.btn-touch.btn-touch-orange:hover,
+.btn-touch.btn-touch-orange:active {
+	background-color: darken(@orange, 10%);
+}
+
+.btn-touch.btn-touch-flat.btn-touch-orange {
+	border-color: darken(@orange, 25%);
+	background: none;
+	background-color: @orange;
+}
+
+.btn-touch.btn-touch-flat.btn-touch-orange:hover {
+	background-color: darken(@orange, 10%);
+}
+
+
+.btn-touch.btn-touch-red {
+	border-color: darken(@red, 25%);
+	.linear-gradient(top, @red, darken(@red, 27%), 100%, @red);
+	.box-shadow-double(inset, 0, 1px, 0, 0, rgba(255, 255, 255, 0.3),
+						inset, 0, -1px, 0, 0, rgba(255, 255, 255, .2));
+}
+
+.btn-touch.btn-touch-red:hover,
+.btn-touch.btn-touch-red:active {
+	background-color: darken(@red, 10%);
+}
+
+.btn-touch.btn-touch-flat.btn-touch-red {
+	border-color: darken(@red, 25%);
+	background: none;
+	background-color: @red;
+}
+
+.btn-touch.btn-touch-flat.btn-touch-red:hover {
+	background-color: darken(@red, 10%);
+}
+
+
+
+.btn-touch.btn-touch-purple {
+	border-color: darken(@purple, 25%);
+	.linear-gradient(top, @purple, darken(@purple, 27%), 100%, @purple);
+	.box-shadow-double(inset, 0, 1px, 0, 0, rgba(255, 255, 255, 0.3),
+						inset, 0, -1px, 0, 0, rgba(255, 255, 255, .2));
+}
+
+.btn-touch.btn-touch-purple:hover,
+.btn-touch.btn-touch-purple:active {
+	background-color: darken(@purple, 10%);
+}
+
+.btn-touch.btn-touch-flat.btn-touch-purple {
+	border-color: darken(@purple, 25%);
+	background: none;
+	background-color: @purple;
+}
+
+.btn-touch.btn-touch-flat.btn-touch-purple:hover {
+	background-color: darken(@purple, 10%);
+}
+
+
+
+.btn-touch.btn-touch-lime {
+	border-color: darken(@lime, 25%);
+	.linear-gradient(top, @lime, darken(@lime, 27%), 100%, @lime);
+	.box-shadow-double(inset, 0, 1px, 0, 0, rgba(255, 255, 255, 0.3),
+						inset, 0, -1px, 0, 0, rgba(255, 255, 255, .2));
+}
+
+.btn-touch.btn-touch-lime:hover,
+.btn-touch.btn-touch-lime:active {
+	background-color: darken(@lime, 10%);
+}
+
+.btn-touch.btn-touch-flat.btn-touch-lime {
+	border-color: darken(@lime, 25%);
+	background: none;
+	background-color: @lime;
+}
+
+.btn-touch.btn-touch-flat.btn-touch-lime:hover {
+	background-color: darken(@lime, 10%);
+}
+
+
+
+.btn-touch.btn-touch-dragonfruit {
+	border-color: darken(@dragonfruit, 25%);
+	.linear-gradient(top, @dragonfruit, darken(@dragonfruit, 27%), 100%, @dragonfruit);
+	.box-shadow-double(inset, 0, 1px, 0, 0, rgba(255, 255, 255, 0.3),
+						inset, 0, -1px, 0, 0, rgba(255, 255, 255, .2));
+}
+
+.btn-touch.btn-touch-dragonfruit:hover,
+.btn-touch.btn-touch-dragonfruit:active {
+	background-color: darken(@dragonfruit, 10%);
+}
+
+.btn-touch.btn-touch-flat.btn-touch-dragonfruit {
+	border-color: darken(@dragonfruit, 25%);
+	background: none;
+	background-color: @dragonfruit;
+}
+
+.btn-touch.btn-touch-flat.btn-touch-dragonfruit:hover {
+	background-color: darken(@dragonfruit, 10%);
+}
+
+.btn-touch.btn-touch-blue .bar,
+.btn-touch.btn-touch-flat.btn-touch-blue .bar,
+.btn-touch.btn-touch-green .bar,
+.btn-touch.btn-touch-flat.btn-touch-green .bar,
+.btn-touch.btn-touch-orange .bar,
+.btn-touch.btn-touch-flat.btn-touch-orange .bar,
+.btn-touch.btn-touch-red .bar,
+.btn-touch.btn-touch-flat.btn-touch-red .bar,
+.btn-touch.btn-touch-purple .bar,
+.btn-touch.btn-touch-flat.btn-touch-purple .bar,
+.btn-touch.btn-touch-lime .bar,
+.btn-touch.btn-touch-flat.btn-touch-lime .bar,
+.btn-touch.btn-touch-dragonfruit .bar,
+.btn-touch.btn-touch-flat.btn-touch-dragonfruit .bar {
+	background: @white;
+}
+
+
+.btn.btn-no-border,
+.btn.btn-no-border:hover,
+.btn.btn-no-border:active,
+.btn-touch.btn-no-border,
+.btn-touch.btn-no-border:hover,
+.btn-touch.btn-no-border:active {
+	border: none;
+}
+
+
+/* BUTTON SIZES */
+
+.btn.btn-small {
+	.border-radius(3px);
+	padding: .2em .6em;
+}
+
+.btn.btn-hero {
+	font-size: 130%;
+	.border-radius(4px);
+	max-width: 100%;
+	padding: .6em .9em;
+}
+
+@media only screen and (min-width: 769px) {
+	.btn.btn-small {
+		font-size: 70%;
+		.border-radius(3px);
+		padding: .2em .6em;
+	}
+	
+	.btn.btn-hero {
+		font-size: 180%;
+		.border-radius(4px);
+		max-width: 100%;
+		padding: .4em 1em;
+	}
+}

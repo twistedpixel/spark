@@ -1,0 +1,255 @@
+form.form textarea,
+form.form input[type="text"],
+form.form input[type="password"],
+form.form input[type="datetime"],
+form.form input[type="datetime-local"],
+form.form input[type="date"],
+form.form input[type="month"],
+form.form input[type="time"],
+form.form input[type="week"],
+form.form input[type="number"],
+form.form input[type="email"],
+form.form input[type="url"],
+form.form input[type="search"],
+form.form input[type="tel"],
+form.form input[type="color"] {
+	margin: 0 0 8px 0;
+	font-size: 16px;
+	display: block;
+	border: 1px solid #b1b1b1;
+	padding: 4px 4px 5px 4px;
+	width: 100%;
+	
+	.appearance(none);
+	.border-radius(3px);
+}
+
+form.form input[type="file"] {
+	padding: 4px 4px 5px 4px;
+	
+}
+
+form.form select:focus,
+form.form textarea:focus,
+form.form input[type="text"]:focus,
+form.form input[type="password"]:focus,
+form.form input[type="datetime"]:focus,
+form.form input[type="datetime-local"]:focus,
+form.form input[type="date"]:focus,
+form.form input[type="month"]:focus,
+form.form input[type="time"]:focus,
+form.form input[type="week"]:focus,
+form.form input[type="number"]:focus,
+form.form input[type="email"]:focus,
+form.form input[type="url"]:focus,
+form.form input[type="search"]:focus,
+form.form input[type="tel"]:focus,
+form.form input[type="color"]:focus,
+form.form input[type="file"]:focus,
+form.form button:focus {
+	border: 1px solid #313131;
+	outline: none;
+}
+
+form.form .input-container,
+form.form textarea,
+form.form select,
+form.form.form-inline input,
+form.form.form-inline select,
+form.form.form-inline textarea {
+	margin-bottom: 10px;
+}
+
+form.form .input-container {
+	overflow: hidden;
+}
+
+form.form .input-container * {
+	max-width: 100%;
+}
+
+textarea {
+	.resize(vertical);
+}
+
+form.form label {
+	display: block;
+	font-size: 80%;
+	line-height: 2.3;
+}
+
+form.form select {
+	font-size: 16px;
+	margin-top: 3px;
+	display: block;
+	border: 1px solid #b1b1b1;
+	padding: 4px 4px 5px 4px;
+	width: auto;
+	max-width: 100%;
+	.border-radius(3px);
+}
+
+form.form input[type="radio"] {
+	margin-left: 1px;
+}
+
+form.form.form-inline {
+	overflow: hidden;
+}
+
+form.form.form-inline select,
+form.form.form-inline textarea,
+form.form.form-inline input[type="text"],
+form.form.form-inline input[type="password"],
+form.form.form-inline input[type="datetime"],
+form.form.form-inline input[type="datetime-local"],
+form.form.form-inline input[type="date"],
+form.form.form-inline input[type="month"],
+form.form.form-inline input[type="time"],
+form.form.form-inline input[type="week"],
+form.form.form-inline input[type="number"],
+form.form.form-inline input[type="email"],
+form.form.form-inline input[type="url"],
+form.form.form-inline input[type="search"],
+form.form.form-inline input[type="tel"],
+form.form.form-inline input[type="color"],
+form.form.form-inline input[type="file"],
+form.form.form-inline .input-container {
+	display: inline-block;
+	float: left;
+	margin-right: 10px;
+}
+
+form.form input[type="file"] {
+	font-size: 10px;
+	max-width: 140px;
+}
+
+form.form.form-inline .input-container label {
+	text-align: left;
+}
+
+form.form.form-inline label {
+	float: left;
+	margin-right: 10px;
+}
+
+form.form.form-inline label input[type="checkbox"] {
+	margin-left: 0;
+}
+
+form.form.form-inline input {
+	margin-bottom: 20px;
+}
+
+form.form.form-inline .radio {
+	display: inline-block;
+	float: left;
+	clear: none;
+}
+
+form.form.form-inline .btn {
+	float: left;
+	clear: both;
+}
+
+form.form.form-inline input[type="checkbox"] {
+	margin-right: 5px;
+	margin-left: 10px;
+}
+
+form.form.form-horizontal input[type="radio"] {
+	margin-bottom: 0;
+}
+
+form.form .input-small {
+	width: 50%;
+}
+
+form.form .input-medium {
+	width: 70%;
+}
+
+form.form .input-large {
+	width: 100%;
+}
+
+form.form .input-huge {
+	width: 100%;
+}
+
+@media only screen and (min-width: 768px) {
+	// only available in IE9 and up so avoiding for now
+	//input:not([type=submit]):not([type=file]) {
+	//
+	//}
+	
+	form.form select {
+		font-size: inherit;
+	}
+	
+	form.form textarea,
+	form.form input[type="text"],
+	form.form input[type="password"],
+	form.form input[type="datetime"],
+	form.form input[type="datetime-local"],
+	form.form input[type="date"],
+	form.form input[type="month"],
+	form.form input[type="time"],
+	form.form input[type="week"],
+	form.form input[type="number"],
+	form.form input[type="email"],
+	form.form input[type="url"],
+	form.form input[type="search"],
+	form.form input[type="tel"],
+	form.form input[type="color"] {
+		width: 260px;
+		font-size: inherit;
+
+	}
+	
+	form.form .input-small {
+		width: 140px !important;
+	}
+	
+	form.form .input-medium {
+		width: 220px !important;
+	}
+	
+	form.form .input-large {
+		width: 320px !important;
+	}
+	
+	form.form .input-huge {
+		width: 100%;
+	}
+	
+	form.form.form-inline .btn {
+		float: left;
+		clear: none;
+	}
+	
+	form.form.form-inline input,
+	form.form.form-inline .btn {
+		margin-bottom: 0;
+	}
+	
+	form.form.form-horizontal .input-container label {
+		text-align: right;
+	}
+	
+	form.form.form-horizontal select {
+		display: inline-block;
+	}
+	
+	form.form.form-horizontal .input-container label {
+		float: left;
+		width: 16%;
+		margin-right: 20px;
+	}
+	
+	form.form.form-horizontal .btn-container {
+		margin-left: 16%;
+		padding-left: 20px;
+	}
+}

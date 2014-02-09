@@ -1,0 +1,99 @@
+a:focus,
+input:focus {
+	//outline: 1px solid @blue;
+}
+
+.lt-ie9 {
+	max-width: 1200px;
+	margin: 0 auto;
+}
+
+//.lt-ie9 .container {
+	//max-width: 760px;
+//}
+
+.lt-ie9 .switch input[type=checkbox] {
+	display: block !important;
+	position: relative !important;
+	left: auto;
+}
+
+.lt-ie9 .switch label {
+	display: none !important;
+}
+
+.lt-ie9 .switch {
+	background: none;
+}
+
+// Fix alpha transparency on banners in IE8
+.lt-ie9 .banners > li {
+	//background-color: #1a1a1a;
+	//border-bottom: 1px solid #383838;
+}
+
+.lt-ie9	form.form select,
+.lt-ie9	textarea,
+.lt-ie9	form.form input[type="text"],
+.lt-ie9	form.form input[type="password"],
+.lt-ie9	form.form input[type="datetime"],
+.lt-ie9	form.form input[type="datetime-local"],
+.lt-ie9	form.form input[type="date"],
+.lt-ie9	form.form input[type="month"],
+.lt-ie9	form.form input[type="time"],
+.lt-ie9	form.form input[type="week"],
+.lt-ie9	form.form input[type="number"],
+.lt-ie9	form.form input[type="email"],
+.lt-ie9	form.form input[type="url"],
+.lt-ie9	form.form input[type="search"],
+.lt-ie9	form.form input[type="tel"],
+.lt-ie9	form.form input[type="color"],
+.lt-ie9	form.form input[type="file"],
+.lt-ie9 form.form label {
+	width: 16em;
+}
+
+.lt-ie9 form.form.form-inline label,
+.lt-ie9 form.form.form-inline input {
+	width: auto;
+}
+
+.lt-ie9 form.form.form-inline .btn {
+	clear: none;
+}
+
+.lt-ie9 input[type="file"] {
+	border: 1px solid #b1b1b1;
+	background-color: @white;
+}
+
+.lt-ie9 .tbl.tbl-bordered {
+	border-bottom: 1px solid #dddddd;
+	border-right: 1px solid #dddddd;
+}
+
+// Elements with .lt-ie9-hidden are visible by default
+.lt-ie9-hidden {
+	display: inherit;
+}
+
+// Elements with .lt-ie9-hidden are hidden in IE8
+.lt-ie9 .lt-ie9-hidden {
+	display: none;
+}
+
+// Elements with .ie8 are not visible by default
+.ie8 {
+	display: none;
+}
+
+// In IE8, elements with .ie8 are only visible
+.lt-ie9 .ie8 {
+	display: inherit;
+}
+
+// Fix modal blackout. Disgusting.
+.lt-ie9 #blackout {
+	background-color: @black;
+	filter: alpha(opacity=90);
+}

@@ -1,0 +1,168 @@
+.link-list {
+	list-style: none;
+	padding: 5px 0 20px 0;
+}
+
+.link-list li.list-heading {
+	text-transform: uppercase;
+	font-size: 0.6em;
+	color: @disabled;
+	padding: 10px 20px 5px 20px;
+}
+
+.link-list li.list-heading:hover {
+	background: none;
+}
+
+.link-list li.divider {
+	margin: 10px 20px;
+	height: 1px;
+	background-color: #e1e1e1;
+	border-bottom: 1px solid #ffffff;
+	.box-sizing(content-box);
+}
+
+.link-list li a {
+	text-decoration: none;
+	color: @darkblue;
+	display: block;
+	padding: 0 20px;
+	font-size: 16px;
+}
+
+.link-list li a:hover,
+.link-list.link-list-blue li a:hover,
+.link-list.link-list-green li a:hover,
+.link-list.link-list-orange li a:hover,
+.link-list.link-list-red li a:hover,
+.link-list.link-list-purple li a:hover,
+.link-list.link-list-lime li a:hover,
+.link-list.link-list-dragonfruit li a:hover {
+	color: lighten(@black, 20%);
+	background-color: #e8e8e8;
+}
+
+.link-list li.active a {
+	color: @white;
+	background-color: lighten(@nav-dark-back, 18%);
+}
+
+.link-list li.active a:hover {
+	background-color: @nav-dark-hover;
+}
+
+
+
+// LINK LIST BLUE
+.link-list.link-list-blue li a {
+	color: darken(@blue, 20%);
+}
+
+.link-list.link-list-blue li.active a {
+	color: @white;
+	background-color: desaturate(@blue, 5%);
+}
+
+.link-list.link-list-blue li.active a:hover {
+	background-color: lighten(desaturate(@blue, 5%), 3%);
+}
+
+
+// LINK LIST GREEN
+.link-list.link-list-green li a {
+	color: darken(@green, 20%);
+}
+
+.link-list.link-list-green li.active a {
+	color: @white;
+	background-color: desaturate(@green, 5%);
+}
+
+.link-list.link-list-green li.active a:hover {
+	background-color: lighten(desaturate(@green, 5%), 3%);
+}
+
+
+// LINK LIST ORANGE
+.link-list.link-list-orange li a {
+	color: darken(@orange, 10%);
+}
+
+.link-list.link-list-orange li.active a {
+	color: @white;
+	background-color: desaturate(@orange, 5%);
+}
+
+.link-list.link-list-orange li.active a:hover {
+	background-color: lighten(desaturate(@orange, 5%), 3%);
+}
+
+
+
+// LINK LIST RED
+.link-list.link-list-red li a {
+	color: @red;
+}
+
+.link-list.link-list-red li.active a {
+	color: @white;
+	background-color: desaturate(@red, 5%);
+}
+
+.link-list.link-list-red li.active a:hover {
+	background-color: lighten(desaturate(@red, 5%), 3%);
+}
+
+
+
+// LINK LIST PURPLE
+.link-list.link-list-purple li a {
+	color: darken(@purple, 10%);
+}
+
+.link-list.link-list-purple li.active a {
+	color: @white;
+	background-color: desaturate(@purple, 5%);
+}
+
+.link-list.link-list-purple li.active a:hover {
+	background-color: lighten(desaturate(@purple, 5%), 3%);
+}
+
+
+
+// LINK LIST LIME
+.link-list.link-list-lime li a {
+	color: darken(@lime, 20%);
+}
+
+.link-list.link-list-lime li.active a {
+	color: @white;
+	background-color: desaturate(@lime, 5%);
+}
+
+.link-list.link-list-lime li.active a:hover {
+	background-color: lighten(desaturate(@lime, 5%), 3%);
+}
+
+
+
+// LINK LIST DRAGONFRUIT
+.link-list.link-list-dragonfruit li a {
+	color: darken(@dragonfruit, 10%);
+}
+
+.link-list.link-list-dragonfruit li.active a {
+	color: @white;
+	background-color: desaturate(@dragonfruit, 5%);
+}
+
+.link-list.link-list-dragonfruit li.active a:hover {
+	background-color: lighten(desaturate(@dragonfruit, 5%), 3%);
+}
+
+@media only screen and (min-width: 768px) {
+	.link-list li a {
+		font-size: inherit;
+	}
+}
