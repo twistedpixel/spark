@@ -98,8 +98,8 @@
 	color: #2b77a6;
 }
 
-.navigation nav .nav-container ul.nav-list li.active > a {
-	background-color: ;
+.navigation nav ul.nav-list li.active > a {
+	color: #2b77a6;
 }
 
 .navigation.nav-dark nav ul.nav-list li.dd-container li > a:hover,
@@ -150,6 +150,10 @@
 	background-color: @nav-light-back;
 }
 
+.navigation.nav-light nav ul.nav-list li.active > a {
+	color: inherit;
+	background-color: lighten(@nav-light-back, 5%);
+}
 
 
 /* nav-dark */
@@ -197,6 +201,11 @@
 
 .navigation.nav-dark nav ul.nav-list li.dd-container > a:hover {
 	background-color: transparent;
+}
+
+.navigation.nav-dark nav ul.nav-list li.active > a {
+	color: @white;
+	background-color: @nav-dark-hover;
 }
 
 .navigation nav .name h1 {
