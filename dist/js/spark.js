@@ -18,6 +18,7 @@ $(document).ready(function () {
 			$('.nav-list').css({"height": "0"})
 			nav = false
 		}
+		return false;
 	})
 	
 	// Accessibility fix for navigation menu dropdowns
