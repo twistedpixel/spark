@@ -9,13 +9,13 @@
 
 .clearfix:after,
 .container:after {
-	content: '';
 	display: block;
-	overflow: hidden;
-	visibility: hidden;
+	content: '';
 	width: 0;
 	height: 0;
 	clear: both;
+	overflow: hidden;
+	visibility: hidden;
 }
 
 .hidden {
@@ -74,19 +74,19 @@ img.float-left {
 }
 
 .note {
+	margin-bottom: 20px;
 	font-size: 0.8em;
 	line-height: 1.8em;
 	text-align: left !important;
-	margin-bottom: 20px;
 }
 
 .note:before {
+	margin-right: 6px;
+	padding: 2px 3px 3px 5px;
 	content: 'note :';
 	background-color: #e32376;
 	color: @white;
-	padding: 2px 3px 3px 5px;
 	.border-radius(3px);
-	margin-right: 6px;
 }
 
 .shadow {
@@ -98,11 +98,11 @@ img.float-left {
 }
 
 .well {
-	background-color: #f9f9f9;
 	margin-bottom: 20px;
+	background-color: #f9f9f9;
+	border: 1px solid #c8c8c8;
 	.border-radius(4px);
 	//.box-shadow(inset, 0, 0, 3px, 0, rgba(0,0,0,.4));
-	border: 1px solid #c8c8c8
 }
 
 .well.well-light {
@@ -135,21 +135,21 @@ img.float-left {
 }
 
 .paginate ul li {
-	float: left;
 	margin-right: 4px;
 	margin-bottom: 0;
+	float: left;
 }
 
 .paginate ul li a {
 	display: inline-block;
+	padding: 5px 10px;
 	border: solid 1px #afafaf;
 	color: @black;
-	padding: 5px 10px;
-	.border-radius(2px);
 	-webkit-background-size: 100% 190%;
 	   -moz-background-size: 100% 190%;
 	   		background-size: 100% 190%;
-	box-shadow: inset 0px 1px 0px rgba(255,255,255, .8), 0 1px 3px rgba(0,0,0, .15);
+	.box-shadow(~'', 0, 1px, 3px, 0, rgba(0,0,0, .15));
+	.border-radius(2px);
     .linear-gradient(top, @white, darken(@white, 12%), 100%, lighten(@silver, 6%));
     .transition(background, .1s);
 }
@@ -170,20 +170,20 @@ img.float-left {
 .paginate.paginate-dark ul li a {
 	border: solid 1px #32373b;
 	color: @white;
-	box-shadow: inset 0px 1px 1px rgba(255,255,255, .3), 0px 1px 3px rgba(0,0,0, .1);
+	.box-shadow-double(inset, 0, 1px, 1px, 0, rgba(255,255,255, .3), ~'', 0, 1px, 3px, 0, rgba(0,0,0, .1));
     .linear-gradient(top, #6d767d, darken(#4a5055, 15%), 100%, #4a5055);
     //.transition(background, .1s);
 }
 
 .paginate ul li.paginate-current a,
 .paginate.paginate-dark > ul > li.paginate-current > a {
+	padding: 6px 10px;
 	border: none;
 	background: #494949;
-    box-shadow: inset 0px 0px 8px rgba(0,0,0, .5), 0px 1px 0px rgba(255,255,255, .25);
     color: @white;
     text-shadow: 0px 0px 3px rgba(0,0,0, .5);
     .border-radius(2px);
-    padding: 6px 10px;
+    .box-shadow-double(inset, 0, 0, 8px, 0, rgba(0,0,0, .5), ~'', 0, 1px, 0, 0, rgba(255,255,255, .25));
 }
 
 .paginate.paginate-dark ul li.paginate-current a {
@@ -206,8 +206,8 @@ img.float-left {
 
 .paginate.paginate-dark.paginate-flat ul li a {
 	background: #464646;
-	.box-shadow-none();
 	border: 1px solid #464646;
+	.box-shadow-none();
 }
 
 .paginate.paginate-dark.paginate-flat ul li a:hover {
@@ -249,9 +249,9 @@ img.float-left {
 // TABLES
 
 .tbl {
+	margin-bottom: 20px;
 	width: 100%;
 	border-collapse: separate;
-	margin-bottom: 20px;
 }
 
 .tbl tr td {
@@ -278,7 +278,6 @@ img.float-left {
 
 .tbl tr th {
 	text-align: left;
-	//background-color: rgba(69,69,69,1);
 	background-color: #d4d6d9;
 	color: @black;
 }
@@ -379,11 +378,11 @@ img.float-left {
 .spacer150,
 .spacer200,
 .spacer300 {
-	width: 100%;
-	font-size: 0;
-	margin: 0;
-	padding: 0;
-	border: 0;
 	display: block;
 	clear: both;
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	font-size: 0;
+	border: 0;
 }
