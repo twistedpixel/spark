@@ -23,17 +23,17 @@
 }
 
 .navigation nav ul {
-	list-style: none;
 	padding-left: 0;
+	list-style: none;
 }
 
 .navigation nav ul.nav-list {
 	display: block;
 	height: 0;
-	overflow: hidden;
 	margin-left: -@left-gutter;
 	margin-right: -@right-gutter;
 	clear: both;
+	overflow: hidden;
 	.transition(height, 0.3s);
 }
 
@@ -42,11 +42,11 @@
 }
 
 .navigation nav ul.nav-brand li.name a {
+	display: inline-block;
+	padding: 0 0 0 0;
 	color: @nav-basic;
 	line-height: 2em;
-	font-size: 120%;
-	padding: 0 0 0 0;
-	display: inline-block;
+	font-size: 120%;	
 }
 
 .navigation.nav-dark nav ul.nav-brand li.name a {
@@ -54,11 +54,11 @@
 }
 
 .navigation nav ul.nav-list li a {
-	text-decoration: none;
 	display: block;
 	padding: 10px 20px 10px 20px;
 	font-weight: 400;
 	line-height: 1.5;
+	text-decoration: none;
 }
 
 .navigation nav ul.nav-list li:last-child a {
@@ -66,8 +66,9 @@
 }
 
 .navigation nav ul.dd {
-	list-style: none;
 	padding-left: 16px;
+	min-width: 140px;
+	list-style: none;
 	overflow: hidden;
 }
 
@@ -209,9 +210,9 @@
 }
 
 .navigation nav .name h1 {
+	margin: 0;
 	font-size: 16px;
 	line-height: 1.4em;
-	margin: 0;
 }
 
 .navigation nav .name h1 a {
@@ -226,11 +227,11 @@
 	
 	.navigation nav {
 		display: block !important;
-		border: none;
 		height: auto;
 		clear: none;
 		margin-left: 0;
 		margin-right: 0;
+		border: none;
 	}
 	
 	.navigation nav .nav-container {
@@ -249,10 +250,10 @@
 	
 	.navigation nav ul.nav-list {
 		display: block !important;
-		height: auto !important;
-		overflow: visible;
 		margin: 0;
 		clear: none;
+		height: auto !important;
+		overflow: visible;
 	}
 	
 	.navigation.nav-right nav ul.nav-list {
@@ -268,9 +269,14 @@
 	}
 	
 	.navigation nav ul.nav-list > li a {
-		background-color: transparent;
 		float: left;
 		border: none;
+		background-color: transparent;
+	}
+	
+	// Only top level
+	.navigation nav ul.nav-list > li > a {
+		.transition(background, .1s, ease-in);
 	}
 	
 	.navigation nav li.dd-container ul.dd li {
@@ -301,10 +307,10 @@
 		width: 100%;
 		top: 50px;
 		left: 0;
-		background-color: transparent;
 		display: none;
 		overflow: visible;
 		padding-left: 0;
+		background-color: transparent;
 		.border-radius(3px);
 		.box-shadow(~'', 0, 0, 3px, 0, rgba(0,0,0, .2));
 	}
