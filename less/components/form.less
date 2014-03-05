@@ -13,20 +13,18 @@ form.form input[type="url"],
 form.form input[type="search"],
 form.form input[type="tel"],
 form.form input[type="color"] {
-	margin: 0 0 8px 0;
-	font-size: 16px;
 	display: block;
-	border: 1px solid #b1b1b1;
+	margin: 0 0 8px 0;
 	padding: 4px 4px 5px 4px;
 	width: 100%;
-	
+	font-size: 16px;
+	border: 1px solid #b1b1b1;
 	.appearance(none);
 	.border-radius(3px);
 }
 
 form.form input[type="file"] {
 	padding: 4px 4px 5px 4px;
-	
 }
 
 form.form select:focus,
@@ -47,8 +45,8 @@ form.form input[type="tel"]:focus,
 form.form input[type="color"]:focus,
 form.form input[type="file"]:focus,
 form.form button:focus {
-	border: 1px solid #313131;
 	outline: none;
+	border: 1px solid #313131;
 }
 
 form.form .input-container,
@@ -79,13 +77,13 @@ form.form label {
 }
 
 form.form select {
-	font-size: 16px;
-	margin-top: 3px;
 	display: block;
-	border: 1px solid #b1b1b1;
+	margin-top: 3px;
 	padding: 4px 4px 5px 4px;
 	width: auto;
 	max-width: 100%;
+	font-size: 16px;
+	border: 1px solid #b1b1b1;
 	.border-radius(3px);
 }
 
@@ -116,13 +114,13 @@ form.form.form-inline input[type="color"],
 form.form.form-inline input[type="file"],
 form.form.form-inline .input-container {
 	display: inline-block;
-	float: left;
 	margin-right: 10px;
+	float: left;
 }
 
 form.form input[type="file"] {
-	font-size: 10px;
 	max-width: 140px;
+	font-size: 10px;
 }
 
 form.form.form-inline .input-container label {
@@ -130,8 +128,8 @@ form.form.form-inline .input-container label {
 }
 
 form.form.form-inline label {
-	float: left;
 	margin-right: 10px;
+	float: left;
 }
 
 form.form.form-inline label input[type="checkbox"] {
@@ -162,8 +160,12 @@ form.form.form-horizontal input[type="radio"] {
 	margin-bottom: 0;
 }
 
+form.form .input-tiny {
+	width: 36px;
+}
+
 form.form .input-small {
-	width: 50%;
+	width: 40%;
 }
 
 form.form .input-medium {
@@ -205,7 +207,6 @@ form.form .input-huge {
 	form.form input[type="color"] {
 		width: 260px;
 		font-size: inherit;
-
 	}
 	
 	form.form .input-small {
@@ -243,9 +244,9 @@ form.form .input-huge {
 	}
 	
 	form.form.form-horizontal .input-container label {
+		margin-right: 20px;
 		float: left;
 		width: 16%;
-		margin-right: 20px;
 	}
 	
 	form.form.form-horizontal .btn-container {
