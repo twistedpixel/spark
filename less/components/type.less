@@ -10,29 +10,29 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-	font-size: 300%; //36px equiv at 14px base
-	font-weight: 900;
 	margin-top: 0;
 	margin-bottom: 24px;
+	font-size: 300%; //42px equiv at 14px base
+	font-weight: 900;
 }
 
 h2 {
-	font-size: 250%; //27px equiv at 14px base
 	margin-top: 40px;
+	font-size: 250%; //35px equiv at 14px base
 }
 
 h2, h3, h4, h5, h6 {
-	font-weight: 700;
 	margin-bottom: 24px;
+	font-weight: 700;	
 }
 
 h3 {
-	font-size: 200%; //21px equiv at 14px base
 	margin-top: 40px;
+	font-size: 200%; //28px equiv at 14px base
 }
 
 h4 {
-	font-size: 180%; //nnpx equiv at 14px base
+	font-size: 180%; //25px equiv at 14px base
 }
 
 h5 {
@@ -40,7 +40,7 @@ h5 {
 }
 
 h6 {
-	font-size: 110%; //nnpx equiv at 14px base
+	font-size: 110%; //15px equiv at 14px base
 }
 
 .skinny-headings h1,
@@ -75,7 +75,7 @@ h2 span.alt,
 h3 span.alt,
 h4 span.alt {
 	font-size: 90%;
-	font-weight: 400;
+	font-weight: inherit;
 	color: #b7b7b7;
 }
 
@@ -114,21 +114,17 @@ h6.page-heading {
 }
 
 p {
-	text-align: justify;
-	color: @copy-color;
 	margin-top: 0;
 	margin-bottom: 20px;
-}
-
-p:last-child {
-	//margin-bottom: 0;
+	text-align: justify;
+	color: @copy-color;
 }
 
 p.leading {
-	font-size: 170%;
-	font-weight: 200;
 	margin-top: 0;
 	margin-bottom: 20px;
+	font-size: 170%;
+	font-weight: 200;
 }
 
 a {
@@ -144,10 +140,10 @@ a:hover {
 }
 
 .underlined:after {
-	content: '';
 	display: block;
 	margin-top: 14px;
 	height: 1px;
+	content: '';
 	background-color: #eeeeee;
 }
 
@@ -177,7 +173,6 @@ a:hover {
 small,
 .small {
 	font-size: 80%;
-	color: @copy-color;
 }
 
 .text-shadow {
@@ -194,20 +189,20 @@ small,
 
 h1.herotype,
 h2.herotype {
+	margin-bottom: 20px;
 	color: @darkergray;
 	letter-spacing: -0.07em;
 	line-height: 0.8em;
-	margin-bottom: 20px;
 }
 
 h3.herotype,
 h4.herotype,
 h5.herotype,
 h6.herotype {
+	margin-bottom: 10px;
 	color: @darkergray;
 	letter-spacing: -0.07em;
 	line-height: 0.8em;
-	margin-bottom: 10px;
 }
 
 .left {
@@ -234,7 +229,6 @@ blockquote.bq {
 	margin: 20px 0;
 	border-left: 5px solid #c3c3c3;
 	padding: 12px 20px;
-	
 	font-size: 150%;
 	font-weight: 200;
 	line-height: 1.2;	
@@ -267,8 +261,8 @@ blockquote.bq.alt.right {
 }
 
 blockquote.bq small {
-	color: #878787;
-	font-size: 60%;
-	margin-top: 10px;
 	display: block;
+	margin-top: 10px;
+	color: #878787;
+	font-size: 60%;	
 }
