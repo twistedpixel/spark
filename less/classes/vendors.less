@@ -97,12 +97,12 @@
 		  	transition: @what @length @easing @delay;
 }
 
-.transition-none() {
-	-webkit-transition: none;
-	   -moz-transition: none;
-	   	-ms-transition: none;
-	     -o-transition: none;
-		  	transition: none;
+.transition-none(@x: '') {
+	-webkit-transition: none @x;
+	   -moz-transition: none @x;
+	   	-ms-transition: none @x;
+	     -o-transition: none @x;
+		  	transition: none @x;
 }
 
 .transform(@params) {

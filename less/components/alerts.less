@@ -2,9 +2,9 @@
 
 .alert {
 	position: relative;
+	margin-bottom: 20px;
 	padding: 10px 30px 10px 20px;
 	background-color: #ebebeb;
-	margin-bottom: 20px;
 	border: 1px solid @silver;
 	.border-radius(3px);
 	.linear-gradient(top, @white, darken(@white, 4%), 100%, lighten(@silver, 6%));
@@ -54,21 +54,21 @@
 }
 
 .alert.warning-light:before {
+	float: left;
+	margin-right: 10px;
+	margin-bottom: 10px;
 	font-family: "FontAwesome";
 	color: @white;
 	content: '\f071';
-	float: left;
-	margin-right: 10px;
-	margin-bottom: 10px;
 }
 
 .alert.warning-dark:before {
-	font-family: "FontAwesome";
-	color: @darkgray;
-	content: '\f071';
 	float: left;
 	margin-right: 10px;
 	margin-bottom: 10px;
+	font-family: "FontAwesome";
+	color: @darkgray;
+	content: '\f071';
 }
 
 .alert:empty {
@@ -130,16 +130,17 @@
 }
 
 .banners li {
+	display: none;
+	margin: 0;
+	padding: 6px 60px 6px 40px;
 	font-size: 0.8em;
 	line-height: 1.8;
 	color: @white;
-	padding: 6px 60px 6px 40px;
-	margin: 0;
 	background-color: #1a1a1a;
 	opacity: .85;
 	border-bottom: 1px solid #383838;
 	border-bottom: 1px solid rgba(255,255,255,.1);
-	display: none;
+	
 }
 
 .banners li:last-child {
@@ -147,10 +148,10 @@
 }
 
 .banners li a {
-	color: @white;
-	text-decoration: none;
 	position: absolute;
 	right: 34px;
+	color: @white;
+	text-decoration: none;
 }
 
 .banners li a:hover {
@@ -268,48 +269,49 @@
 
 .badge.badge-blue {
 	color: @white;
-	.linear-gradient(top, @blue, darken(@blue, 20%), 100%, @blue);
 	border: 1px solid darken(@blue, 30%);
+	.linear-gradient(top, @blue, darken(@blue, 20%), 100%, @blue);
+
 }
 
 .badge.badge-green {
 	color: @white;
-	.linear-gradient(top, @green, darken(@green, 20%), 100%, @green);
 	border: 1px solid darken(@green, 30%);
+	.linear-gradient(top, @green, darken(@green, 20%), 100%, @green);
 }
 
 .badge.badge-orange {
 	color: @white;
-	.linear-gradient(top, @orange, darken(@orange, 20%), 100%, @orange);
 	border: 1px solid darken(@orange, 30%);
+	.linear-gradient(top, @orange, darken(@orange, 20%), 100%, @orange);
 }
 
 .badge.badge-red {
 	color: @white;
-	.linear-gradient(top, @red, darken(@red, 20%), 100%, @red);
 	border: 1px solid darken(@red, 30%);
+	.linear-gradient(top, @red, darken(@red, 20%), 100%, @red);
 }
 
 .badge.badge-purple {
 	color: @white;
-	.linear-gradient(top, @purple, darken(@purple, 20%), 100%, @purple);
 	border: 1px solid darken(@purple, 30%);
+	.linear-gradient(top, @purple, darken(@purple, 20%), 100%, @purple);
 }
 
 .badge.badge-lime {
 	color: @white;
-	.linear-gradient(top, @lime, darken(@lime, 20%), 100%, @lime);
 	border: 1px solid darken(@lime, 30%);
+	.linear-gradient(top, @lime, darken(@lime, 20%), 100%, @lime);
 }
 
 .badge.badge-dragonfruit {
 	color: @white;
-	.linear-gradient(top, @dragonfruit, darken(@dragonfruit, 20%), 100%, @dragonfruit);
 	border: 1px solid darken(@dragonfruit, 30%);
+	.linear-gradient(top, @dragonfruit, darken(@dragonfruit, 20%), 100%, @dragonfruit);
 }
 
 .badge.badge-flat {
+	padding: 1px 6px;
 	border: none;
 	background-image: none;
-	padding: 1px 6px;
 }

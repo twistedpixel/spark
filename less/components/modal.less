@@ -1,6 +1,6 @@
 .modal {
+	display: none;
 	position: fixed;
-	background-color: transparent;
 	top: 0;
 	right: 0;
 	left: 0;
@@ -8,26 +8,26 @@
 	margin-right: auto;
 	width: 100%;
 	max-height: 100%;
+	z-index: 9000;
 	opacity: 0;
-	display: none;
 	overflow: auto;
 	overflow-y: scroll;
+	background-color: transparent;
 	.transition(all, .4s, ease-in-out);
-	z-index: 9000;
 }
 
 .modal.modal-static {
 	position: relative;
 	top: inherit;
 	display: inherit;
-	opacity: 1;
 	width: 100%;
 	z-index: inherit;
+	opacity: 1;
 }
 
 .modal .head {
-	overflow: auto;
 	padding: 10px 20px;
+	overflow: auto;
 	background-color: #f4f4f4;
 	border-bottom: 1px solid lighten(@modal-border, 12%);
 }
@@ -46,16 +46,16 @@
 }
 
 .modal .body {
-	overflow: auto;
 	padding: 20px 20px 10px 20px;
+	overflow: auto;
 	background-color: @white;
 }
 
 .modal .foot {
+	padding: 10px 20px;
 	overflow: auto;
 	color: @white;
 	font-size: 80%;
-	padding: 10px 20px;
 	background-color: @modal-foot;
 }
 
@@ -73,21 +73,21 @@
 }
 
 .modal-show {
-	opacity: 1;
 	top: 60px;
+	opacity: 1;
 }
 
 #blackout {
+	display: none;
 	position: absolute;
 	top: 0;
 	left: 0;
 	height: 100%;
 	width: 100%;
+	z-index: 8000;
+	opacity: 0;
 	background-color: rgba(0,0,0,.8);
 	.transition(all, .4s, ease-in-out);
-	display: none;
-	opacity: 0;
-	z-index: 8000;
 }
 
 #blackout.show {
@@ -102,7 +102,6 @@
 	}
 	
 	.modal .head {
-		//border: 1px solid @modal-border;
 		.border-radius-corners(4px, 4px, 0, 0);
 	}
 	
