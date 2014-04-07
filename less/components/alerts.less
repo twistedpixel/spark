@@ -252,15 +252,16 @@
 }
 
 .badge {
-	padding: 0 4px;
-	width: 12px;
+	font-size: 11px;
+	padding: 4px 7px;
 	text-align: center;
+	white-space: nowrap;
+	vertical-align: baseline;
 	border: 1px solid darken(#fefefe, 30%);
-	font-family: "Helvetica Neue";
 	font-weight: 400;
 	line-height: 0;
 	.linear-gradient(top, #fefefe, darken(#fefefe, 10%), 100%, darken(#fefefe, 13%));
-	.border-radius(1em);
+	.border-radius(20px);
 }
 
 .badge:empty {
@@ -311,7 +312,6 @@
 }
 
 .badge.badge-flat {
-	padding: 1px 6px;
 	border: none;
 	background-image: none;
 }
