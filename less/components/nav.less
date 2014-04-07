@@ -398,6 +398,21 @@
 		.border-radius-corners(0, 0, 3px, 3px);
 	}
 	
+	.navigation nav ul.nav-list > li > ul.dd li.dd-container:last-child:hover,
+	.navigation nav ul.nav-list > li > ul.dd li.dd-container:last-child:hover > a {
+		.border-radius-corners(0, 0, 0, 3px);
+	}
+
+	.navigation nav ul.nav-list > li > ul.dd ul.dd li:only-child,
+	.navigation nav ul.nav-list > li > ul.dd ul.dd li:only-child > a {
+		.border-radius-corners(0, 3px, 3px, 0);
+	}
+	
+	.navigation nav ul.nav-list > li > ul.dd > li:only-child,
+	.navigation nav ul.nav-list > li > ul.dd > li:only-child > a {
+		.border-radius(3px);
+	}
+	
 	.navigation nav ul.dd ul.dd {
 		left: 100%;
 		top: 0;
