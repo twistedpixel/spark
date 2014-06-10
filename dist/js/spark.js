@@ -4,10 +4,10 @@ $(document).ready(function () {
 	var nav = false
 	var selector = 'nav#primary-nav .nav-list > li'
 	
-	$('.nav-link').click(function() {
+	$('.nav-link').on('click', function() {
 		var height = 0
 		$(selector).each(function(){
-			height += parseInt($( this ).css('height'))
+			height += parseInt($(this).css('height'))
 		})
 
 		if(nav == false) {
@@ -22,20 +22,20 @@ $(document).ready(function () {
 	})
 	
 	// Accessibility fix for navigation menu dropdowns
-	$(".dd-container a").focus(function() {
+	$(".dd-container a").on('focus', function() {
 		$(this).parent('li.dd-container').addClass('open')
-	}).blur(function() {
+	}).on('blur', function() {
 		$(this).parent('li.dd.container').removeClass('open')
 	})
 	
 	// Close button for alerts
-	$('.alert .alert-close').click(function() {
+	$('.alert .alert-close').on('click', function() {
 		$(this).parent().remove();
 		return false;
 	})
 	
 	// Modal open trigger
-	$('.modal-trigger:not(.modal-static)').click(function() {
+	$('.modal-trigger:not(.modal-static)').on('click', function() {
 		modal = $('#' + $(this).data('modal-trigger'));
 		modal.css({'display':'inherit'});
 		$('#blackout').css({'display':'block'});
@@ -46,7 +46,7 @@ $(document).ready(function () {
 	});
 	
 	// Modal close trigger
-	$('.modal-close-trigger').click(function() {
+	$('.modal-close-trigger').on('click', function() {
 		modal = $('#' + $(this).data('modal-trigger'));
 		modal.removeClass('modal-show');
 		$('#blackout').removeClass('show');
