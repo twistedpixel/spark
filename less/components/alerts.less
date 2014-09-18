@@ -2,55 +2,55 @@
 
 .alert {
 	position: relative;
-	margin-bottom: 20px;
 	padding: 10px 30px 10px 20px;
-	background-color: #ebebeb;
-	border: 1px solid @silver;
-	.border-radius(3px);
-	.linear-gradient(top, @white, darken(@white, 4%), 100%, lighten(@silver, 6%));
+	background-color: @silver;
+	color: @black;
+	border-bottom: 1px dashed @white;
+	border-bottom-color: rgba(255, 255, 255, .8);
 }
 
-.alert.alert-blue {
-	border: 1px solid darken(@blue, 20%);
+.alert.blue {
 	color: @white;
-	.linear-gradient(top, @blue, darken(@blue, 4%), 100%, @blue);
+	background-color: @blue;
 }
 
-.alert.alert-green {
-	border: 1px solid darken(@green, 20%);
-	.linear-gradient(top, @green, darken(@green, 4%), 100%, @green);
-}
-
-.alert.alert-orange,
-.alert.alert-warning {
-	border: 1px solid darken(@orange, 20%);
+.alert.green {
 	color: @white;
-	.linear-gradient(top, @orange, darken(@orange, 4%), 100%, @orange);
+	background-color: @green;
 }
 
-.alert.alert-red,
-.alert.alert-error {
-	border: 1px solid darken(@red, 20%);
+.alert.orange {
 	color: @white;
-	.linear-gradient(top, @red, darken(@red, 4%), 100%, @red);
+	background-color: @orange;
 }
 
-.alert.alert-purple {
-	border: 1px solid darken(@purple, 20%);
+.alert.red {
 	color: @white;
-	.linear-gradient(top, @purple, darken(@purple, 4%), 100%, @purple);
+	background-color: @red;
 }
 
-.alert.alert-lime,
-.alert.alert-success {
-	border: 1px solid darken(@lime, 20%);
-	.linear-gradient(top, @lime, darken(@lime, 4%), 100%, @lime);
-}
-
-.alert.alert-dragonfruit {
-	border: 1px solid darken(@dragonfruit, 20%);
+.alert.purple {
 	color: @white;
-	.linear-gradient(top, @dragonfruit, darken(@dragonfruit, 4%), 100%, @dragonfruit);
+	background-color: @purple;
+}
+
+.alert.lime {
+	color: @white;
+	background-color: @lime;
+}
+
+.alert.dragonfruit {
+	color: @white;
+	background-color: @dragonfruit;
+}
+
+.alert.cosmic {
+	color: @white;
+	background-color: @cosmic;
+}
+
+.alert:last-of-type {
+	border: none;
 }
 
 .alert.warning-light:before {
@@ -136,8 +136,8 @@
 	font-size: 0.8em;
 	line-height: 1.8;
 	color: @white;
-	background-color: #1a1a1a;
-	opacity: .85;
+	background-color: #4a4a4a;
+	opacity: .90;
 	border-bottom: 1px solid #383838;
 	border-bottom: 1px solid rgba(255,255,255,.1);
 	
@@ -202,6 +202,9 @@
 // BANNER RED
 
 .banners.banners-red li {
+	//background-color: #ea3957;
+	//background-color: saturate(mix(@red, rgba(255,0,141,1), 80%), 10%);
+	background-color: saturate(@red, 100);
 	background-color: @red;
 }
 
