@@ -1,33 +1,24 @@
 html {
 	font: 14px/1.5 "Helvetica Neue", Helvetica, Arial, sans-serif;
-	// Calm down, doctor! Now is not the time for Helvetica Neue Light. That comes later.
-	//font: 14px/1.5 "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 h1, h2, h3, h4, h5, h6 {
+	font-weight: 200;
 	line-height: 1.2em;
 	color: #404040;
 }
 
 h1 {
-	margin-top: 0;
-	margin-bottom: 24px;
+	margin: 20px 0;
 	font-size: 300%; //42px equiv at 14px base
-	font-weight: 900;
 }
 
 h2 {
-	margin-top: 40px;
+	margin: 20px 0;
 	font-size: 250%; //35px equiv at 14px base
 }
 
-h2, h3, h4, h5, h6 {
-	margin-bottom: 24px;
-	font-weight: 700;	
-}
-
 h3 {
-	margin-top: 40px;
 	font-size: 200%; //28px equiv at 14px base
 }
 
@@ -43,13 +34,8 @@ h6 {
 	font-size: 110%; //15px equiv at 14px base
 }
 
-.skinny-headings h1,
-.skinny-headings h2,
-.skinny-headings h3,
-.skinny-headings h4,
-.skinny-headings h5,
-.skinny-headings h6 {
-	font-weight: 200;
+h3, h4, h5, h6 {
+	margin: 14px 0;
 }
 
 .super-skinny-headings h1,
@@ -57,31 +43,58 @@ h6 {
 .super-skinny-headings h3,
 .super-skinny-headings h4,
 .super-skinny-headings h5,
-.super-skinny-headings h6 {
+.super-skinny-headings h6,
+h1.super-skinny,
+h2.super-skinny,
+h3.super-skinny,
+h4.super-skinny,
+h5.super-skinny,
+h6.super-skinny,
+.super-skinny {
 	font-weight: 100;
 }
 
+.heavy-headings h1,
+.heavy-headings h2,
+.heavy-headings h3,
+.heavy-headings h4,
+.heavy-headings h5,
+.heavy-headings h6,
 h1.heavy,
 h2.heavy,
 h3.heavy,
 h4.heavy,
 h5.heavy,
-h6.heavy {
-	font-weight: 700;
+h6.heavy,
+.heavy {
+	font-weight: 500;
+}
+
+.heavier-headings h1,
+.heavier-headings h2,
+.heavier-headings h3,
+.heavier-headings h4,
+.heavier-headings h5,
+.heavier-headings h6,
+h1.heavier,
+h2.heavier,
+h3.heavier,
+h4.heavier,
+h5.heavier,
+h6.heavier,
+.heavier {
+	font-weight: 900;
 }
 
 h1 span.alt,
 h2 span.alt,
 h3 span.alt,
-h4 span.alt {
-	font-size: 90%;
-	font-weight: inherit;
-	color: #9b9b9b;
-}
-
+h4 span.alt,
 h5 span.alt,
 h6 span.alt {
-	color: #b7b7b7;
+	font-size: 85%;
+	font-weight: inherit;
+	color: #9b9b9b;
 }
 
 .page-heading {
@@ -94,10 +107,7 @@ h6 span.alt {
 	padding: 0;
 }
 
-h1.page-heading {
-	margin-bottom: 36px;
-}
-
+// Prevent unnecessary margins
 .col h1:first-child,
 .col h2:first-child,
 .col h3:first-child,
@@ -110,7 +120,7 @@ h3.page-heading,
 h4.page-heading,
 h5.page-heading,
 h6.page-heading {
-	margin-top: 0;
+	//margin-top: 0;
 }
 
 p {
@@ -130,13 +140,27 @@ p.leading {
 a {
 	padding: 0;
 	margin: 0;
-	color: @darkblue;
+	color: @link-color;
 	text-decoration: none;
 }
 
+
+a:link {
+	color: @link-color;
+	text-decoration: none;
+}
+
+a:focus,
+a:active {
+	color: @link-focus-color;
+}
+
+a:visited {
+	color: @link-visited-color;
+}
+
 a:hover {
-	color: lighten(@darkblue, 10%);
-	text-decoration: underline;
+	color: @link-hover-color;
 }
 
 .underlined:after {
@@ -150,7 +174,7 @@ a:hover {
 .hero p,
 .hero-edgeless p {
 	font-size: 120%;
-	font-weight: lighter;
+	font-weight: 200;
 }
 
 .hero h1,
@@ -160,14 +184,6 @@ a:hover {
 .hero h5,
 .hero h6 {
 	margin-top: 0;
-}
-
-.skinny {
-	font-weight: 200 !important;
-}
-
-.super-skinny {
-	font-weight: 100 !important;
 }
 
 small,
@@ -184,7 +200,7 @@ small,
 }
 
 .disabled {
-	color: #aeaeae;
+	color: @disabled !important;
 }
 
 h1.herotype,
@@ -215,14 +231,6 @@ h6.herotype {
 
 .center {
 	text-align: center;
-}
-
-.white {
-	color: @white !important;
-}
-
-.black {
-	color: @black !important;
 }
 
 blockquote.bq {
@@ -267,34 +275,46 @@ blockquote.bq small {
 	font-size: 60%;	
 }
 
-.silver {
-	color: @silver !important;
+body .black {
+	color: @black;
 }
 
-.blue {
-	color: @blue !important;
+body .white {
+	color: @white;
 }
 
-.green {
-	color: @green !important;
+body .silver {
+	color: @silver;
 }
 
-.orange {
-	color: @orange !important;
+body .blue {
+	color: @blue;
 }
 
-.red {
-	color: @red !important;
+body .green {
+	color: @green;
 }
 
-.purple {
-	color: @purple !important;
+body .orange {
+	color: @orange;
 }
 
-.lime {
-	color: @lime !important;
+body .red {
+	color: @red;
 }
 
-.dragonfruit {
-	color: @dragonfruit !important;
+body .purple {
+	color: @purple;
+}
+
+body .lime {
+	color: @lime;
+}
+
+body .dragonfruit {
+	color: @dragonfruit;
+}
+
+body .cosmic {
+	color: @cosmic;
 }
