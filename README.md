@@ -2,9 +2,9 @@
 
 Spark is a lightweight, responsive, front-end web design framework with multiple colors and styles.
 
-## Styles</h2>
-The framework comes prebuilt with several color themes that are interchangeable, in both shiny and flat styles.
-Currently, the base colors are __silver__ (default), __blue__, __green__, __orange__, __red__, __purple__, __lime__ and __dragonfruit__.
+## Styles
+The framework comes pre-baked with several color themes that are interchangeable.
+Currently, the base colors are __silver__ (default), __blue__, __green__, __orange__, __red__, __purple__, __lime__,  __dragonfruit__ and new to v2.0: __cosmic__.
 
 ## Nonintrusive
 Spark is what we like to call nonintrusive. When you include the css/js files in the head of your HTML file, by default with no extra classes it styles only the bare necessities like font families/weights/sizes/colors, resets etc. While it may require slightly more markup than other frameworks to use theme elements, it's much easier to customize elements with the default all-in Spark rather than having to call big long selector lists to override. And that's why we started it.
