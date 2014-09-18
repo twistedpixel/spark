@@ -1,52 +1,56 @@
-//********** ********** GENERAL COLORS ********** **********/
+//********** ********** General Colors ********** **********/
 @white: #ffffff;
 @black: #222222;
 
-@darkblue: #3a586a;
-@darkergray: #292929;
 @lightgray: #999999;
 @darkgray: #4a4a4a;
 @darkergray: #404040;
-@silver: #e1e1e1;
-@green: #71ed9d;
-@blue: #6cc7fc;
-@orange: #fca26c;
-@red: #ff526a;
-@purple: #b07dfc;
-@dragonfruit: #ff649b;
-@dragonfruit-alt: #ff5e97;
-@lime: #9ff267;
+@link-color: @cosmic;
+@link-hover-color: lighten(@link-color, 30%);
+@link-focus-color: lighten(@link-color, 10%);
+@link-visited-color: lighten(@link-color, 10%);
 
 
+//********** ********** Theme Colors ********** **********/
 
-//********** ********** SPECIAL COLORS ********** **********/
+@silver: #e7e7e7;
+@blue: #65b3d4;
+@green: #65d49f;
+@orange: saturate(lighten(#d48e6a, 7%), 36%);
+//@red: #d16565;
+@red: #e7637f;
+@purple: #d165b3;
+@lime: #7cd165;
+@dragonfruit: #d16585;
+@cosmic: #82576C;
 
-//@disabled: #878787;
+
+//********** ********** Special Colors ********** **********/
+
 @disabled: #aeaeae;
 @copy-color: #404040;
 @modal-link: #a3cbdd;
 @modal-foot: #545454;
 @modal-border: #bfbfbf;
 
-//********** ********** NAVIGATION ********** **********/
+//********** ********** Navigation ********** **********/
 
-// BASIC
+@nav-brand-color: #484848;
+
+// Basic
 @nav-basic: #222222;
-@nav-basic-hover: #00a2ff;
+@nav-basic-hover: #c4c4c4;
+@nav-basic-back: transparent;
+@nav-basic-back-hover: transparent;
 
-// DARK
-@nav-dark-back: #232323;
-@nav-dark-hover: mix(lighten(@nav-dark-back, 7%), @blue, 90%);
+// Dark
+@nav-dark: @white;
+@nav-dark-hover: #858585;
+@nav-dark-back: #272727;
+@nav-dark-back-hover: #232323;
 @nav-dark-border: #999999;
 
-// LIGHT
-@nav-light-back: #ededed;
-@nav-light-hover: darken(#2b77a6, 20%);
-@nav-light-font: #3a3a3a;
-@nav-light-border: #b8b8b8;
-
-
-//********** ********** STRUCTURE ********** **********/
+//********** ********** Structure ********** **********/
 
 @num-cols: 12;
 @left-gutter: 20px;
