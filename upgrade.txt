@@ -1,0 +1,24 @@
+Releases and Update Notes
+
+Spark 1.0.1 - Initial Release
+Initial release of Spark. Skipped releasing 1.0.0 for some important bugs found after packaging.
+UPGRADE NOTES: none
+
+Spark 1.1.0 - Minor Update and Bug fixes
+Fixed a few critical bugs, updated to FontAwesome 4.1, added copy colors
+Gave it the wrong version number in the copyright statement for some reason, which is always useful.
+UPGRADE NOTES: none
+
+Spark 2.0.0
+Huge rewrite. New and improved and worthy of a major version number.
+UPGRADE NOTES:
+.hero-edgeless has become .hero and old .hero has been deprecated.
+.hero must be on a .container.
+To use .limit on the.hero, you should add a .row and .col(s) inside.
+Headings are now font-weight 200 by default. Adjust weight with .super-skinny, .heavy and .heavier.
+The .skinny-headings global body class has been deprecated (since they are now the default).
+Colors have been tweaked to be more neutral, less saturated and now include cosmic.
+.note deprecated.
+Alerts are now flat so .alert-flat has been deprecated.
+The navigation bar markup structure has been redesigned. It's fairly similar but check the docs on the website for a full description.
+Nav bar .name is now .brand.
