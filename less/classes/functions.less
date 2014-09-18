@@ -9,6 +9,8 @@
 	
 .grid(0) {}
 
+
+
 .skip(@cols, @index) when (@index > 0) {
 	.container .col.skip-@{index} {
 		@margin: (100% / @cols) * @index;
@@ -19,6 +21,8 @@
 }
 	
 .skip(0) {}
+
+
 
 // MERGE THIS FUNCTION WITH THE ABOVE WHEN I HAVE A MINUTE TO FIGURE OUT HOW
 .skip-reverse(@cols, @index) when (@index > 0) {
