@@ -1,433 +1,271 @@
-.navigation {
-	padding: 0;
+nav.bar {
+	width: 100%;
+	background-color: transparent;
+	overflow: auto;
 }
 
-.navigation a.nav-link {
+nav.bar .brand {
 	float: right;
-	margin: 7px 0;
+	padding: 10px @right-gutter 10px @left-gutter;
+	font-size: 200%;
+	max-height: 100%;
 }
 
-.navigation nav {
-	position: relative;
-	clear: both;
+nav.bar .brand img {
+	height: 100%;
+	width: auto;
 }
 
-.navigation nav a,
-.navigation nav a:hover {
-	text-decoration: none;
-}
-
-.navigation nav .nav-container {
-	padding-left: @left-gutter;
-	padding-right: @right-gutter;
-}
-
-.navigation nav ul {
-	padding-left: 0;
-	list-style: none;
-}
-
-.navigation nav ul.nav-list {
-	display: block;
-	height: 0;
-	margin-left: -@left-gutter;
-	margin-right: -@right-gutter;
-	clear: both;
-	overflow: hidden;
-	.transition(height, 0.3s);
-}
-
-.navigation nav ul.nav-brand {
+nav.bar.right .brand {
 	float: left;
 }
 
-.navigation nav ul.nav-brand li.name a {
-	display: inline-block;
-	padding: 0 0 0 0;
-	color: @nav-basic;
-	line-height: 2em;
-	font-size: 120%;	
-}
-
-.navigation.nav-dark nav ul.nav-brand li.name a {
-	color: @white;
-}
-
-.navigation nav ul.nav-list li a {
+nav.bar.center .brand {
+	padding: 10px @right-gutter 0 @left-gutter;
 	display: block;
-	padding: 10px 20px 10px 20px;
-	font-weight: 400;
-	line-height: 1.5;
-	text-decoration: none;
-}
-
-.navigation nav ul.nav-list li:last-child a {
-	border: none;
-}
-
-.navigation nav ul.dd {
-	padding-left: 16px;
-	min-width: 140px;
-	list-style: none;
-	overflow: hidden;
-}
-
-.navigation nav ul.dd li,
-.navigation nav ul.dd li a {
-	overflow: visible;
-}
-
-.navigation nav ul.dd li a {
-	padding-left: 30px;
-}
-
-.navigation nav ul.nav-list li ul.dd li > a {
 	float: none;
 }
 
-.navigation nav ul.nav-list li ul.dd li {
-	float: left;
+nav.bar ul {
+	list-style: none;
+	text-align: left;
+	padding: 0;
+}
+
+nav.bar > ul {
+	padding: 0 @right-gutter 0 @left-gutter;
+	height: 0;
 	width: 100%;
+	overflow: hidden;
+	.transition(height, .3s, ease-in-out);
 }
 
-.navigation nav ul.nav-list li > a,
-.navigation nav ul.nav-list li.dd-container > a:hover {
+nav.bar > ul > li:first-child {
+	//margin-top: 20px;
+}
+
+nav.bar > ul > li:last-child {
+	margin-bottom: 20px;
+}
+
+.nav-link {
+	margin: 10px 20px;
+	vertical-align: middle;
+}
+
+nav.bar.right ul {
+	text-align: right;
+}
+
+nav.bar.right .nav-link {
+	float: right;
+}
+
+nav.bar.center ul {
+	text-align: center;
+}
+
+nav.bar ul .drop ul {
+	font-size: 80%;
+}
+
+nav.bar ul a {
+	font-weight: 200;
 	color: @nav-basic;
+	display: block;
+	padding: 10px 0;
 }
 
-.navigation nav ul.nav-list li > a:hover {
-	color: #2b77a6;
+nav.bar ul li.active > a {
+	font-weight: 600;
+	color: @nav-basic-hover;
 }
 
-.navigation nav ul.nav-list li.active > a {
-	color: #2b77a6;
+nav.heavy ul a {
+	font-weight: 500;
 }
 
-.navigation.nav-dark nav ul.nav-list li.dd-container li > a:hover,
-.navigation.nav-dark nav ul.nav-list li.dd-container > a {
-	color: @white;
-}
-
-/* nav-light */
-
-.navigation.nav-light {
-	background-color: @nav-light-back;
-}
-
-.navigation.nav-light nav,
-.navigation.nav-light nav ul.nav-list li > a {
-	background-color: @nav-light-back;
-}
-
-.navigation.nav-light nav ul.nav-list > li:first-child {
-	border-top: 1px solid @nav-light-border;
-}
-
-.navigation.nav-light nav ul.nav-list li {
-	border-bottom: 1px solid @nav-light-border;
-}
-
-.navigation.nav-light nav ul.nav-list ul.dd li:first-child {
-	border-top: 1px solid @nav-light-border;
-}
-
-.navigation.nav-light nav ul.nav-list li:last-child,
-.navigation.nav-light nav ul.nav-list ul.dd li:last-child {
-	border-bottom: none;
-}
-
-.navigation.nav-light nav ul.nav-list li a {
-	color: @nav-light-font;
-}
-
-.navigation.nav-light nav ul.nav-list li a:hover,
-.navigation.nav-light nav ul.nav-list li a:active {
-	background-color: @white;
-	color: inherit;
-}
-
-.navigation.nav-light nav ul.nav-list li.dd-container > a,
-.navigation.nav-light nav ul.nav-list li.dd-container > a:hover {
-	background-color: @nav-light-back;
-}
-
-.navigation.nav-light nav ul.nav-list li.active > a {
-	color: inherit;
-	background-color: lighten(@nav-light-back, 5%);
-}
-
-
-/* nav-dark */
-
-.navigation.nav-dark {
-	background-color: @nav-dark-back;
-}
-
-.navigation.nav-dark nav {
-	background-color: @nav-dark-back;
-}
-
-.navigation.nav-dark nav ul.dd {
-	background-color: @nav-dark-back;
-}
-
-.navigation.nav-dark nav ul.nav-list > li:first-child {
-	border-top: 1px solid @nav-dark-border;
-}
-
-.navigation.nav-dark nav ul.nav-list li {
-	border-bottom: 1px solid @nav-dark-border;
-}
-
-.navigation.nav-dark nav ul.nav-list li:last-child {
-	border-bottom: none;
-}
-
-.navigation.nav-dark nav ul.nav-list ul.dd li:first-child {
-	border-top: 1px solid @nav-dark-border;
-}
-
-.navigation.nav-dark nav ul.nav-list ul.dd li:last-child {
-	border-bottom: none;
-}
-
-.navigation.nav-dark nav ul.nav-list li a:hover {
-	background-color: @nav-dark-hover;
-}
-
-.navigation.nav-dark nav ul.nav-list > li a {
-	background-color: @nav-dark-back;
-	color: @white;
-}
-
-.navigation.nav-dark nav ul.nav-list li.dd-container > a:hover {
-	background-color: transparent;
-}
-
-.navigation.nav-dark nav ul.nav-list li.active > a {
-	color: @white;
-	background-color: @nav-dark-hover;
-}
-
-.navigation nav .name h1 {
-	margin: 0;
-	font-size: 16px;
-	line-height: 1.4em;
-}
-
-.navigation nav .name h1 a {
+nav.heavier ul a {
 	font-weight: 900;
 }
 
-@media only screen and (min-width: 769px) {
+nav.bar.heavy ul li.active > a,
+nav.bar.heavier ul li.active > a {
+	font-weight: 500;
+}
 
-	.navigation a.nav-link {
-		display: none;
-	}
+@media only screen and (min-width: 769px) {
 	
-	.navigation nav {
-		display: block !important;
-		height: auto;
-		clear: none;
-		margin-left: 0;
-		margin-right: 0;
-		border: none;
-	}
-	
-	.navigation nav .nav-container {
-		padding-left: 0;
-		padding-right: 0;
-	}
-	
-	.navigation nav ul.nav-brand li.name a {
-		margin-left: @left-gutter;
-	}
-	
-	.navigation nav ul.nav-brand {
-		float: left;
-		margin-right: 30px;
-	}
-	
-	.navigation nav ul.nav-list {
-		display: block !important;
-		margin: 0;
-		clear: none;
-		height: auto !important;
-		overflow: visible;
-	}
-	
-	.navigation.nav-right nav ul.nav-list {
-		float: right;
-	}
-	
-	.navigation nav ul.nav-list > li {
-		float: left;
-	}
-	
-	.navigation nav ul.nav-list li {
-		background-color: transparent;
-	}
-	
-	.navigation nav ul.nav-list > li a {
-		float: left;
-		border: none;
-		background-color: transparent;
-	}
-	
-	// Only top level
-	.navigation nav ul.nav-list > li > a {
-		.transition(background, .1s, ease-in);
-	}
-	
-	.navigation nav li.dd-container ul.dd li {
-		border: none !important;
-	}
-	
-	.navigation nav li.dd-container ul.dd li a {
-		padding-left: 20px;
-	}
-	
-	.navigation nav ul.nav-list li.dd-container li > a:hover {
-		color: @white;
-	}
-	
-	.navigation nav li.dd-container {
-		position: relative;
-		float: left;
+	nav.bar,
+	nav.bar ul {
 		height: auto;
 		width: auto;
-		padding-bottom: 10px;
-		margin-bottom: -10px;
-	}
-	
-	.navigation nav ul.dd {
-		position: absolute;
-		z-index: 1000;
-		height: auto;
-		width: 100%;
-		top: 50px;
-		left: 0;
-		display: none;
 		overflow: visible;
-		padding-left: 0;
-		background-color: transparent;
+	}
+	
+	nav.bar.center .brand.force-left {
+		margin: 0 @right-gutter 0 @left-gutter;
+		float: left;
+	}
+	
+	nav.bar.center .brand.force-right {
+		margin: 0 @right-gutter 0 @left-gutter;
+		float: right;
+	}
+		
+	nav.bar ul li {
+		cursor: pointer;
+	}
+	
+	nav.bar > ul > li {
+		display: inline-block;
+		padding: 20px;
+		margin: 0 !important;
+	}
+	
+	nav.bar ul a {
+		display: inline;
+	}
+	
+	nav.bar li:hover > a,
+	nav.bar li > a:focus {
+		color: @nav-basic-hover;
+		outline: none;
+	}
+	
+	// Top level links
+	nav.bar ul > li > a {
+		padding: 20px 0;
+		height: 80px;
+		.transition(all, .2s, ease-in-out);
+	}
+	
+	// Dropdown link root
+	nav.bar ul li.drop {
+		position: relative;
+	}
+	
+	// Dropdown link box
+	nav.bar .box {
+		width: 180px;
+		position: absolute;
+		left: 50%;
+		margin-left: -90px;
+		top: -400px;
+		z-index: 100;
+	}
+	
+	// Hover state of dropdown link box
+	nav.bar ul li.drop:hover > .box,
+	nav.bar ul li.drop a:focus + .box,
+	nav.bar ul li.drop.dropped .box {
+		top: 50px;
+	}
+	
+	// Dropdown list
+	nav.bar ul.inner {
+		width: 100%;
+		text-align: center;
+		background-color: @white;
+		float: left;
+		position: relative;
+		margin: 0;
+		padding: 10px;
+		opacity: 0;
 		.border-radius(3px);
-		.box-shadow(~'', 0, 0, 3px, 0, rgba(0,0,0, .2));
+		.box-shadow(~'', 0, 0, 3px, 0, rgba(0,0,0,.25));
+		.transition(all, .2s, ease-in-out);
 	}
 	
-	.navigation.nav-light nav ul.nav-list > li:first-child,
-	.navigation.nav-dark nav ul.nav-list > li:first-child {
-		border: none;
+	// Hover state of dropdown list
+	nav.bar ul li.drop:hover > .box > .inner,
+	nav.bar ul li.drop a:focus + .box > .inner,
+	nav.bar ul li.drop.dropped .box > .inner {
+		opacity: 1;
+		margin-top: 5px;
 	}
 	
-	.navigation.nav-light nav ul.nav-list li,
-	.navigation.nav-dark nav ul.nav-list li {
-		border-bottom: none;
+	// Dropdown list item
+	nav.bar ul.inner li {
+		padding: 10px;
+		.transition(background, .3s, ease-out);
 	}
 	
-	.navigation.nav-light nav ul.nav-list li a {
-		border: none;
+	// Dropdown list item hover
+	nav.bar ul.inner li:hover,
+	nav.bar ul.inner li.hover {
+		background-color: #ebebeb;
+		.border-radius(3px);
 	}
 	
-	.navigation.nav-light nav ul.nav-list li a:hover,
-	.navigation.nav-light nav ul.nav-list li a:active {
-		background-color: @nav-light-hover;
-		color: @white;
+	nav.bar ul.inner li:hover > a,
+	nav.bar ul.inner li > a:focus {
+		color: @black;
 	}
 	
-	.navigation nav li.dd-container:hover > ul.dd,
-	.navigation nav li.dd-container > a:focus + ul.dd {
-		display: block;
+	.nav-link {
+		display: none !important;
 	}
+}
+
+/* Nav Dark */
+
+nav.bar.dark,
+nav.bar.dark ul {
+	color: @white;
+	background-color: @nav-dark-back;
+}
+
+nav.bar.dark ul li a {
+	color: @nav-dark;
+}
+
+nav.bar.dark ul li a:hover {
+	color: @nav-dark-hover;
+}
+
+nav.bar.dark ul li.active > a {
+	color: @nav-dark-hover;
+}
+
+@media only screen and (min-width: 769px) {
 	
-	.navigation nav ul.nav-list > li.dd-container:hover > a {
-		color: #2b77a6;
-	}
-	
-	.navigation nav ul.nav-list ul li.dd-container:hover > a,
-	.navigation.nav-dark nav ul.nav-list li.dd-container:hover > a {
-		background-color: @nav-dark-hover;
-		color: @white;
-	}
-	
-	.navigation.nav-light nav ul.nav-list li.dd-container:hover > a {
-		background-color: @nav-light-hover;
-		color: @white;
-	}
-	
-	.navigation.nav-dark nav ul.nav-list > li a {
-		border: none;
-	}
-	
-	.navigation nav ul.nav-list > li > ul.dd li > a {
-		float: none;
-		font-size: 76%;
+	nav.bar.dark ul li.drop ul {
 		background-color: @white;
 	}
 	
-	.navigation.nav-dark nav ul.nav-list > li > ul.dd li > a {
-		background-color: transparent;
+	nav.bar.dark li.drop ul a {
+		color: @nav-basic;
 	}
 	
-	.navigation.nav-light nav ul.nav-list > li > ul.dd li > a {
-		background-color: @white;
-		color: @nav-dark-back;
+	// Dropdown list item hover
+	nav.bar.dark ul.inner li:hover,
+	nav.bar.dark ul.inner li.hover {
+		background-color: #3f3f3f;
 	}
 	
-	.navigation.nav-light nav ul.nav-list > li > ul.dd li > a:hover {
-		background-color: @nav-light-hover;
+	// Dropdown list item hover (the link)
+	nav.bar.dark ul.inner li:hover > a,
+	nav.bar.dark ul.inner li > a:focus {
 		color: @white;
 	}
-	
-	.navigation nav ul.nav-list > li > ul.dd li > a:hover {
-		background-color: @nav-dark-hover;
-	}
-	
-	.navigation nav ul.nav-list > li > ul.dd li:first-child,
-	.navigation nav ul.nav-list > li > ul.dd li:first-child a {
-		.border-radius-corners(3px, 3px, 0, 0);
-	}
-	
-	.navigation nav ul.nav-list > li > ul.dd ul.dd li:first-child,
-	.navigation nav ul.nav-list > li > ul.dd ul.dd li:first-child a {
-		.border-radius-corners(0, 3px, 0, 0);
-	}
-	
-	.navigation nav ul.nav-list > li > ul.dd li:last-child,
-	.navigation nav ul.nav-list > li > ul.dd li:last-child a {
-		.border-radius-corners(0, 0, 3px, 3px);
-	}
-	
-	.navigation nav ul.nav-list > li > ul.dd li.dd-container:last-child:hover,
-	.navigation nav ul.nav-list > li > ul.dd li.dd-container:last-child:hover > a {
-		.border-radius-corners(0, 0, 0, 3px);
+}
+
+/* Sticky Nav */
+
+// Kind of goes against “mobile first” but this is the cleanest solution I can see
+@media only screen and (max-width: 768px) {
+
+	div.stickybump {
+		height: 100% !important;
 	}
 
-	.navigation nav ul.nav-list > li > ul.dd ul.dd li:only-child,
-	.navigation nav ul.nav-list > li > ul.dd ul.dd li:only-child > a {
-		.border-radius-corners(0, 3px, 3px, 0);
-	}
-	
-	.navigation nav ul.nav-list > li > ul.dd > li:only-child,
-	.navigation nav ul.nav-list > li > ul.dd > li:only-child > a {
-		.border-radius(3px);
-	}
-	
-	.navigation nav ul.dd ul.dd {
-		left: 100%;
+}
+
+@media only screen and (min-width: 769px) {
+	nav.bar.sticky {
+		position: fixed;
 		top: 0;
-	}
-	
-	.navigation nav ul.dd ul.dd li:first-child,
-	.navigation nav ul.dd ul.dd li:first-child a {
-		.border-radius-corners(0, 3px, 0, 0);
-	}
-	
-	.navigation nav ul.dd ul.dd > li > a {
-		padding: 6px 20px;
-	}
-	
-	.navigation nav ul.nav-list li.dd-container.open ul.dd {
-		display: block !important;
+		width: 100%;
 	}
 }

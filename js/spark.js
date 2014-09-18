@@ -1,38 +1,48 @@
 $(document).ready(function () {
-
-	// Toggle menu visibility (height) on mobile devices
-	var nav = false
-	var selector = 'nav#primary-nav .nav-list > li'
 	
-	$('.nav-link').on('click', function() {
-		var height = 0
-		$(selector).each(function(){
-			height += parseInt($(this).css('height'))
-		})
-
-		if(nav == false) {
-			$('.nav-list').css({"height": height})
-			nav = true
+	// Toggle menu on mobile devices
+	$(document).on('click', 'a.nav-link', function() {
+		
+		nav = $('nav#primary-nav')
+		selector = $('nav#primary-nav > ul')
+				
+		if(nav.hasClass('open')) {
+			selector.css({"height": "0"})
+			nav.removeClass('open')
 		}
 		else {
-			$('.nav-list').css({"height": "0"})
-			nav = false
+			selector.css({"height": selector[0].scrollHeight})
+			nav.addClass('open')
 		}
-		return false;
 	})
 	
-	// Accessibility fix for navigation menu dropdowns
-	$(".dd-container a").on('focus', function() {
-		$(this).parent('li.dd-container').addClass('open')
-	}).on('blur', function() {
-		$(this).parent('li.dd.container').removeClass('open')
+	
+	// Accessibility functionality for navigation menu dropdowns
+	$("nav.bar li.drop ul.inner li").on('focus', 'a', function() {
+		
+		$(this).parents('li.drop').addClass('dropped')
+		$(this).parent().addClass('hover')
+		
+	}).on('blur', 'a', function() {
+		
+		$(this).parents('li.drop').removeClass('dropped')
+		$(this).parent().removeClass('hover')
+		
 	})
+	
+	
+	// Automatically compensate spacing for sticky nav
+	$("nav.bar.sticky").wrap(function() {
+		return $('<div>', {'class':'stickybump', 'height':$(this).outerHeight()})
+	})
+	
 	
 	// Close button for alerts
 	$('.alert .alert-close').on('click', function() {
 		$(this).parent().remove();
 		return false;
 	})
+	
 	
 	// Modal open trigger
 	$('.modal-trigger:not(.modal-static)').on('click', function() {
@@ -44,6 +54,7 @@ $(document).ready(function () {
 		}, 100);
 		return false;
 	});
+	
 	
 	// Modal close trigger
 	$('.modal-close-trigger').on('click', function() {

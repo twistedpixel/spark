@@ -1,19 +1,16 @@
 // Nav dropdown caret
-
-.navigation nav li.dd-container > a:after {
-	display: inline-block;
-	margin-left: 10px;
-	font-family: "FontAwesome";
-	content: "\f149";
-	line-height: 1em;
-}
-
 @media only screen and (min-width: 769px) {
-	.navigation nav li.dd-container > a:after {
-		content: "\f0d7";
-	}
 	
-	.navigation nav li.dd-container:hover > a:after {
+	nav.bar li.drop > a:after {
+		color: #858585;
+		display: inline-block;
+		margin-left: 10px;
+		font-family: "FontAwesome";
+		content: "\f0d7";
+		line-height: 1em;
+	}
+		
+	nav.bar li.drop:hover > a:after {
 		content: "\f0d8";
 	}
 }
