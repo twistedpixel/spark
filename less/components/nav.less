@@ -54,8 +54,8 @@ nav.bar > ul > li:last-child {
 	margin-bottom: 20px;
 }
 
-.nav-link {
-	margin: 10px 20px;
+nav.bar .nav-link {
+	margin: 12px @right-gutter 12px @left-gutter;
 	vertical-align: middle;
 }
 
@@ -313,4 +313,11 @@ nav.bar.dark ul li.active > a {
 	nav.bar.sticky.dark {
 		background-color: @nav-dark-back;
 	}
+}
+
+/* Transparency */
+
+nav.bar.transparent,
+nav.bar.transparent > ul {
+	background: transparent !important;
 }

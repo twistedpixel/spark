@@ -3,15 +3,18 @@ $(document).ready(function () {
 	// Toggle menu on mobile devices
 	$(document).on('click', 'a.nav-link', function(e) {
 		e.preventDefault()
-		nav = $(this).parents('nav')
-		selector = $(this).siblings('ul')
-				
+		link = $(this)
+		nav = link.parents('nav')
+		selector = link.siblings('ul')
+		
 		if(nav.hasClass('open')) {
 			selector.removeAttr('style')
 			nav.removeClass('open')
+			link.removeClass('active')
 		}
 		else {
 			selector.css({"height": selector[0].scrollHeight})
+			link.addClass('active')
 			nav.addClass('open')
 		}
 	})
@@ -29,7 +32,7 @@ $(document).ready(function () {
 	
 	
 	// Automatically compensate spacing for sticky nav
-	$("nav.bar.sticky").wrap(function() {
+	$("nav.bar.sticky:not(.transparent)").wrap(function() {
 		return $('<div>', {'class':'stickybump', 'height':$(this).outerHeight()})
 	})
 	
