@@ -3,11 +3,11 @@ $(document).ready(function () {
 	// Toggle menu on mobile devices
 	$(document).on('click', 'a.nav-link', function() {
 		
-		nav = $('nav#primary-nav')
-		selector = $('nav#primary-nav > ul')
+		nav = $(this).parents('nav')
+		selector = $(this).siblings('ul')
 				
 		if(nav.hasClass('open')) {
-			selector.css({"height": "0"})
+			selector.removeAttr('style')
 			nav.removeClass('open')
 		}
 		else {

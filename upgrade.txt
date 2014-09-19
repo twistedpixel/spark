@@ -22,3 +22,4 @@ Colors have been tweaked to be more neutral, less saturated and now include cosm
 Alerts are now flat so .alert-flat has been deprecated.
 The navigation bar markup structure has been redesigned. It's fairly similar but check the docs on the website for a full description.
 Nav bar .name is now .brand.
+Id of primary-nav no longer necessary.

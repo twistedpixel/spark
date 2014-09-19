@@ -9,6 +9,12 @@ nav.bar .brand {
 	padding: 10px @right-gutter 10px @left-gutter;
 	font-size: 200%;
 	max-height: 100%;
+	color: @black;
+	.transition(all, .3s, ease-in-out);
+}
+
+nav.bar .brand:hover {
+	color: @nav-basic-hover;
 }
 
 nav.bar .brand img {
@@ -69,6 +75,10 @@ nav.bar ul .drop ul {
 	font-size: 80%;
 }
 
+nav.bar ul .drop ul ul {
+	font-size: 100%;
+}
+
 nav.bar ul a {
 	font-weight: 200;
 	color: @nav-basic;
@@ -95,6 +105,11 @@ nav.bar.heavier ul li.active > a {
 }
 
 @media only screen and (min-width: 769px) {
+	
+	nav.bar.limit {
+		max-width: @limit;
+		margin: auto;
+	}
 	
 	nav.bar,
 	nav.bar ul {
@@ -155,6 +170,12 @@ nav.bar.heavier ul li.active > a {
 		z-index: 100;
 	}
 	
+	// Dropdown link box
+	nav.bar ul ul .box {
+		left: -20%;
+		top: -15px !important;
+	}
+	
 	// Hover state of dropdown link box
 	nav.bar ul li.drop:hover > .box,
 	nav.bar ul li.drop a:focus + .box,
@@ -203,6 +224,14 @@ nav.bar.heavier ul li.active > a {
 		color: @black;
 	}
 	
+	nav.bar > ul > li:last-of-type {
+		padding-right: 0;
+	}
+	
+	nav.bar > ul > li:first-of-type {
+		padding-left: 0;
+	}
+		
 	.nav-link {
 		display: none !important;
 	}
@@ -214,6 +243,14 @@ nav.bar.dark,
 nav.bar.dark ul {
 	color: @white;
 	background-color: @nav-dark-back;
+}
+
+nav.bar.dark .brand {
+	color: @white;
+}
+
+nav.bar.dark .brand:hover {
+	color: @nav-basic-hover;
 }
 
 nav.bar.dark ul li a {
