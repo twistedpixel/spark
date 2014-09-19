@@ -8,10 +8,7 @@
 	color: @black;
 	line-height: 1.5;
 	border: none;
-	-webkit-background-size: 100% 170%;
-	   -moz-background-size: 100% 170%;
-	   		background-size: 100% 170%;
-	
+	.background-size(100%, 170%);
 	.linear-gradient(top, lighten(@silver, 3%), darken(@silver, 12%), 100%, @silver);
 	.border-radius(2px);
 	.transition(all, 0.2s, ease);
@@ -33,16 +30,12 @@
 	cursor: pointer;
 	text-decoration: none;
 	background-color: @silver;
-	-webkit-background-position: 0 50%;
-	   -moz-background-position: 0 50%;
-	   		background-position: 0 50%;
+	.background-position(0, 50%);
 }
 
 .btn:active {
 	background-color: darken(@silver, 10%);
-	-webkit-background-position: 0 100%;
-	   -moz-background-position: 0 100%;
-	   		background-position: 0 100%;
+	.background-position(0, 100%);
 }
 
 
@@ -232,9 +225,9 @@
 
 .btn-touch {
 	display: inline-block;
-	//margin-top: 0.2em;
 	padding: 8px 0;
 	border: none;
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
 .btn-touch .bar {
@@ -306,6 +299,7 @@
 	display: inline-block;
 	margin: 0;
 	padding: 1px 0;
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
 .btn-touch-round .circle {
@@ -331,7 +325,6 @@
 	.transition(all, .5s, ease-in-out);
 }
 
-.btn-touch-round:hover .circle,
 .btn-touch-round.active .circle {
 	border: 6px solid lighten(@black, 20%);
 	padding: 4px;
@@ -342,7 +335,6 @@
 
 
 .btn-touch-round.white .circle,
-.btn-touch-round.white:hover .circle,
 .btn-touch-round.white.active .circle {
 	border-color: @white;
 }
@@ -352,7 +344,6 @@
 }
 
 .btn-touch-round.silver .circle,
-.btn-touch-round.silver:hover .circle,
 .btn-touch-round.silver.active .circle {
 	border-color: darken(@silver, 30%);
 }
@@ -362,58 +353,100 @@
 	border-color: @white;
 }
 
-
 .btn-touch-round.blue .circle,
-.btn-touch-round.blue:hover .circle,
 .btn-touch-round.blue.active .circle {
 	border-color: @blue;
 }
 
 .btn-touch-round.green .circle,
-.btn-touch-round.green:hover .circle,
 .btn-touch-round.green.active .circle {
 	border-color: @green;
 }
 
 .btn-touch-round.orange .circle,
-.btn-touch-round.orange:hover .circle,
 .btn-touch-round.orange.active .circle {
 	border-color: @orange;
 }
 
 .btn-touch-round.red .circle,
-.btn-touch-round.red:hover .circle,
 .btn-touch-round.red.active .circle {
 	border-color: @red;
 }
 
 .btn-touch-round.purple .circle,
-.btn-touch-round.purple:hover .circle,
 .btn-touch-round.purple.active .circle {
 	border-color: @purple;
 }
 
 .btn-touch-round.lime .circle,
-.btn-touch-round.lime:hover .circle,
 .btn-touch-round.lime.active .circle {
 	border-color: @lime;
 }
 
 .btn-touch-round.dragonfruit .circle,
-.btn-touch-round.dragonfruit:hover .circle,
 .btn-touch-round.dragonfruit.active .circle {
 	border-color: @dragonfruit;
 }
 
 .btn-touch-round.cosmic .circle,
-.btn-touch-round.cosmic:hover .circle,
 .btn-touch-round.cosmic.active .circle {
 	border-color: @cosmic;
 }
 
-.btn-touch-round:hover .circle .inner-circle,
 .btn-touch-round.active .circle .inner-circle {
-	border-color: #e1e1e1;
+	border-color: @touch-round-hover-inner-circle;
+}
+
+@media only screen and (min-width: 769px) {
+	
+	.btn-touch-round:hover .circle {
+		border: 6px solid lighten(@black, 20%);
+		padding: 4px;
+	}
+	
+	.btn-touch-round.white:hover .circle {
+		border-color: @white;
+	}
+	
+	.btn-touch-round.silver:hover .circle {
+		border-color: darken(@silver, 30%);
+	}
+	
+	.btn-touch-round.blue:hover .circle {
+		border-color: @blue;
+	}
+	
+	.btn-touch-round.green:hover .circle {
+		border-color: @green;
+	}
+	
+	.btn-touch-round.orange:hover .circle {
+		border-color: @orange;
+	}
+	
+	.btn-touch-round.red:hover .circle {
+		border-color: @red;
+	}
+	
+	.btn-touch-round.purple:hover .circle {
+		border-color: @purple;
+	}
+	
+	.btn-touch-round.lime:hover .circle {
+		border-color: @lime;
+	}
+	
+	.btn-touch-round.dragonfruit:hover .circle {
+		border-color: @dragonfruit;
+	}
+	
+	.btn-touch-round.cosmic:hover .circle {
+		border-color: @cosmic;
+	}
+	
+	.btn-touch-round:hover .circle .inner-circle {
+		border-color: @touch-round-hover-inner-circle;
+	}
 }
 
 
