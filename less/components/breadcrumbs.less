@@ -1,0 +1,144 @@
+.breadcrumbs {
+	margin: 20px 0;
+}
+
+.breadcrumbs ul {
+	overflow: auto;
+	padding: 5px 10px;
+	list-style: none;
+	background-color: @breadcrumbs-default-back;
+	color: @breadcrumbs-default;
+	.border-radius(2px);
+}
+
+.breadcrumbs ul li {
+	float: left;
+	margin-right: 10px;
+	font-size: 70%;
+}
+
+.breadcrumbs ul li:after {
+	content: '::';
+	margin-left: 10px;
+	color: @breadcrumbs-default-separator;
+}
+
+.breadcrumbs ul li:last-child:after {
+	content: '';
+	margin: 0;
+	display: none;
+}
+
+.breadcrumbs ul li a {
+	color: @breadcrumbs-default-link;
+}
+
+.breadcrumbs ul li a:hover {
+	color: @breadcrumbs-default-link-hover;
+}
+
+.breadcrumbs.caps ul {
+	text-transform: uppercase;
+}
+
+.breadcrumbs.round ul {
+	.border-radius(20px);
+}
+
+/* Dark */
+
+.breadcrumbs.dark ul {
+	color: @breadcrumbs-dark;
+	background-color: @breadcrumbs-dark-back;
+}
+
+.breadcrumbs.dark ul li a {
+	color: @breadcrumbs-dark-link;
+}
+
+.breadcrumbs.dark ul li a:hover {
+	color: @breadcrumbs-dark-link-hover;
+}
+
+/* Colored */
+
+.breadcrumbs.blue ul,
+.breadcrumbs.green ul,
+.breadcrumbs.orange ul,
+.breadcrumbs.red ul,
+.breadcrumbs.purple ul,
+.breadcrumbs.lime ul,
+.breadcrumbs.dragonfruit ul,
+.breadcrumbs.cosmic ul {
+	color: @breadcrumbs-colored;
+}
+
+.breadcrumbs.blue ul li:after,
+.breadcrumbs.green ul li:after,
+.breadcrumbs.orange ul li:after,
+.breadcrumbs.red ul li:after,
+.breadcrumbs.purple ul li:after,
+.breadcrumbs.lime ul li:after,
+.breadcrumbs.dragonfruit ul li:after,
+.breadcrumbs.cosmic ul li:after {
+	color: @breadcrumbs-colored-separator;
+}
+
+.breadcrumbs.blue ul li a,
+.breadcrumbs.green ul li a,
+.breadcrumbs.orange ul li a,
+.breadcrumbs.red ul li a,
+.breadcrumbs.purple ul li a,
+.breadcrumbs.lime ul li a,
+.breadcrumbs.dragonfruit ul li a,
+.breadcrumbs.cosmic ul li a {
+	color: @breadcrumbs-colored-link;
+}
+
+.breadcrumbs.blue ul li a:hover,
+.breadcrumbs.green ul li a:hover,
+.breadcrumbs.orange ul li a:hover,
+.breadcrumbs.red ul li a:hover,
+.breadcrumbs.purple ul li a:hover,
+.breadcrumbs.lime ul li a:hover,
+.breadcrumbs.dragonfruit ul li a:hover,
+.breadcrumbs.cosmic ul li a:hover {
+	color: @breadcrumbs-colored-link-hover;
+}
+
+.breadcrumbs.blue ul {
+	background-color: @blue;
+}
+
+.breadcrumbs.green ul {
+	background-color: @green;
+}
+
+.breadcrumbs.orange ul {
+	background-color: @orange;
+}
+
+.breadcrumbs.red ul {
+	background-color: @red;
+}
+
+.breadcrumbs.purple ul {
+	background-color: @purple;
+}
+
+.breadcrumbs.lime ul {
+	background-color: @lime;
+}
+
+.breadcrumbs.dragonfruit ul {
+	background-color: @dragonfruit;
+}
+
+.breadcrumbs.cosmic ul {
+	background-color: @cosmic;
+	color: lighten(@breadcrumbs-default, 50%);
+}
+
+.breadcrumbs.cosmic ul li:after {
+	color: lighten(@breadcrumbs-colored-separator, 30%);
+}
