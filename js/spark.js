@@ -37,6 +37,20 @@ $(document).ready(function () {
 	})
 	
 	
+	// A sticky nav needs one extra wrapper if 'limit' is used
+	$("nav.bar.sticky, nav.bar.limit").wrap(function() {
+		// We also need to move a little CSS up the chain to keep color consistency
+		extra = '';
+		if($(this).hasClass('dark')) {
+			extra += ' dark';
+		}
+		if($(this).hasClass('transparent')) {
+			extra += ' transparent';
+		}
+		return $('<div>', {'class':'stickyglue' + extra})
+	})
+	
+	
 	// Close button for alerts
 	$('.alert').on('click', 'a.alert-close', function(e) {
 		e.preventDefault()

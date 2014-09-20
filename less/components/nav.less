@@ -106,9 +106,9 @@ nav.bar.heavier ul li.active > a {
 
 @media only screen and (min-width: 769px) {
 	
-	nav.bar.limit {
-		max-width: @limit;
-		margin: auto;
+	.stickyglue > nav.bar.limit {
+		max-width: @limit !important;
+		margin: auto !important;
 	}
 	
 	nav.bar,
@@ -304,12 +304,34 @@ nav.bar.dark ul li.active > a {
 		position: fixed;
 		top: 0;
 		width: 100%;
+		max-width: 100%;
+	}
+	
+	.stickyglue {
+		position: fixed;
+		top: 0;
+		width: 100%;
+		background-color: @white;
+	}
+	
+	.stickyglue.dark {
+		background-color: @nav-dark-back;
+	}
+	
+	.stickyglue.transparent {
+		background-color: transparent;
+	}
+	
+	.stickyglue > nav.bar.sticky {
+		position: relative;
+		width: 100%;
+		max-width: @limit;
 	}
 	
 	nav.bar.sticky {
 		background-color: @nav-basic-back;
 	}
-	
+		
 	nav.bar.sticky.dark {
 		background-color: @nav-dark-back;
 	}
