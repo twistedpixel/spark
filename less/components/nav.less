@@ -300,18 +300,18 @@ nav.bar.dark ul li.active > a {
 }
 
 @media only screen and (min-width: 769px) {
-	nav.bar.sticky {
+	nav.bar.sticky,
+	.stickyglue.sticky {
 		position: fixed;
 		top: 0;
 		width: 100%;
 		max-width: 100%;
+		background-color: @white;
 	}
 	
-	.stickyglue {
-		position: fixed;
-		top: 0;
-		width: 100%;
-		background-color: @white;
+	nav.bar.overhang,
+	.stickyglue.overhang {
+		.box-shadow(~'', 0, 0, 4px, 0, rgba(0, 0, 0, .3));
 	}
 	
 	.stickyglue.dark {
@@ -325,7 +325,14 @@ nav.bar.dark ul li.active > a {
 	.stickyglue > nav.bar.sticky {
 		position: relative;
 		width: 100%;
+	}
+	
+	.stickyglue > nav.bar.limit {
 		max-width: @limit;
+	}
+	
+	.stickyglue > nav.bar.overhang {
+		.box-shadow-none();
 	}
 	
 	nav.bar.sticky {

@@ -47,6 +47,12 @@ $(document).ready(function () {
 		if($(this).hasClass('transparent')) {
 			extra += ' transparent';
 		}
+		if($(this).hasClass('sticky')) {
+			extra += ' sticky';
+		}
+		if($(this).hasClass('overhang')) {
+			extra += ' overhang';
+		}
 		return $('<div>', {'class':'stickyglue' + extra})
 	})
 	
