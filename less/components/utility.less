@@ -2,20 +2,13 @@
 	clear: both;
 }
 
-.clearfix,
-.container {
-	zoom: 1;
-}
-
 .clearfix:after,
-.container:after {
-	display: block;
-	content: '';
-	width: 0;
-	height: 0;
+.container:after,
+.row:after,
+.col:after {
+	content: "";
+	display: table;
 	clear: both;
-	overflow: hidden;
-	visibility: hidden;
 }
 
 .inline {
