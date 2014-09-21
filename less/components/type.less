@@ -9,12 +9,12 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-	margin: 20px 0;
+	margin: 10px 0 30px 0;
 	font-size: 300%; //42px equiv at 14px base
 }
 
 h2 {
-	margin: 20px 0;
+	margin: 10px 0 20px 0;
 	font-size: 250%; //35px equiv at 14px base
 }
 
@@ -35,7 +35,7 @@ h6 {
 }
 
 h3, h4, h5, h6 {
-	margin: 14px 0;
+	margin: 10px 0 10px 0;
 }
 
 .super-skinny-headings h1,
@@ -120,7 +120,7 @@ h3.page-heading,
 h4.page-heading,
 h5.page-heading,
 h6.page-heading {
-	//margin-top: 0;
+	margin-top: 0;
 }
 
 p {
@@ -128,6 +128,10 @@ p {
 	margin-bottom: 20px;
 	text-align: justify;
 	color: @copy-color;
+}
+
+.container .row .col:last-of-type p:last-child {
+	margin-bottom: 0;
 }
 
 p.leading {
@@ -165,7 +169,7 @@ a:hover {
 
 .underlined:after {
 	display: block;
-	margin-top: 14px;
+	margin-top: 20px;
 	height: 1px;
 	content: '';
 	background-color: #eeeeee;
