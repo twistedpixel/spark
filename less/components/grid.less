@@ -1,6 +1,6 @@
 .container {
 	margin: 0 @container-gutter;
-	padding: 0;
+	padding: 60px 0;
 }
 
 .container.limit .nav-container {
@@ -15,19 +15,16 @@
 	max-width: @limit;
 	margin-left: auto;
 	margin-right: auto;
-	overflow: auto;
-}
-
-.container.limit.navigation .row,
-.container.limit.navigation .page-heading,
-.container.limit.hero.navigation {
-	overflow: visible;
 }
 
 .container .row {
 	float: left;
 	clear: both;
 	width: 100%;
+	margin-bottom: 30px;
+}
+
+.container .row:last-child {
 	margin-bottom: 0;
 }
 
@@ -36,7 +33,6 @@
 	text-align: left;
 	padding: 0 @right-gutter 0 @left-gutter;
 	display: inline;
-	margin-bottom: 40px;
 	min-height: 1px;
 }
 
@@ -62,10 +58,6 @@
 	background-color: #f9f9f9;
 }
 
-.container.hero .col {
-	margin-bottom: 0;
-}
-
 .container .col.of-1,
 .container .col.of-2,
 .container .col.of-3,
@@ -88,10 +80,6 @@
 	
 	.skip-reverse(@num-cols, @num-cols);
 	
-	.container .row .col {
-		margin-bottom: 0;
-	}
-	
 	.container .row .col .col {
 		padding: 0 @right-gutter 0 @left-gutter;
 	}
@@ -104,12 +92,12 @@
 		padding-right: 0;
 	}
 	
-	.container .row.reverse-stack > .col:first-of-type {
+	.container .row.reverse-stack > .col:last-of-type {
 		padding-left: @left-gutter;
 		padding-right: 0;
 	}
 	
-	.container .row.reverse-stack > .col:last-of-type {
+	.container .row.reverse-stack > .col:first-of-type {
 		padding-right: @right-gutter;
 		padding-left: 0;
 	}
