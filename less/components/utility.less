@@ -5,7 +5,10 @@
 .clearfix:after,
 .container:after,
 .row:after,
-.col:after {
+.col:after,
+form:after,
+form.form:not(.form-tight) .input-container:after,
+form.form-tight .form-row:after {
 	content: "";
 	display: table;
 	clear: both;
@@ -373,4 +376,14 @@ img.float-left {
 	width: 100%;
 	font-size: 0;
 	border: 0;
+}
+
+.screen-readers {
+	position: absolute !important;
+	width: 1px !important;
+	height: 1px !important;
+	overflow: hidden !important;
+	margin: -1px !important;
+	padding: 0 !important;
+	border: 0 !important;
 }
