@@ -22,4 +22,7 @@ Colors have been tweaked to be more neutral, less saturated and now include cosm
 Alerts are now flat so .alert-flat has been deprecated.
 The navigation bar markup structure has been redesigned. It's fairly similar but check the docs on the website for a full description.
 Nav bar .name is now .brand.
-Id of primary-nav no longer necessary.
+An ID on primary-nav is no longer necessary (although still recommended).
+For compatibility, all form types now use input-containers, including inline and buttons.
+Classes now go on the input-container, rather than the input.
+Visually different input elements (checkbox, radio, select, file, textarea) require an additional class on their input-container. That class is the type of input, for example .checkbox or .radio. For obvious reasons, rextareas do not work in the inline form.
