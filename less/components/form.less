@@ -53,6 +53,11 @@ form.form input[type="color"]:focus {
 	border: 1px solid @form-focus-border-color;
 }
 
+form.form input:disabled {
+	color: @form-disabled-color;
+	background-color: @form-disabled-background-color;
+}
+
 form.form .radio label {
 	float: left;
 	clear: both;
@@ -88,7 +93,7 @@ form.form .input-container {
 	margin-bottom: 14px;
 }
 
-form.form .input-container:last-child {
+form.form:not(.form-tight) .input-container:last-child {
 	margin-bottom: 0;
 }
 
@@ -176,6 +181,18 @@ form.form.dark input[type="color"]:focus {
 	color: @form-dark-focus-color;
 	background-color: @form-dark-focus-background-color;
 	border: 1px solid @form-dark-focus-border-color;
+}
+
+form.form.dark input:disabled {
+	color: @form-dark-disabled-color;
+	background-color: @form-dark-disabled-background-color;
+	border-color: darken(@form-dark-border-color, 24%);
+}
+
+form.form-tight .input-container.file,
+form.form-tight .input-container.checkbox,
+form.form-tight .input-container.radio {
+	padding: 10px 0 10px 0;
 }
 
 form.form.dark label {
@@ -362,12 +379,15 @@ form.form.dark label {
 		margin: 0 .99%;
 	}
 	
-	form.form-tight .form-row .input-container:last-child {
-		margin-right: 0;
+	form.form-tight .input-container.file,
+	form.form-tight .input-container.checkbox,
+	form.form-tight .input-container.radio {
+		text-align: center;
+		padding: 33px 0 0 0;
 	}
 	
-	form.form-tight .form-row .input-container:last-child input {
-		margin-right: -2%;
+	form.form-tight .input-container.select select {
+		margin: 10px 0 0 0;
 	}
 }
 
