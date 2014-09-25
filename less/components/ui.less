@@ -6,8 +6,10 @@
 	display: inline-block;
 	padding: 4px 14px;
 	margin-bottom: 10px;
-	vertical-align: top;
+	vertical-align: middle;
 	text-decoration: none;
+	text-align: center;
+	word-wrap: break-word;
 	color: @black;
 	line-height: 1.5;
 	border: none;
@@ -240,10 +242,55 @@
 	background-color: #b8b8b8 !important;
 }
 
+/* Button Groups */
+
+.btn-group .btn {
+	margin: 0;
+	float: left;
+	.border-radius(0);
+	clear: both;
+	width: 100%;
+}
+
+.btn-group .btn:first-child {
+	.border-radius-corners(2px, 2px, 0, 0);
+}
+
+.btn-group .btn:last-child {
+	.border-radius-corners(0, 0, 2px, 2px);
+}
+
+@media only screen and (min-width: 769px) {
+	
+	.btn-group .btn {
+		margin: 0;
+		float: left;
+		.border-radius(0);
+		clear: none;
+		width: auto;
+	}
+	
+	.btn-group .btn:first-child {
+		.border-radius-corners(2px, 0, 0, 2px);
+	}
+	
+	.btn-group .btn:last-child {
+		.border-radius-corners(0, 2px, 2px, 0);
+	}
+	
+	.btn-group.full-width .btn {
+		display: table-cell;
+		width: 1%;
+		float: none;
+	}
+	
+}
+
 /* Touch buttons */
 
 .btn-touch {
 	display: inline-block;
+	vertical-align: middle;
 	padding: 8px 0;
 	border: none;
 	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
@@ -471,12 +518,14 @@
 
 /* Button sizes */
 
-.btn.btn-small {
+.btn.btn-small,
+.btn-group.btn-small .btn {
 	padding: .2em .6em;
 	.border-radius(3px);
 }
 
-.btn.btn-hero {
+.btn.btn-hero,
+.btn-group.btn-hero .btn {
 	max-width: 100%;
 	padding: .6em .9em;
 	font-size: 130%;
@@ -485,11 +534,13 @@
 
 @media only screen and (min-width: 769px) {
 	
-	.btn.btn-small {
+	.btn.btn-small,
+	.btn-group.btn-small .btn {
 		font-size: 70%;
 	}
 	
-	.btn.btn-hero {
+	.btn.btn-hero,
+	.btn-group.btn-hero .btn {
 		padding: .4em 1em;
 		font-size: 180%;
 	}
