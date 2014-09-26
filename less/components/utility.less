@@ -1,3 +1,5 @@
+/* General */
+
 .clear {
 	clear: both;
 }
@@ -12,7 +14,8 @@ form.form-tight .form-row:after,
 .btn-group:after,
 .modal header:after,
 .modal section:after,
-.modal footer:after {
+.modal footer:after,
+.paginate ul:after {
 	content: "";
 	display: table;
 	clear: both;
@@ -109,217 +112,6 @@ img.float-left {
 	padding: 20px;
 }
 
-.paginate {
-	margin-top: 20px;
-	margin-bottom: 20px;
-	overflow: hidden;
-}
-
-.paginate.paginate-center {
-	text-align: center;
-}
-
-.paginate.paginate-right {
-	text-align: right;
-}
-
-.paginate ul {
-	display: inline-block;
-	padding: 0;
-	list-style: none;
-}
-
-.paginate ul li {
-	margin-right: 4px;
-	margin-bottom: 0;
-	float: left;
-}
-
-.paginate ul li a {
-	display: inline-block;
-	padding: 5px 10px;
-	border: solid 1px #afafaf;
-	color: @black;
-	-webkit-background-size: 100% 190%;
-	   -moz-background-size: 100% 190%;
-	   		background-size: 100% 190%;
-	.box-shadow(~'', 0, 1px, 3px, 0, rgba(0,0,0, .15));
-	.border-radius(2px);
-    .linear-gradient(top, @white, darken(@white, 12%), 100%, lighten(@silver, 6%));
-    .transition(background, .1s);
-}
-
-.paginate ul li a:hover {
-	text-decoration: none;
-	-webkit-background-position: 0 50%;
-	   -moz-background-position: 0 50%;
-	   		background-position: 0 50%;
-}
-
-.paginate ul li a:active {
-	-webkit-background-position: 0 100%;
-	   -moz-background-position: 0 100%;
-	   		background-position: 0 100%;
-}
-
-.paginate.paginate-dark ul li a {
-	border: solid 1px #32373b;
-	color: @white;
-	.box-shadow-double(inset, 0, 1px, 1px, 0, rgba(255,255,255, .3), ~'', 0, 1px, 3px, 0, rgba(0,0,0, .1));
-    .linear-gradient(top, #6d767d, darken(#4a5055, 15%), 100%, #4a5055);
-    //.transition(background, .1s);
-}
-
-.paginate ul li.paginate-current a,
-.paginate.paginate-dark > ul > li.paginate-current > a {
-	padding: 6px 10px;
-	border: none;
-	background: #494949;
-    color: @white;
-    text-shadow: 0px 0px 3px rgba(0,0,0, .5);
-    .border-radius(2px);
-    .box-shadow-double(inset, 0, 0, 8px, 0, rgba(0,0,0, .5), ~'', 0, 1px, 0, 0, rgba(255,255,255, .25));
-}
-
-.paginate.paginate-dark ul li.paginate-current a {
-	padding: 6px 10px;
-}
-
-.paginate.paginate-flat ul li a {
-	background: #fcfcfc;
-	.box-shadow-none();
-	.transition(none);
-}
-
-.paginate.paginate-flat ul li a:hover {
-	background: #eaeaea;
-}
-
-.paginate.paginate-flat ul li a:active {
-	background: #dedede;
-}
-
-.paginate.paginate-dark.paginate-flat ul li a {
-	background: #464646;
-	border: 1px solid #464646;
-	.box-shadow-none();
-}
-
-.paginate.paginate-dark.paginate-flat ul li a:hover {
-	background: #8a8a8a;
-	border: 1px solid #8a8a8a;
-}
-
-.paginate.paginate-dark.paginate-flat ul li a:active {
-	background: #adadad;
-}
-
-.paginate.paginate-flat ul li.paginate-current a,
-.paginate.paginate-flat ul li.paginate-current a:hover {
-	background-color: #464646;
-	border: none;
-	text-shadow: none;
-}
-
-.paginate.paginate-dark.paginate-flat ul li.paginate-current a,
-.paginate.paginate-dark.paginate-flat ul li.paginate-current a:hover {
-	background-color: #e0e0e0;
-	color: @black;
-	border: none;
-	text-shadow: none;
-}
-
-.paginate.paginate-no-border ul li a,
-.paginate.paginate-no-border ul li a:hover,
-.paginate.paginate-flat.paginate-no-border ul li a,
-.paginate.paginate-flat.paginate-no-border ul li a:hover {
-	border: none;
-}
-
-.paginate.paginate-dark.paginate-no-border ul li.paginate-current a,
-.paginate.paginate-no-border ul li.paginate-current a {
-	padding: 2px 8px;
-}
-
-// TABLES
-
-.tbl {
-	margin-bottom: 20px;
-	width: 100%;
-	border-collapse: separate;
-}
-
-.tbl tr td {
-	padding: 4px;
-}
-
-.tbl tr th {
-	vertical-align: bottom;
-}
-
-.tbl tr th,
-.tbl tr td {
-	padding: 6px;
-	vertical-align: top;
-}
-
-.tbl tr:first-child > td {
-	border: none;
-}
-
-.tbl tr th {
-	text-align: left;
-	background-color: #d4d6d9;
-	color: @black;
-}
-
-.tbl.tbl-bordered tr:first-child > td {
-	//border: 1px solid #dddddd;
-}
-
-.tbl.tbl-bordered tr th {
-	text-align: left;
-	background-color: #f1f1f1;
-	color: #222222;
-}
-
-.tbl.tbl-bordered tr th,
-.tbl.tbl-bordered tr td {
-	border-top: 1px solid #dddddd;
-	border-left: 1px solid #dddddd;
-}
-
-.tbl.tbl-bordered tr th:last-child,
-.tbl.tbl-bordered tr td:last-child {
-	border-right: 1px solid #dddddd;
-}
-
-.tbl.tbl-bordered tr:last-child td {
-	border-bottom: 1px solid #dddddd;
-}
-
-.tbl.tbl-center tr th,
-.tbl.tbl-center tr td, {
-	text-align: center;
-}
-
-.tbl.tbl-skinny tr th,
-.tbl.tbl-skinny tr td {
-	padding: 3px 6px;
-}
-
-.tbl th:first-child {
-    .border-radius-corners(4px, 0, 0, 0);
-}
-
-.tbl th:last-child {
-    .border-radius-corners(0, 4px, 0, 0);
-}
-
-.tbl th:only-child {
-    .border-radius-corners(6px, 6px, 0, 0);
-}
-
 .gutter-right {
 	margin-right: @right-gutter;
 }
@@ -390,4 +182,326 @@ img.float-left {
 	margin: -1px !important;
 	padding: 0 !important;
 	border: 0 !important;
+}
+
+/* Pagination */
+
+.paginate ul {
+	display: inline-block;
+	padding: 0;
+	list-style: none;
+}
+
+.paginate ul li {
+	float: left;
+	margin: 0 4px;
+}
+
+.paginate ul li:first-child {
+	margin-left: 0;
+}
+
+.paginate ul li:last-child {
+	margin-right: 0;
+}
+
+.paginate ul li a,
+.paginate.silver ul li a,
+.paginate.white ul li a {
+	display: inline-block;
+	padding: 4px;
+	width: 26px;
+	background-color: @pagination-background;
+	text-align: center;
+	color: @pagination-color;
+	.border-radius(2px);
+	.transition(all, .2s, ease-in-out);
+}
+
+.paginate ul li.current a {
+	color: @pagination-current-color;
+	background-color: @pagination-current-background;
+}
+
+.paginate.blue ul li a {
+	color: @blue;
+}
+
+.paginate.blue ul li.current a {
+	color: @white;
+	background-color: @blue;
+}
+
+.paginate.green ul li a {
+	color: @green;
+}
+
+.paginate.green ul li.current a {
+	color: @white;
+	background-color: @green;
+}
+
+.paginate.orange ul li a {
+	color: @orange;
+}
+
+.paginate.orange ul li.current a {
+	color: @white;
+	background-color: @orange;
+}
+
+.paginate.red ul li a {
+	color: @red;
+}
+
+.paginate.red ul li.current a {
+	color: @white;
+	background-color: @red;
+}
+
+.paginate.purple ul li a {
+	color: @purple;
+}
+
+.paginate.purple ul li.current a {
+	color: @white;
+	background-color: @purple;
+}
+
+.paginate.lime ul li a {
+	color: @lime;
+}
+
+.paginate.lime ul li.current a {
+	color: @white;
+	background-color: @lime;
+}
+
+.paginate.dragonfruit ul li a {
+	color: @dragonfruit;
+}
+
+.paginate.dragonfruit ul li.current a {
+	color: @white;
+	background-color: @dragonfruit;
+}
+
+.paginate.cosmic ul li a {
+	color: @cosmic;
+}
+
+.paginate.cosmic ul li.current a {
+	color: @white;
+	background-color: @cosmic;
+}
+
+.paginate.dark ul li a {
+	color: @pagination-dark-color;
+	background-color: @pagination-dark-background;
+}
+
+.paginate.dark ul li.current a {
+	color: @pagination-dark-current-color;
+	background-color: @pagination-dark-current-background;
+}
+
+@media only screen and (min-width: 769px) {
+	.paginate ul li a:hover {
+		color: @pagination-current-hover-color;
+		background-color: @pagination-current-hover-background;
+		.box-shadow(~'', 0, 0, 2px, 0, rgba(0, 0, 0, .15));
+	}
+	
+	.paginate.blue ul li a:hover {
+		background-color: @blue;
+	}
+	
+	.paginate.green ul li a:hover {
+		background-color: @green;
+	}
+	
+	.paginate.orange ul li a:hover {
+		background-color: @orange;
+	}
+	
+	.paginate.red ul li a:hover {
+		background-color: @red;
+	}
+	
+	.paginate.purple ul li a:hover {
+		background-color: @purple;
+	}
+	
+	.paginate.lime ul li a:hover {
+		background-color: @lime;
+	}
+	
+	.paginate.dragonfruit ul li a:hover {
+		background-color: @dragonfruit;
+	}
+	
+	.paginate.cosmic ul li a:hover {
+		background-color: @cosmic;
+	}
+	
+	.paginate.dark ul li a:hover {
+		color: @pagination-dark-hover-color;
+		background-color: @pagination-dark-hover-background;
+	}
+}
+
+/* Tables */
+
+.tbl {
+	width: 100%;
+	border-collapse: separate;
+	border-spacing: 0;
+}
+
+.tbl tr th {
+	vertical-align: bottom;
+	padding: 20px 10px;
+	color: @black;
+}
+
+.tbl tr td {
+	vertical-align: top;
+	font-size: 90%;
+	padding: 10px;
+	color: @table-head-color;
+}
+
+.tbl.narrow tr th,
+.tbl.narrow tr td {
+	padding: 4px 10px;
+}
+
+.tbl.bordered tr th {
+	border-top: 1px solid @table-border-color;
+}
+
+.tbl.bordered tr th,
+.tbl.bordered tr td {
+	border-bottom: 1px solid @table-border-color;
+	border-left: 1px solid @table-border-color;
+}
+
+.tbl.bordered tr th:last-child,
+.tbl.bordered tr td:last-child {
+	border-right: 1px solid @table-border-color;
+}
+
+.tbl.alternate tr:nth-child(odd) td {
+	color: @table-alternate-color;
+	background-color: @table-alternate-background;
+}
+
+.tbl.alternate tr th,
+.tbl.alternate tr td,
+.tbl.alternate tr td:last-child,
+.tbl.alternate tr th:last-child {
+	border: none;
+}
+
+.tbl.alternate.blue tr th {
+	color: @blue;
+}
+
+.tbl.alternate.blue tr:nth-child(odd) td {
+	color: @white;
+	background-color: @blue;
+}
+
+.tbl.alternate.green tr th {
+	color: @green;
+}
+
+.tbl.alternate.green tr:nth-child(odd) td {
+	color: @white;
+	background-color: @green;
+}
+
+.tbl.alternate.orange tr th {
+	color: @orange;
+}
+
+.tbl.alternate.orange tr:nth-child(odd) td {
+	color: @white;
+	background-color: @orange;
+}
+
+.tbl.alternate.red tr th {
+	color: @red;
+}
+
+.tbl.alternate.red tr:nth-child(odd) td {
+	color: @white;
+	background-color: @red;
+}
+
+.tbl.alternate.purple tr th {
+	color: @purple;
+}
+
+.tbl.alternate.purple tr:nth-child(odd) td {
+	color: @white;
+	background-color: @purple;
+}
+
+.tbl.alternate.lime tr th {
+	color: @lime;
+}
+
+.tbl.alternate.lime tr:nth-child(odd) td {
+	color: @white;
+	background-color: @lime;
+}
+
+.tbl.alternate.dragonfruit tr th {
+	color: @dragonfruit;
+}
+
+.tbl.alternate.dragonfruit tr:nth-child(odd) td {
+	color: @white;
+	background-color: @dragonfruit;
+}
+
+.tbl.alternate.cosmic tr th {
+	color: @cosmic;
+}
+
+.tbl.alternate.cosmic tr:nth-child(odd) td {
+	color: @white;
+	background-color: @cosmic;
+}
+
+
+.tbl.dark tr th {
+	color: @table-dark-head-color;
+	background-color: @table-dark-head-background;
+}
+
+.tbl.dark tr td {
+	color: @table-dark-color;
+	background-color: @table-dark-background;
+}
+
+.tbl.bordered.dark tr th,
+.tbl.bordered.dark tr td {
+	border-color: @table-dark-border-color;
+}
+
+.tbl.alternate.dark tr th {
+	color: @table-dark-head-color;
+	background-color: @table-dark-head-background;
+}
+
+.tbl.alternate.dark tr:nth-child(odd) td {
+	color: @table-dark-color;
+	background-color: #393939;
+}
+
+.tbl.alternate.dark tr:nth-child(even) td {
+	color: @table-dark-color;
+	background-color: #6a6a6a;
 }

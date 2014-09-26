@@ -27,3 +27,8 @@ For compatibility, all form types now use .input-containers, including .form-inl
 Classes now go on the .input-container, rather than the input.
 Visually different input elements (checkbox, radio, select, file, textarea) require an additional class on their .input-container. That class is the type of input, for example .checkbox or .radio. For obvious reasons, textareas do not work with .form-inline.
 Modal has been rewritten. New LESS variables, new classes, new plugin (to replace the old awkward JavaScript). See documentation for details.
+Pagination is now always flat so .paginate-flat and .paginate-no-border have been deprecated.
+Pagination centering and right aligning uses classes .center and .right (on the .paginate element) respectively.
+Pagination dark uses class .dark (on the .paginate element).
+Current pagination link now uses .current (still on the li element).
+Table class name changes: .tbl-bordered is now .bordered, .tbl-centered is now .center, .tbl-skinny is now .narrow.
