@@ -4,78 +4,81 @@
 	top: 0;
 	right: 0;
 	left: 0;
-	margin-left: auto;
-	margin-right: auto;
+	margin: auto;
 	width: 100%;
 	max-height: 100%;
 	z-index: 9000;
 	opacity: 0;
-	overflow: auto;
-	overflow-y: scroll;
 	background-color: transparent;
 	.transition(all, .4s, ease-in-out);
+	.box-shadow(~'', 0, 0, 2px, 0, rgba(0, 0, 0, .25));
 }
 
-.modal.modal-static {
+.modal.show {
+	top: 60px;
+	opacity: 1;
+}
+
+.modal header {
+	padding: 20px;
+	text-align: center;
+	background-color: @modal-header-back;
+}
+
+.modal header h1,
+.modal header h2,
+.modal header h3,
+.modal header h4,
+.modal header h5,
+.modal header h6 {
+	color: @white;
+	margin: 0;
+}
+
+.modal section {
+	padding: 16px;
+	color: @modal-color;
+	background-color: @modal-body-back;
+}
+
+.modal footer {
+	padding: 16px;
+	font-size: 80%;
+	color: @modal-footer-color;
+	border-top: 1px solid @modal-footer-top-border-color;
+	background-color: @modal-footer-back;
+}
+
+.modal footer a {
+	color: @modal-footer-link-color;
+}
+
+.modal footer a:hover {
+	color: @modal-footer-link-hover-color;
+}
+
+// Round the bottom corners of the last item
+.modal section:last-child,
+.modal footer:last-child {
+	.border-radius-corners(0, 0, 2px, 2px);
+}
+
+.modal.static {
 	position: relative;
 	top: inherit;
 	display: inherit;
 	width: 100%;
 	z-index: inherit;
 	opacity: 1;
+	.box-shadow(~'', 0, 0, 2px, 0, rgba(0, 0, 0, .25));
+	.border-radius(2px);
 }
 
-.modal .head {
-	padding: 10px 20px;
-	overflow: auto;
-	background-color: #f4f4f4;
-	border-bottom: 1px solid lighten(@modal-border, 12%);
+.modal.static header {
+	.border-radius-corners(2px, 2px, 0, 0);
 }
 
-.modal.modal-flat .head {
-	border-top: 1px solid @modal-border;
-}
-
-.modal .head h1,
-.modal .head h2,
-.modal .head h3,
-.modal .head h4,
-.modal .head h5,
-.modal .head h6, {
-	margin: 0;
-}
-
-.modal .body {
-	padding: 20px 20px 10px 20px;
-	overflow: auto;
-	background-color: @white;
-}
-
-.modal .foot {
-	padding: 10px 20px;
-	overflow: auto;
-	color: @white;
-	font-size: 80%;
-	background-color: @modal-foot;
-}
-
-.modal .foot a {
-	color: @modal-link;
-}
-
-.modal .btn-modal-right {
-	float: right;
-	margin-left: 10px;
-}
-
-.modal.modal-flat {
-	.box-shadow-none();
-}
-
-.modal-show {
-	top: 60px;
-	opacity: 1;
-}
+/* Blackout Curtain */
 
 #blackout {
 	display: none;
@@ -86,7 +89,8 @@
 	width: 100%;
 	z-index: 8000;
 	opacity: 0;
-	background-color: rgba(0,0,0,.8);
+	background-color: black;
+	background-color: rgba(0, 0, 0, .8);
 	.transition(all, .4s, ease-in-out);
 }
 
@@ -94,27 +98,31 @@
 	opacity: 1;
 }
 
+.modal.flat {
+	.box-shadow-none();
+}
+
+.modal.flat section {
+	background-color: @modal-flat-background;
+}
+
+.modal.flat footer {
+	background-color: @modal-flat-footer-background;
+}
+
 @media only screen and (min-width: 769px) {
+	
 	.modal {
 		width: 50%;
-		.border-radius(5px);
-		.box-shadow(~'', 0, 0px, 4px, 0, rgba(0, 0, 0, .3));
+		.border-radius(2px);
 	}
 	
-	.modal .head {
-		.border-radius-corners(5px, 5px, 0, 0);
+	.modal header {
+		padding: 16px 10px;
+		.border-radius-corners(2px, 2px, 0, 0);
 	}
 	
-	.modal.modal-flat .head {
-		border: 1px solid @modal-border;
-	}
-	
-	.modal.modal-flat .body {
-		border-left: 1px solid @modal-border;
-		border-right: 1px solid @modal-border;
-	}
-	
-	.modal .foot {
-		.border-radius-corners(0, 0, 5px, 5px);
+	.modal section {
+		padding: 20px;
 	}
 }
