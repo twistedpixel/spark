@@ -24,10 +24,6 @@
 	margin-bottom: 30px;
 }
 
-.container .row:last-child {
-	margin-bottom: 0;
-}
-
 .container .row .col {
 	float: left;
 	text-align: left;
@@ -41,21 +37,19 @@
 	padding: 0 @right-gutter 0 @left-gutter;
 }
 
-.container .row .col:empty {
-	margin-bottom: 0;
-}
-
 .container .row .col .col {
 	padding: 0;
-}
-
-.container .row .col > img:last-child {
-	//margin-bottom: 20px;
 }
 
 .container.hero {
 	padding: 40px 30px;
 	background-color: #f9f9f9;
+}
+
+.container > :last-child,
+.container .row > :last-child,
+.container .row .col:empty {
+	margin-bottom: 0;
 }
 
 .container .col.of-1,
