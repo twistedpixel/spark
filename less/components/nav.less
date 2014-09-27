@@ -159,32 +159,14 @@ nav.bar.heavier ul li.active > a {
 		position: relative;
 	}
 	
-	// Dropdown link box
+	// Dropdown list container
 	nav.bar .box {
 		width: 180px;
 		position: absolute;
-		left: 9999px;
+		left: -9999px;
 		margin-left: -90px;
 		top: 50px;
 		z-index: 100;
-	}
-	
-	// Dropdown link box n+1th tier
-	nav.bar ul ul .box {
-		left: 120%;
-		top: -15px !important;
-	}
-	
-	// Dropdown (right) link box n+1th tier
-	nav.bar.right ul ul .box {
-		left: -20%;
-	}
-	
-	// Hover state of dropdown link box
-	nav.bar > ul > li.drop:hover > .box,
-	nav.bar > ul > li.drop a:focus + .box,
-	nav.bar > ul > li.drop.dropped .box {
-		left: 50%;
 	}
 	
 	// Dropdown list
@@ -199,28 +181,59 @@ nav.bar.heavier ul li.active > a {
 		opacity: 0;
 		.border-radius(3px);
 		.box-shadow(~'', 0, 0, 3px, 0, rgba(0,0,0,.25));
-		.transition(all, .2s, ease-in-out);
+		
+		-webkit-transition: margin 0.2s ease-in-out, opacity 0.2s ease-in-out;
+		-moz-transition: margin 0.2s ease-in-out, opacity 0.2s ease-in-out;
+		-ms-transition: margin 0.2s ease-in-out, opacity 0.2s ease-in-out;
+		-o-transition: margin 0.2s ease-in-out, opacity 0.2s ease-in-out;
+		transition: margin 0.2s ease-in-out, opacity 0.2s ease-in-out;
+	}
+	
+	// Hover state of dropdown list container
+	nav.bar li.drop:hover > .box,
+	nav.bar li.drop a:focus + .box,
+	nav.bar li.drop.dropped .box {
+		left: 50%;
 	}
 	
 	// Hover state of dropdown list
-	nav.bar ul li.drop:hover > .box > .inner,
-	nav.bar ul li.drop a:focus + .box > .inner,
-	nav.bar ul li.drop.dropped .box > .inner {
+	nav.bar li.drop:hover > .box > .inner,
+	nav.bar li.drop a:focus + .box > .inner,
+	nav.bar li.drop.dropped .box > .inner {
 		opacity: 1;
 		margin-top: 5px;
+	}
+	
+	// Hover state of dropdown list
+	nav.bar li.drop:hover > .box > .inner,
+	nav.bar li.drop a:focus + .box > .inner,
+	nav.bar li.drop.dropped .box > .inner {
+		opacity: 1;
+		margin-top: 5px;
+	}
+	
+	// Dropdown list container n+1th tier
+	nav.bar ul li.drop li.drop .box {
+		left: 120%;
+		top: -15px;
+	}
+	
+	// Dropdown (right) list container n+1th tier
+	nav.bar.right li.drop li.drop .box {
+		left: -20%;
 	}
 	
 	// Dropdown list item
 	nav.bar ul.inner li {
 		padding: 10px;
 		.transition(background, .3s, ease-out);
+		.border-radius(2px);
 	}
 	
 	// Dropdown list item hover
 	nav.bar ul.inner li:hover,
 	nav.bar ul.inner li.hover {
 		background-color: #ebebeb;
-		.border-radius(3px);
 	}
 	
 	nav.bar ul.inner li:hover > a,
