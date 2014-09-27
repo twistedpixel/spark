@@ -1,4 +1,4 @@
-// ALERTS
+/* Alerts */
 
 .alert {
 	position: relative;
@@ -87,7 +87,7 @@
 	right: 7px;
 }
 
-// ALERT CLOSE BUTTONS
+/* Close Button */
 
 .alert .alert-close {
 	color: #d3d3d3;
@@ -117,7 +117,7 @@
 	color: darken(@white, 66%);
 }
 
-// BANNERS
+/* Banners */
 
 .banners {
 	position: fixed;
@@ -158,8 +158,6 @@
 	color: @green;
 }
 
-// BANNER BLUE
-
 .banners.banners-blue li {
 	background-color: @blue;
 	color: black;
@@ -172,8 +170,6 @@
 .banners.banners-blue li a:hover {
 	color: @dragonfruit;
 }
-
-// BANNER GREEN
 
 .banners.banners-green li {
 	background-color: @green;
@@ -188,8 +184,6 @@
 	color: @dragonfruit;
 }
 
-// BANNER ORANGE
-
 .banners.banners-orange li {
 	background-color: @orange;
 	color: black;
@@ -198,8 +192,6 @@
 .banners.banners-orange li a {
 	color: @white;
 }
-
-// BANNER RED
 
 .banners.banners-red li {
 	//background-color: #ea3957;
@@ -212,8 +204,6 @@
 	color: @white;
 }
 
-// BANNER PURPLE
-
 .banners.banners-purple li {
 	background-color: @purple;
 	color: black;
@@ -223,8 +213,6 @@
 	color: @white;
 }
 
-// BANNER LIME
-
 .banners.banners-lime li {
 	background-color: @lime;
 	color: black;
@@ -233,8 +221,6 @@
 .banners.banners-lime li a {
 	color: @white;
 }
-
-// BANNER DRAGONFRUIT
 
 .banners.banners-dragonfruit li {
 	background-color: @dragonfruit;
@@ -319,6 +305,63 @@
 	background-image: none;
 }
 
+/* Tags */
+
+.tag {
+	display: inline-block;
+	font-size: 10px;
+	line-height: 1.5;
+	color: #494949;
+	background-color: @silver;
+	padding: 0 6px;
+	margin-left: 10px;
+	.border-radius(2px);
+}
+
+h1 + .tag,
+h2 + .tag,
+h3 + .tag,
+h4 + .tag,
+h5 + .tag,
+h6 + .tag {
+	vertical-align: super;
+}
+
+.tag.blue {
+	color: @white;
+	background-color: @blue;
+}
+
+.tag.green {
+	color: @white;
+	background-color: @green;
+}
+
+.tag.orange {
+	color: @white;
+	background-color: @orange;
+}
+
+.tag.red {
+	color: @white;
+	background-color: @red;
+}
+
+.tag.lime {
+	color: @white;
+	background-color: @lime;
+}
+
+.tag.dragonfruit {
+	color: @white;
+	background-color: @dragonfruit;
+}
+
+.tag.cosmic {
+	color: @white;
+	background-color: @cosmic;
+}
+
 /* Notification */
 
 .notifications {
@@ -337,6 +380,7 @@
 }
 
 .notifications .notification {
+	display: block;
 	overflow: hidden;
 	margin: 14px 0 0 0;
 	opacity: 0;
@@ -402,10 +446,10 @@
 	.notifications {
 		left: 20px;
 		bottom: 20px;
+		max-width: 340px;
 	}
 	
 	.notifications .notification {
-		//padding: 0 20px 20px 20px;
 		width: 400px;
 	}
 	
