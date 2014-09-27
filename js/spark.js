@@ -1,7 +1,7 @@
 $(document).ready(function () {
 	
 	// Toggle menu on mobile devices
-	$(document).on('click', 'a.nav-link', function(e) {
+	$(document).on('click', '.nav-link', function(e) {
 		e.preventDefault()
 		link = $(this)
 		nav = link.parents('nav')
