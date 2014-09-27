@@ -171,14 +171,19 @@ nav.bar.heavier ul li.active > a {
 	
 	// Dropdown link box n+1th tier
 	nav.bar ul ul .box {
-		left: -20%;
+		left: 120%;
 		top: -15px !important;
 	}
 	
+	// Dropdown (right) link box n+1th tier
+	nav.bar.right ul ul .box {
+		left: -20%;
+	}
+	
 	// Hover state of dropdown link box
-	nav.bar ul li.drop:hover > .box,
-	nav.bar ul li.drop a:focus + .box,
-	nav.bar ul li.drop.dropped .box {
+	nav.bar > ul > li.drop:hover > .box,
+	nav.bar > ul > li.drop a:focus + .box,
+	nav.bar > ul > li.drop.dropped .box {
 		left: 50%;
 	}
 	
