@@ -163,13 +163,13 @@ nav.bar.heavier ul li.active > a {
 	nav.bar .box {
 		width: 180px;
 		position: absolute;
-		left: 50%;
+		left: 9999px;
 		margin-left: -90px;
-		top: -400px;
+		top: 50px;
 		z-index: 100;
 	}
 	
-	// Dropdown link box
+	// Dropdown link box n+1th tier
 	nav.bar ul ul .box {
 		left: -20%;
 		top: -15px !important;
@@ -179,7 +179,7 @@ nav.bar.heavier ul li.active > a {
 	nav.bar ul li.drop:hover > .box,
 	nav.bar ul li.drop a:focus + .box,
 	nav.bar ul li.drop.dropped .box {
-		top: 50px;
+		left: 50%;
 	}
 	
 	// Dropdown list
