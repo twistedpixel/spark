@@ -24,9 +24,10 @@ The navigation bar markup structure has been redesigned. It's fairly similar but
 Nav bar .name is now .brand.
 An ID of primary-nav is no longer necessary on nav .bar (although an ID is obviously recommended).
 Nav bar .nav-light has been deprecated. By default, the navigation bar is light.
-For compatibility, all form types now use .input-containers, including .form-inline and for buttons (submit etc.).
+Form type classes have been shortened: .form-inline is now .inline and .form-horizontal is now .horizontal.
+For compatibility, all form types now use .input-containers, including .inline and for buttons (submit etc.).
 Classes now go on the .input-container, rather than the input.
-Visually different input elements (checkbox, radio, select, file, textarea) require an additional class on their .input-container. That class is the type of input, for example .checkbox or .radio. For obvious reasons, textareas do not work with .form-inline.
+Visually different input elements (checkbox, radio, select, file, textarea) require an additional class on their .input-container. That class is the type of input, for example .checkbox or .radio. For obvious reasons, textareas do not work with .inline.
 Modal has been rewritten. New LESS variables, new classes, new plugin (to replace the old awkward JavaScript). See documentation for details.
 Pagination is now always flat so .paginate-flat and .paginate-no-border have been deprecated.
 Pagination centering and right aligning uses classes .center and .right (on the .paginate element) respectively.
