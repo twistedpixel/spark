@@ -1,167 +1,155 @@
-.link-list {
-	padding: 5px 0 20px 0;
+.link-list,
+.link-list.white,
+.link-list.silver {
+	padding: 16px;
 	list-style: none;
+	.border-radius(2px);
+	background-color: transparent;
 }
 
-.link-list li.list-heading {
-	padding: 10px 20px 5px 20px;
-	text-transform: uppercase;
-	font-size: 0.6em;
-	color: @disabled;
+.link-list.dark {
+	background-color: @link-list-dark-background;
 }
 
-.link-list li.list-heading:hover {
-	background: none;
+.link-list li.heading,
+.link-list.white li.heading,
+.link-list.silver li.heading {
+	color: @link-list-heading-color;
+	font-weight: 600;
+	margin: 10px 0;
 }
 
-.link-list li.divider {
-	margin: 10px 20px;
-	height: 1px;
-	background-color: #e1e1e1;
-	border-bottom: 1px solid #ffffff;
-	.box-sizing(content-box);
+.link-list.dark li.heading {
+	color: @link-list-heading-color;
 }
 
-.link-list li a {
+.link-list li.heading:first-child {
+	margin-top: 0;
+}
+
+.link-list li.divider,
+.link-list.white li.divider,
+.link-list.silver li.divider {
 	display: block;
-	padding: 0 20px;
-	text-decoration: none;
-	color: @link-color;
-	font-size: 16px;
+	height: 0px;
+	border-bottom: 1px solid @link-list-border-bottom-color;
+	margin: 10px 0;
+}
+
+.link-list.dark li.divider {
+	border-top: 1px solid @link-list-dark-border-top-color;
+	border-bottom: 1px solid @link-list-dark-border-bottom-color;
+}
+
+.link-list li a,
+.link-list.white li a,
+.link-list.silver li a {
+	color: @link-list-color;
+	.border-radius(2px);
+}
+
+.link-list li.active a,
+.link-list.white li.active a,
+.link-list.silver li.active a {
+	padding: 2px 4px;
+	background-color: @link-list-active-background;
+	color: @link-list-active-color;
+}
+
+.link-list li a,
+.link-list.white li a,
+.link-list.silver li a {
+	color: @link-list-color;
+}
+
+.link-list.dark li a {
+	color: @link-list-dark-color;
+}
+
+.link-list.dark li.active a {
+	background-color: @link-list-dark-active-background;
+	color: @link-list-dark-active-color;
 }
 
 .link-list li a:hover,
-.link-list.link-list-blue li a:hover,
-.link-list.link-list-green li a:hover,
-.link-list.link-list-orange li a:hover,
-.link-list.link-list-red li a:hover,
-.link-list.link-list-purple li a:hover,
-.link-list.link-list-lime li a:hover,
-.link-list.link-list-dragonfruit li a:hover {
-	color: lighten(@black, 20%);
-	background-color: #e8e8e8;
+.link-list li a:focus {
+	outline: none;
+	color: @link-list-hover-color;
 }
 
-.link-list li.active a {
-	color: @white;
-	background-color: lighten(@nav-dark-back, 18%);
+.link-list.blue li a {
+	color: @blue;
 }
 
-.link-list li.active a:hover {
-	background-color: @nav-dark-hover;
-}
-
-
-// LINK LIST BLUE
-.link-list.link-list-blue li a {
+.link-list.blue li a:hover,
+.link-list.blue li a:focus {
 	color: darken(@blue, 20%);
 }
 
-.link-list.link-list-blue li.active a {
-	color: @white;
-	background-color: desaturate(@blue, 5%);
+.link-list.green li a {
+	color: @green;
 }
 
-.link-list.link-list-blue li.active a:hover {
-	background-color: lighten(desaturate(@blue, 5%), 3%);
-}
-
-
-// LINK LIST GREEN
-.link-list.link-list-green li a {
+.link-list.green li a:hover,
+.link-list.green li a:focus {
 	color: darken(@green, 20%);
 }
 
-.link-list.link-list-green li.active a {
-	color: @white;
-	background-color: desaturate(@green, 5%);
+.link-list.orange li a {
+	color: @orange;
 }
 
-.link-list.link-list-green li.active a:hover {
-	background-color: lighten(desaturate(@green, 5%), 3%);
+.link-list.orange li a:hover,
+.link-list.orange li a:focus {
+	color: darken(@orange, 20%);
 }
 
-
-// LINK LIST ORANGE
-.link-list.link-list-orange li a {
-	color: darken(@orange, 10%);
-}
-
-.link-list.link-list-orange li.active a {
-	color: @white;
-	background-color: desaturate(@orange, 5%);
-}
-
-.link-list.link-list-orange li.active a:hover {
-	background-color: lighten(desaturate(@orange, 5%), 3%);
-}
-
-
-
-// LINK LIST RED
-.link-list.link-list-red li a {
+.link-list.red li a {
 	color: @red;
 }
 
-.link-list.link-list-red li.active a {
-	color: @white;
-	background-color: desaturate(@red, 5%);
+.link-list.red li a:hover,
+.link-list.red li a:focus {
+	color: darken(@red, 20%);
 }
 
-.link-list.link-list-red li.active a:hover {
-	background-color: lighten(desaturate(@red, 5%), 3%);
+.link-list.purple li a {
+	color: @purple;
 }
 
-
-
-// LINK LIST PURPLE
-.link-list.link-list-purple li a {
-	color: darken(@purple, 10%);
+.link-list.purple li a:hover,
+.link-list.purple li a:focus {
+	color: darken(@purple, 20%);
 }
 
-.link-list.link-list-purple li.active a {
-	color: @white;
-	background-color: desaturate(@purple, 5%);
+.link-list.lime li a {
+	color: @lime;
 }
 
-.link-list.link-list-purple li.active a:hover {
-	background-color: lighten(desaturate(@purple, 5%), 3%);
-}
-
-
-
-// LINK LIST LIME
-.link-list.link-list-lime li a {
+.link-list.lime li a:hover,
+.link-list.lime li a:focus {
 	color: darken(@lime, 20%);
 }
 
-.link-list.link-list-lime li.active a {
-	color: @white;
-	background-color: desaturate(@lime, 5%);
+.link-list.dragonfruit li a {
+	color: @dragonfruit;
 }
 
-.link-list.link-list-lime li.active a:hover {
-	background-color: lighten(desaturate(@lime, 5%), 3%);
+.link-list.dragonfruit li a:hover,
+.link-list.dragonfruit li a:focus {
+	color: darken(@dragonfruit, 20%);
 }
 
-
-
-// LINK LIST DRAGONFRUIT
-.link-list.link-list-dragonfruit li a {
-	color: darken(@dragonfruit, 10%);
+// Cosmic needs a bit of tweaking since it's quite dark
+.link-list.cosmic li a {
+	color: lighten(@cosmic, 10%);
 }
 
-.link-list.link-list-dragonfruit li.active a {
-	color: @white;
-	background-color: desaturate(@dragonfruit, 5%);
+.link-list.cosmic li.active a {
+	color: lighten(@cosmic, 20%);
 }
 
-.link-list.link-list-dragonfruit li.active a:hover {
-	background-color: lighten(desaturate(@dragonfruit, 5%), 3%);
-}
-
-@media only screen and (min-width: 769px) {
-	.link-list li a {
-		font-size: inherit;
-	}
+.link-list.cosmic li a:hover,
+.link-list.cosmic li a:focus {
+	color: lighten(@cosmic, 30%);
 }

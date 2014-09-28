@@ -1,11 +1,12 @@
 html {
 	font: 14px/1.5 "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-weight: 400;
 }
 
 h1, h2, h3, h4, h5, h6 {
 	font-weight: 200;
 	line-height: 1.2em;
-	color: #404040;
+	color: @headings;
 }
 
 h1 {
@@ -54,6 +55,27 @@ h6.super-skinny,
 	font-weight: 100;
 }
 
+p.skinny,
+span.skinny,
+.skinny {
+	font-weight: 200;
+}
+
+h1.base-weight,
+h2.base-weight,
+h3.base-weight,
+h4.base-weight,
+h5.base-weight,
+h6.base-weight {
+	font-weight: 200;
+}
+
+p.base-weight,
+span.base-weight,
+body .base-weight {
+	font-weight: 400;
+}
+
 .heavy-headings h1,
 .heavy-headings h2,
 .heavy-headings h3,
@@ -94,7 +116,7 @@ h5 span.alt,
 h6 span.alt {
 	font-size: 85%;
 	font-weight: inherit;
-	color: #9b9b9b;
+	color: @headings-alt;
 }
 
 .page-heading {
@@ -105,22 +127,6 @@ h6 span.alt {
 // Fix padding for nested page-headings
 .col .page-heading {
 	padding: 0;
-}
-
-// Prevent unnecessary margins
-.col h1:first-child,
-.col h2:first-child,
-.col h3:first-child,
-.col h4:first-child,
-.col h5:first-child,
-.col h6:first-child,
-h1.page-heading,
-h2.page-heading,
-h3.page-heading,
-h4.page-heading,
-h5.page-heading,
-h6.page-heading {
-	margin-top: 0;
 }
 
 p {
@@ -134,6 +140,7 @@ p {
 	margin-bottom: 0;
 }
 
+body .leading,
 p.leading {
 	margin-top: 0;
 	margin-bottom: 20px;
@@ -147,7 +154,6 @@ a {
 	color: @link-color;
 	text-decoration: none;
 }
-
 
 a:link {
 	color: @link-color;
@@ -169,10 +175,10 @@ a:hover {
 
 .underlined:after {
 	display: block;
-	margin-top: 20px;
+	margin: 20px 0;
 	height: 1px;
 	content: '';
-	background-color: #eeeeee;
+	background-color: @heading-underline;
 }
 
 .hero p,
@@ -210,7 +216,6 @@ small,
 h1.herotype,
 h2.herotype {
 	margin-bottom: 20px;
-	color: @darkergray;
 	letter-spacing: -0.07em;
 	line-height: 0.8em;
 }
@@ -220,7 +225,6 @@ h4.herotype,
 h5.herotype,
 h6.herotype {
 	margin-bottom: 10px;
-	color: @darkergray;
 	letter-spacing: -0.07em;
 	line-height: 0.8em;
 }
@@ -239,7 +243,8 @@ h6.herotype {
 
 blockquote.bq {
 	margin: 20px 0;
-	border-left: 5px solid #c3c3c3;
+	border-left: 5px solid @blockquote-border-left-color;
+	background-color: @blockquote-background-color;
 	padding: 12px 20px;
 	font-size: 150%;
 	font-weight: 200;
@@ -247,14 +252,14 @@ blockquote.bq {
 }
 
 blockquote.bq.alt {
-	background-color: #f8f8f8;
-	border-left: 10px solid #6e4c76;
+	background-color: @blockquote-alt-background-color;
+	border-left: 10px solid @blockquote-alt-border-color;
 	.border-radius-corners(0, 3px, 3px, 0);
 }
 
 blockquote.bq.right {
 	border-left: none;
-	border-right: 10px solid #6e4c76;
+	border-right: 10px solid @blockquote-alt-border-color;
 }
 
 blockquote.bq.right,
@@ -268,15 +273,15 @@ blockquote.bq p {
 
 blockquote.bq.alt.right {
 	border-left: none;
-	border-right: 10px solid #6e4c76;
+	border-right: 10px solid @blockquote-alt-border-color;
 	.border-radius-corners(3px, 0, 0, 3px);
 }
 
-blockquote.bq small {
+blockquote.bq footer {
 	display: block;
 	margin-top: 10px;
-	color: #878787;
-	font-size: 60%;	
+	color: @blockquote-footer-color;
+	font-size: 60%;
 }
 
 body .black {
