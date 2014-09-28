@@ -48,7 +48,12 @@
 				
 				var allowAutoRemove = true
 				
-				$notification = $('<div>', {'class':settings.notificationClasses})
+				if(typeof href != 'undefined') {
+					$notification = $('<a>', {'class':settings.notificationClasses, 'href':href})
+				}
+				else {
+					$notification = $('<div>', {'class':settings.notificationClasses})
+				}		
 				
 				$imgContainer = $('<div>', {'class':'thumb'})
 				$img = $('<img>', {'src':imgsrc})
@@ -79,16 +84,10 @@
 					})
 				}
 				
-				if(typeof href != 'undefined') {
-					$notification.wrap($('<a>', {'href':href}))
-				}
-				
-				
 				$close.on('click', function(e) {
 					e.preventDefault()
 					removeNotification($(this).parent('.notification'))
 				})
-				
 				
 				if(settings.hoverPreventsFade) {
 					$notification.on('mouseenter', function() {
