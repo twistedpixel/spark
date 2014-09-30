@@ -1,9 +1,5 @@
 // Only available in IE9+ avoiding for now
-/*
-form input:not([type=submit]):not([type=file]) {
-
-}
-*/
+//form input:not([type=submit]):not([type=file]) {}
 
 /* Basic Form */
 
@@ -31,10 +27,14 @@ form.form input[type="color"] {
 	border: 1px solid @form-border-color;
 	.appearance(none);
 	.border-radius(1px);
-	.transition(all, .2s, ease-in-out);
+	-webkit-transition: border 0.2s ease-in-out 0s, background 0.2s ease-in-out 0s;
+	   -moz-transition: border 0.2s ease-in-out 0s, background 0.2s ease-in-out 0s;
+	    -ms-transition: border 0.2s ease-in-out 0s, background 0.2s ease-in-out 0s;
+		 -o-transition: border 0.2s ease-in-out 0s, background 0.2s ease-in-out 0s;
+		 	transition: border 0.2s ease-in-out 0s, background 0.2s ease-in-out 0s;
 }
 
-form.form textarea,
+form.form textarea:focus,
 form.form input[type="text"]:focus,
 form.form input[type="password"]:focus,
 form.form input[type="datetime"]:focus,
@@ -172,7 +172,7 @@ form.form.dark input[type="color"] {
 	border: 1px solid @form-dark-border-color;
 }
 
-form.form.dark textarea,
+form.form.dark textarea:focus,
 form.form.dark input[type="text"]:focus,
 form.form.dark input[type="password"]:focus,
 form.form.dark input[type="datetime"]:focus,
@@ -208,6 +208,10 @@ form.tight .input-container.radio {
 form.form.dark label {
 	color: @form-dark-label-color;
 }
+	
+form.horizontal .input-container.radio label {
+	float: left;
+}
 
 @media only screen and (min-width: 769px) {
 	
@@ -235,6 +239,18 @@ form.form.dark label {
 	
 	form.form .select select {
 		font-size: 14px;
+	}
+	
+	form.form .radio label {
+		float: none;
+	}
+	
+	form.form:not(.horizontal) .radio label + label {
+		margin-left: 10px;
+	}
+	
+	form.form .radio label:last-of-type {
+		margin-bottom: 0;
 	}
 	
 
@@ -278,15 +294,6 @@ form.form.dark label {
 		width: 140px;
 	}
 	
-	form.form .radio label {
-		float: none;
-		margin-right: 10px;
-	}
-	
-	form.form .radio label:last-of-type {
-		margin-bottom: 0;
-	}
-	
 	form.inline .btn.fill {
 		padding: 11px 18px 10px 18px;
 		margin: 0;
@@ -301,14 +308,25 @@ form.form.dark label {
 	form.horizontal select {
 		display: inline-block;
 	}
-		
-	form.horizontal .input-container label {
+	
+	form.horizontal .input-container.radio .radios {
+		margin-left: 16%;
+		padding-left: 1px;
+		overflow: hidden;
+	}
+	
+	form.horizontal .input-container:not(.radio) label,
+	form.horizontal .input-container.radio label.side {
+		position: relative;
 		margin-right: 20px;
 		float: left;
 		width: 16%;
-		position: relative;
 	}
-		
+	
+	form.horizontal .input-container.radio label.side {
+		margin-left: 0;
+	}
+	
 	form.horizontal .input-container.buttons {
 		margin-left: 16%;
 		padding-left: 20px;
@@ -317,6 +335,7 @@ form.form.dark label {
 	
 	/* Tight Form */
 	
+	form.tight textarea,
 	form.tight input[type="text"],
 	form.tight input[type="password"],
 	form.tight input[type="datetime"],
@@ -337,6 +356,10 @@ form.form.dark label {
 	
 	form.tight .form-row {
 		margin-bottom: 10px;
+	}
+	
+	form.tight .form-row label {
+		line-height: 1;
 	}
 	
 	form.tight .form-row.controls {
@@ -389,11 +412,16 @@ form.form.dark label {
 		margin: 0 .99%;
 	}
 	
+	form.tight .tight-100 {
+		width: 98%;
+		margin: 0 .99%;
+	}
+	
 	form.tight .input-container.file,
 	form.tight .input-container.checkbox,
 	form.tight .input-container.radio {
-		text-align: center;
 		padding: 33px 0 0 0;
+		text-align: center;
 	}
 	
 	form.tight .input-container.select select {
@@ -403,25 +431,30 @@ form.form.dark label {
 
 /* Size Overrides */
 
-@media only screen and (min-width: 769px) {
+form.form:not(.tight) .is-tiny input {
+	width: 46px;
+}
 
-	form.form .input-tiny {
-		width: 36px;
+form.form:not(.tight) .is-small input {
+	width: 40%;
+}
+
+form.form:not(.tight) .is-medium input {
+	width: 70%;
+}
+
+form.form:not(.tight) .is-huge input {
+	width: 100%;
+	max-width: 100%;
+}
+
+@media only screen and (min-width: 769px) {
+	
+	form.form:not(.tight) .is-small input {
+		width: 200px;
 	}
 	
-	form.form .input-small {
-		width: 40%;
-	}
-	
-	form.form .input-medium {
-		width: 70%;
-	}
-	
-	form.form .input-large {
-		width: 100%;
-	}
-	
-	form.form .input-huge {
-		width: 100%;
+	form.form:not(.tight) .is-medium input {
+		width: 250px;
 	}
 }

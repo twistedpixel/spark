@@ -26,6 +26,7 @@ An ID of primary-nav is no longer necessary on nav .bar (although an ID is obvio
 Nav bar .nav-light has been deprecated. By default, the navigation bar is light.
 Form type classes have been shortened: .form-inline is now .inline and .form-horizontal is now .horizontal.
 For compatibility, all form types now use .input-containers, including .inline and for buttons (submit etc.).
+Form size classes now go on the .input-container and have been renamed .is-tiny, .is-small, .is-medium and .is-huge. No need for .is-large as it's the default.
 Classes now go on the .input-container, rather than the input.
 Visually different input elements (checkbox, radio, select, file, textarea) require an additional class on their .input-container. That class is the type of input, for example .checkbox or .radio. For obvious reasons, textareas do not work with .inline.
 Modal has been rewritten. New LESS variables, new classes, new plugin (to replace the old awkward JavaScript). See documentation for details.
