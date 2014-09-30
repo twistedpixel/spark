@@ -310,6 +310,7 @@
 .tag {
 	display: inline-block;
 	font-size: 10px;
+	font-weight: 400;
 	line-height: 1.5;
 	color: #494949;
 	background-color: @silver;
@@ -325,6 +326,15 @@ h4 + .tag,
 h5 + .tag,
 h6 + .tag {
 	vertical-align: super;
+}
+
+h1 .tag,
+h2 .tag,
+h3 .tag,
+h4 .tag,
+h5 .tag,
+h6 .tag {
+	vertical-align: middle;
 }
 
 .tag.blue {
