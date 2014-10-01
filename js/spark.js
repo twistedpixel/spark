@@ -58,7 +58,7 @@ $(document).ready(function () {
 	
 	
 	// Close button for alerts
-	$('.alert').on('click', 'a.alert-close', function(e) {
+	$('.alert').on('click', 'a.close', function(e) {
 		e.preventDefault()
 		$(this).parent().remove()
 	})
