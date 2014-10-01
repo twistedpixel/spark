@@ -6,8 +6,8 @@
 	overflow: auto;
 	padding: 5px 10px;
 	list-style: none;
-	background-color: @breadcrumbs-default-back;
-	color: @breadcrumbs-default;
+	background-color: @breadcrumbs-default-background;
+	color: @breadcrumbs-default-color;
 	.border-radius(2px);
 }
 
@@ -55,7 +55,7 @@
 
 .breadcrumbs.dark ul {
 	color: @breadcrumbs-dark;
-	background-color: @breadcrumbs-dark-back;
+	background-color: @breadcrumbs-dark-background;
 }
 
 .breadcrumbs.dark ul li a {
@@ -76,7 +76,7 @@
 .breadcrumbs.lime ul,
 .breadcrumbs.dragonfruit ul,
 .breadcrumbs.cosmic ul {
-	color: @breadcrumbs-colored;
+	color: @breadcrumbs-colored-color;
 }
 
 .breadcrumbs.blue ul li:after,
@@ -142,7 +142,7 @@
 
 .breadcrumbs.cosmic ul {
 	background-color: @cosmic;
-	color: lighten(@breadcrumbs-default, 50%);
+	color: lighten(@breadcrumbs-default-color, 50%);
 }
 
 .breadcrumbs.cosmic ul li:after {
