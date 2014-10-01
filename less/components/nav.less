@@ -12,7 +12,9 @@ nav.bar .brand {
 	.transition(all, .3s, ease-in-out);
 }
 
-nav.bar .brand:hover {
+nav.bar .brand:hover,
+nav.bar .brand:focus {
+	outline: none;
 	color: @nav-basic-hover;
 }
 
