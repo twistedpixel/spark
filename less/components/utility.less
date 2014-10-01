@@ -5,6 +5,7 @@
 }
 
 .clearfix:after,
+.clear-fix:after,
 .container:after,
 .row:after,
 .col:after,
@@ -34,11 +35,11 @@ form.tight .form-row:after,
 }
 
 .float-left {
-	float: left;
+	float: left !important;
 }
 
 .float-right {
-	float: right;
+	float: right !important;
 }
 
 img.float-right {
@@ -87,6 +88,10 @@ img.float-left {
 	
 }
 
+.round-corners {
+	.border-radius(2px) !important;
+}
+
 .shadow {
 	.box-shadow(~'', 0, 0, 2px, 0, rgba(0, 0, 0, .4)) !important;
 }
@@ -95,21 +100,38 @@ img.float-left {
 	.box-shadow(inset, 0, 0, 2px, 0, rgba(0, 0, 0, .3)) !important;
 }
 
-.well {
-	margin-bottom: 20px;
-	background-color: #f9f9f9;
+.surround {
+	padding: 4px 10px;
 	border: 1px solid #c8c8c8;
-	.border-radius(4px);
-	//.box-shadow(inset, 0, 0, 3px, 0, rgba(0,0,0,.4));
+	.border-radius(2px);
 }
 
-.well.well-light {
-	background-color: #ffffff;
-	border: 1px solid #c8c8c8;
+.surround.dark {
+	background-color: #424242;
+	border: none;
 }
 
-.well.well-padded {
-	padding: 20px;
+.surround.dark h1,
+.surround.dark h2,
+.surround.dark h3,
+.surround.dark h4,
+.surround.dark h5,
+.surround.dark h6,
+.surround.dark p,
+.surround.dark div {
+	color: @white;
+}
+
+.surround.shadowed {
+	.box-shadow(inset, 0, 0, 2px, 0, rgba(0, 0, 0, .2));
+}
+
+.surround.dark.shadowed {
+	.box-shadow(inset, 0, 0, 5px, 0, rgba(0, 0, 0, 1));
+}
+
+.surround.spaced {
+	padding: 20px 30px;
 }
 
 .gutter-right {
@@ -120,58 +142,52 @@ img.float-left {
 	margin-left: @left-gutter;
 }
 
-.spacer5 {height:5px}
+.push-5 {margin-bottom: 5px !important}
 
-.spacer10 {height:10px}
+.push-10 {margin-bottom: 10px !important}
 
-.spacer15 {height:15px}
+.push-15 {margin-bottom: 15px !important}
 
-.spacer20 {height:20px}
+.push-20 {margin-bottom: 20px !important}
 
-.spacer30 {height:30px}
+.push-30 {margin-bottom: 30px !important}
 
-.spacer40 {height:40px}
+.push-40 {margin-bottom: 40px !important}
 
-.spacer50 {height:50px}
+.push-50 {margin-bottom: 50px !important}
 
-.spacer60 {height:60px}
+.push-60 {margin-bottom: 60px !important}
 
-.spacer70 {height:70px}
+.push-70 {margin-bottom: 70px !important}
 
-.spacer80 {height:80px}
+.push-80 {margin-bottom: 80px !important}
 
-.spacer90 {height:90px}
+.push-90 {margin-bottom: 90px !important}
 
-.spacer100 {height:100px}
+.push-100 {margin-bottom: 100px !important}
 
-.spacer150 {height:150px}
+.push-150 {margin-bottom: 150px !important}
 
-.spacer200 {height:200px}
+.push-200 {margin-bottom: 200px !important}
 
-.spacer300 {height:300px}
+.push-300 {margin-bottom: 300px !important}
 
-.spacer5,
-.spacer10,
-.spacer15,
-.spacer20,
-.spacer30,
-.spacer40,
-.spacer50,
-.spacer60,
-.spacer70,
-.spacer80,
-.spacer90,
-.spacer100,
-.spacer150,
-.spacer200,
-.spacer300 {
-	display: block;
+.push-5,
+.push-10,
+.push-15,
+.push-20,
+.push-30,
+.push-40,
+.push-50,
+.push-60,
+.push-70,
+.push-80,
+.push-90,
+.push-100,
+.push-150,
+.push-200,
+.push-300 {
 	clear: both;
-	margin: 0;
-	padding: 0;
-	width: 100%;
-	font-size: 0;
-	border: 0;
 }
 
 body .screen-readers {
@@ -400,7 +416,7 @@ body a.screen-readers.hide-til-focus:focus {
 	border-right: 1px solid @table-border-color;
 }
 
-.tbl.alternate tr:nth-child(odd) td {
+.tbl.alternate tr:nth-child(even) td {
 	color: @table-alternate-color;
 	background-color: @table-alternate-background;
 }
@@ -412,7 +428,7 @@ body a.screen-readers.hide-til-focus:focus {
 	border: none;
 }
 
-.tbl.alternate.blue tr th {
+.tbl.blue tr th {
 	color: @blue;
 }
 
@@ -421,7 +437,7 @@ body a.screen-readers.hide-til-focus:focus {
 	background-color: @blue;
 }
 
-.tbl.alternate.green tr th {
+.tbl.green tr th {
 	color: @green;
 }
 
@@ -430,7 +446,7 @@ body a.screen-readers.hide-til-focus:focus {
 	background-color: @green;
 }
 
-.tbl.alternate.orange tr th {
+.tbl.orange tr th {
 	color: @orange;
 }
 
@@ -439,7 +455,7 @@ body a.screen-readers.hide-til-focus:focus {
 	background-color: @orange;
 }
 
-.tbl.alternate.red tr th {
+.tbl.red tr th {
 	color: @red;
 }
 
@@ -448,7 +464,7 @@ body a.screen-readers.hide-til-focus:focus {
 	background-color: @red;
 }
 
-.tbl.alternate.purple tr th {
+.tbl.purple tr th {
 	color: @purple;
 }
 
@@ -457,7 +473,7 @@ body a.screen-readers.hide-til-focus:focus {
 	background-color: @purple;
 }
 
-.tbl.alternate.lime tr th {
+.tbl.lime tr th {
 	color: @lime;
 }
 
@@ -466,7 +482,7 @@ body a.screen-readers.hide-til-focus:focus {
 	background-color: @lime;
 }
 
-.tbl.alternate.dragonfruit tr th {
+.tbl.dragonfruit tr th {
 	color: @dragonfruit;
 }
 
@@ -475,7 +491,7 @@ body a.screen-readers.hide-til-focus:focus {
 	background-color: @dragonfruit;
 }
 
-.tbl.alternate.cosmic tr th {
+.tbl.cosmic tr th {
 	color: @cosmic;
 }
 
@@ -483,7 +499,6 @@ body a.screen-readers.hide-til-focus:focus {
 	color: @white;
 	background-color: @cosmic;
 }
-
 
 .tbl.dark tr th {
 	color: @table-dark-head-color;
@@ -507,10 +522,10 @@ body a.screen-readers.hide-til-focus:focus {
 
 .tbl.alternate.dark tr:nth-child(odd) td {
 	color: @table-dark-color;
-	background-color: #393939;
+	background-color: @table-dark-alternate-background-odd;
 }
 
 .tbl.alternate.dark tr:nth-child(even) td {
 	color: @table-dark-color;
-	background-color: #6a6a6a;
+	background-color: @table-dark-alternate-background-even;
 }

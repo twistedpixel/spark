@@ -38,3 +38,13 @@ Pagination dark uses class .dark (on the .paginate element).
 Current pagination link now uses .current (still on the li element).
 Table class name changes: .tbl-bordered is now .bordered, .tbl-centered is now .center, .tbl-skinny is now .narrow.
 .alert-close is now just .close.
+.spacer classes have been renamed .push- (note the new dash between pusher and the number).
+.spacer (.push) are now not extra elements (that was a bad call), they now simply override the margin on the bottom of the element you stick them on.
+.tbl-bordered is now .bordered.
+.tbl-skinny is now .narrow.
+.modal-flat is now .flat and .modal-static is now .static.
+Modals no longer require you to manually add a blackout curtain.
+Modals have been completely rewritten with a new plugin. See Modal documentation for new use.
+.well is now .surround.
+.well-padded is now .spaced.
+.well-light is now the default.
