@@ -19,7 +19,9 @@ Headings are now font-weight 200 by default. Adjust weight with .super-skinny, .
 The .skinny-headings global body class has been deprecated (since they are now the default).
 Colors have been tweaked to be more neutral, less saturated and now include cosmic.
 .note deprecated.
-Alerts are now flat so .alert-flat has been deprecated.
+Alerts are now flat by default so .alert-flat has been deprecated. Flat badges now use .flat instead of .badge-flat.
+Alert colors have been shortened to just the color. For example, .alert-blue is just .blue. This is also true for badges.
+Banners have been deprecated in favor of the new .notifications.
 The navigation bar markup structure has been redesigned. It's fairly similar but check the docs on the website for a full description.
 Nav bar .name is now .brand.
 An ID of primary-nav is no longer necessary on nav .bar (although an ID is obviously recommended).
@@ -35,3 +37,4 @@ Pagination centering and right aligning uses classes .center and .right (on the 
 Pagination dark uses class .dark (on the .paginate element).
 Current pagination link now uses .current (still on the li element).
 Table class name changes: .tbl-bordered is now .bordered, .tbl-centered is now .center, .tbl-skinny is now .narrow.
+.alert-close is now just .close.

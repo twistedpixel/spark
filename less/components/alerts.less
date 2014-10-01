@@ -3,10 +3,10 @@
 .alert {
 	position: relative;
 	padding: 10px 30px 10px 20px;
-	background-color: @silver;
-	color: @black;
+	background-color: @alert-background;
+	color: @alert-color;
 	border-bottom: 1px dashed @white;
-	border-bottom-color: rgba(255, 255, 255, .8);
+	border-bottom-color: rgba(255, 255, 255, .5);
 }
 
 .alert.blue {
@@ -53,203 +53,63 @@
 	border: none;
 }
 
-.alert.warning-light:before {
-	float: left;
-	margin-right: 10px;
-	margin-bottom: 10px;
-	font-family: "FontAwesome";
-	color: @white;
-	content: '\f071';
-}
-
-.alert.warning-dark:before {
-	float: left;
-	margin-right: 10px;
-	margin-bottom: 10px;
-	font-family: "FontAwesome";
-	color: @darkgray;
-	content: '\f071';
-}
-
 .alert:empty {
 	display: none;
 }
 
-.alert.alert-flat {
-	border: none;
-	background-image: none;
-	.box-shadow-none();
-}
-
-.alert .alert-close {
+.alert .close {
 	position: absolute;
 	top: 3px;
 	right: 7px;
 }
 
-/* Close Button */
 
-.alert .alert-close {
+
+/* Alert Close Button */
+
+.alert .close {
 	color: #d3d3d3;
 }
 
-.alert .alert-close:hover {
+.alert .close:hover {
 	color: darken(#d3d3d3, 40%);
 }
 
-.alert.alert-blue .alert-close,
-.alert.alert-green .alert-close,
-.alert.alert-orange .alert-close,
-.alert.alert-red .alert-close,
-.alert.alert-purple .alert-close,
-.alert.alert-lime .alert-close,
-.alert.alert-dragonfruit .alert-close, {
+.alert.blue .close,
+.alert.green .close,
+.alert.orange .close,
+.alert.red .close,
+.alert.purple .close,
+.alert.lime .close,
+.alert.dragonfruit .close, {
 	color: @white;
 }
 
-.alert.alert-blue .alert-close:hover,
-.alert.alert-green .alert-close:hover,
-.alert.alert-orange .alert-close:hover,
-.alert.alert-red .alert-close:hover,
-.alert.alert-purple .alert-close:hover,
-.alert.alert-lime .alert-close:hover,
-.alert.alert-dragonfruit .alert-close:hover, {
+.alert.blue .close:hover,
+.alert.green .close:hover,
+.alert.orange .close:hover,
+.alert.red .close:hover,
+.alert.purple .close:hover,
+.alert.lime .close:hover,
+.alert.dragonfruit .close:hover, {
 	color: darken(@white, 66%);
 }
 
-/* Banners */
 
-.banners {
-	position: fixed;
-	top: 0;
-	left: 0;
-	width: 100%;
-	margin: 0;
-	padding: 0;
-	list-style: none;
-}
 
-.banners li {
-	display: none;
-	margin: 0;
-	padding: 6px 60px 6px 40px;
-	font-size: 0.8em;
-	line-height: 1.8;
-	color: @white;
-	background-color: #4a4a4a;
-	opacity: .90;
-	border-bottom: 1px solid #383838;
-	border-bottom: 1px solid rgba(255,255,255,.1);
-	
-}
-
-.banners li:last-child {
-	border: none;
-}
-
-.banners li a {
-	position: absolute;
-	right: 34px;
-	color: @white;
-	text-decoration: none;
-}
-
-.banners li a:hover {
-	color: @green;
-}
-
-.banners.banners-blue li {
-	background-color: @blue;
-	color: black;
-}
-
-.banners.banners-blue li a {
-	color: @white;
-}
-
-.banners.banners-blue li a:hover {
-	color: @dragonfruit;
-}
-
-.banners.banners-green li {
-	background-color: @green;
-	color: black;
-}
-
-.banners.banners-green li a {
-	color: @white;
-}
-
-.banners.banners-green li a:hover {
-	color: @dragonfruit;
-}
-
-.banners.banners-orange li {
-	background-color: @orange;
-	color: black;
-}
-
-.banners.banners-orange li a {
-	color: @white;
-}
-
-.banners.banners-red li {
-	//background-color: #ea3957;
-	//background-color: saturate(mix(@red, rgba(255,0,141,1), 80%), 10%);
-	background-color: saturate(@red, 100);
-	background-color: @red;
-}
-
-.banners.banners-red li a {
-	color: @white;
-}
-
-.banners.banners-purple li {
-	background-color: @purple;
-	color: black;
-}
-
-.banners.banners-purple li a {
-	color: @white;
-}
-
-.banners.banners-lime li {
-	background-color: @lime;
-	color: black;
-}
-
-.banners.banners-lime li a {
-	color: @white;
-}
-
-.banners.banners-dragonfruit li {
-	background-color: @dragonfruit;
-}
-
-.banners.banners-dragonfruit li a {
-	color: @white;
-}
-
-.banners.banners-blue li,
-.banners.banners-green li,
-.banners.banners-orange li,
-.banners.banners-red li,
-.banners.banners-purple li,
-.banners.banners-lime li,
-.banners.banners-dragonfruit li {
-	border-bottom: 1px solid #f7f7f7;
-}
+/* Badges */
 
 .badge {
 	font-size: 11px;
-	padding: 4px 7px;
+	padding: 5px 8px;
 	text-align: center;
 	white-space: nowrap;
 	vertical-align: baseline;
-	border: 1px solid darken(#fefefe, 30%);
+	border: 1px solid darken(#fefefe, 18%);
+	border: none !important;
 	font-weight: 400;
 	line-height: 0;
-	.linear-gradient(top, #fefefe, darken(#fefefe, 10%), 100%, darken(#fefefe, 13%));
+	.linear-gradient(top, darken(#fefefe, 3%), darken(#fefefe, 10%), 100%, darken(#fefefe, 13%));
 	.border-radius(20px);
 }
 
@@ -257,53 +117,51 @@
 	display: none;
 }
 
-.badge.badge-blue {
+.badge.blue {
 	color: @white;
-	border: 1px solid darken(@blue, 30%);
 	.linear-gradient(top, @blue, darken(@blue, 20%), 100%, @blue);
-
 }
 
-.badge.badge-green {
+.badge.green {
 	color: @white;
-	border: 1px solid darken(@green, 30%);
 	.linear-gradient(top, @green, darken(@green, 20%), 100%, @green);
 }
 
-.badge.badge-orange {
+.badge.orange {
 	color: @white;
-	border: 1px solid darken(@orange, 30%);
 	.linear-gradient(top, @orange, darken(@orange, 20%), 100%, @orange);
 }
 
-.badge.badge-red {
+.badge.red {
 	color: @white;
-	border: 1px solid darken(@red, 30%);
 	.linear-gradient(top, @red, darken(@red, 20%), 100%, @red);
 }
 
-.badge.badge-purple {
+.badge.purple {
 	color: @white;
-	border: 1px solid darken(@purple, 30%);
 	.linear-gradient(top, @purple, darken(@purple, 20%), 100%, @purple);
 }
 
-.badge.badge-lime {
+.badge.lime {
 	color: @white;
-	border: 1px solid darken(@lime, 30%);
 	.linear-gradient(top, @lime, darken(@lime, 20%), 100%, @lime);
 }
 
-.badge.badge-dragonfruit {
+.badge.dragonfruit {
 	color: @white;
-	border: 1px solid darken(@dragonfruit, 30%);
 	.linear-gradient(top, @dragonfruit, darken(@dragonfruit, 20%), 100%, @dragonfruit);
 }
 
-.badge.badge-flat {
-	border: none;
+.badge.dragonfruit {
+	color: @white;
+	.linear-gradient(top, @cosmic, darken(@cosmic, 20%), 100%, @cosmic);
+}
+
+.badge.flat {
 	background-image: none;
 }
+
+
 
 /* Tags */
 
@@ -371,6 +229,8 @@ h6 .tag {
 	color: @white;
 	background-color: @cosmic;
 }
+
+
 
 /* Notification */
 
@@ -443,6 +303,8 @@ h6 .tag {
 .notifications .notification .title a {
 	
 }
+
+
 
 /* Dark Notification */
 
