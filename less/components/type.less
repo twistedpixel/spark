@@ -36,7 +36,7 @@ h6 {
 }
 
 h3, h4, h5, h6 {
-	margin: 10px 0 10px 0;
+	margin: 10px 0 20px 0;
 }
 
 .super-skinny-headings h1,
@@ -155,21 +155,21 @@ a {
 	text-decoration: none;
 }
 
-a:link {
+a:link:not(.btn, .close) {
 	color: @link-color;
 	text-decoration: none;
 }
 
-a:focus,
-a:active {
+a:focus:not(.btn, .close),
+a:active:not(.btn, .close) {
 	color: @link-focus-color;
 }
 
-a:visited {
+a:visited:not(.btn, .close) {
 	color: @link-visited-color;
 }
 
-a:hover {
+a:hover:not(.btn) {
 	color: @link-hover-color;
 }
 
@@ -181,8 +181,7 @@ a:hover {
 	background-color: @heading-underline;
 }
 
-.hero p,
-.hero-edgeless p {
+.hero p {
 	font-size: 120%;
 	font-weight: 200;
 }
