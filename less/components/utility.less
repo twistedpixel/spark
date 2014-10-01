@@ -174,14 +174,23 @@ img.float-left {
 	border: 0;
 }
 
-.screen-readers {
-	position: absolute !important;
-	width: 1px !important;
-	height: 1px !important;
-	overflow: hidden !important;
-	margin: -1px !important;
-	padding: 0 !important;
-	border: 0 !important;
+body .screen-readers {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	overflow: hidden;
+	margin: -1px;
+	padding: 0;
+	border: 0;
+}
+
+body a.screen-readers.hide-til-focus:focus {
+	position: static;
+	margin: 0;
+	width: auto;
+	height: auto;
+	overflow: visible;
+	outline-color: @cosmic;
 }
 
 /* Pagination */
