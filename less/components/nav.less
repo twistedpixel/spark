@@ -15,7 +15,7 @@ nav.bar .brand {
 nav.bar .brand:hover,
 nav.bar .brand:focus {
 	outline: none;
-	color: @nav-basic-hover;
+	color: @nav-basic-hover-color;
 }
 
 nav.bar .brand img {
@@ -78,14 +78,14 @@ nav.bar ul .drop ul ul {
 
 nav.bar ul a {
 	font-weight: 200;
-	color: @nav-basic;
+	color: @nav-basic-color;
 	display: block;
 	padding: 10px 0;
 }
 
 nav.bar ul li.active > a {
 	font-weight: 600;
-	color: @nav-basic-hover;
+	color: @nav-basic-hover-color;
 }
 
 nav.heavy ul a {
@@ -141,7 +141,7 @@ nav.bar.heavier ul li.active > a {
 	
 	nav.bar li:hover > a,
 	nav.bar li > a:focus {
-		color: @nav-basic-hover;
+		color: @nav-basic-hover-color;
 		outline: none;
 	}
 	
@@ -257,7 +257,7 @@ nav.bar.heavier ul li.active > a {
 nav.bar.dark,
 nav.bar.dark ul {
 	color: @white;
-	background-color: @nav-dark-back;
+	background-color: @nav-dark-background;
 }
 
 nav.bar.dark .brand {
@@ -265,19 +265,19 @@ nav.bar.dark .brand {
 }
 
 nav.bar.dark .brand:hover {
-	color: @nav-basic-hover;
+	color: @nav-basic-hover-color;
 }
 
 nav.bar.dark ul li a {
-	color: @nav-dark;
+	color: @nav-dark-color;
 }
 
 nav.bar.dark ul li a:hover {
-	color: @nav-dark-hover;
+	color: @nav-dark-hover-color;
 }
 
 nav.bar.dark ul li.active > a {
-	color: @nav-dark-hover;
+	color: @nav-dark-hover-color;
 }
 
 @media only screen and (min-width: 769px) {
@@ -287,7 +287,7 @@ nav.bar.dark ul li.active > a {
 	}
 	
 	nav.bar.dark li.drop ul a {
-		color: @nav-basic;
+		color: @nav-basic-color;
 	}
 	
 	// Dropdown list item hover
@@ -319,6 +319,7 @@ nav.bar.dark ul li.active > a {
 	.stickyglue.sticky {
 		position: fixed;
 		top: 0;
+		z-index: 9000;
 		width: 100%;
 		max-width: 100%;
 		background-color: @white;
@@ -330,7 +331,7 @@ nav.bar.dark ul li.active > a {
 	}
 	
 	.stickyglue.dark {
-		background-color: @nav-dark-back;
+		background-color: @nav-dark-background;
 	}
 	
 	.stickyglue.transparent {
@@ -351,11 +352,11 @@ nav.bar.dark ul li.active > a {
 	}
 	
 	nav.bar.sticky {
-		background-color: @nav-basic-back;
+		background-color: @nav-basic-background;
 	}
 		
 	nav.bar.sticky.dark {
-		background-color: @nav-dark-back;
+		background-color: @nav-dark-background;
 	}
 }
 
