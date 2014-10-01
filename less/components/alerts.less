@@ -5,8 +5,11 @@
 	padding: 10px 30px 10px 20px;
 	background-color: @alert-background;
 	color: @alert-color;
-	border-bottom: 1px dashed @white;
-	border-bottom-color: rgba(255, 255, 255, .5);
+}
+
+.alert + .alert {
+	border-top: 1px dashed @white;
+	border-top-color: rgba(255, 255, 255, .5);
 }
 
 .alert.blue {
@@ -49,7 +52,7 @@
 	background-color: @cosmic;
 }
 
-.alert:last-of-type {
+.alert:first-of-type {
 	border: none;
 }
 
@@ -243,13 +246,13 @@ h6 .tag {
 /* Notification */
 
 .notifications {
-	list-style: none;
-	padding: 0 10px 10px 10px;
 	position: fixed;
 	bottom: 0;
 	left: 0;
 	width: 100%;
 	max-width: 100%;
+	padding: 0 10px 10px 10px;
+	list-style: none;
 	z-index: 9000;
 }
 
@@ -261,15 +264,16 @@ h6 .tag {
 	display: block;
 	overflow: hidden;
 	margin: 14px 0 0 0;
-	opacity: 0;
-	background-color: #f7f7f7;
 	padding: 10px;
 	height: 90px;
 	width: 100%;
 	max-width: 340px;
+	opacity: 0;
+	background-color: @notification-background;
+	color: @notification-color;
 	font-size: 80%;
 	text-align: justify;
-	.box-shadow(~'', 0, 0, 1px, 0, rgba(0, 0, 0, .3));
+	.box-shadow(~'', 0, 0, 1px, 0, rgba(0, 0, 0, .5));
 	.border-radius(2px);
 	.transition(all, .8s, ease-out);
 }
@@ -280,10 +284,10 @@ h6 .tag {
 
 .notifications .notification a.close {
 	float: right;
-	font-size: 200%;
-	line-height: 1;
 	margin-left: 10px;
 	margin-bottom: 10px;
+	font-size: 200%;
+	line-height: 1;
 	color: #cdcdcd;
 }
 
@@ -293,23 +297,20 @@ h6 .tag {
 
 .notifications .notification .thumb {
 	float: left;
-	margin: 4px 10px 0 0;
+	margin: 4px 20px 0 10px;
+	height: 100%;
 }
 
 .notifications .notification .thumb img {
 	display: block;
-	width: 55px;
-	height: 55px;
+	width: 42px;
+	height: 42px;
 	.border-radius(100px);
 }
 
 .notifications .notification .title {
 	font-weight: 700;
 	margin-bottom: 6px;
-}
-
-.notifications .notification .title a {
-	
 }
 
 
@@ -326,11 +327,12 @@ h6 .tag {
 	.notifications {
 		left: 20px;
 		bottom: 20px;
-		max-width: 340px;
+		max-width: 400px;
 	}
 	
 	.notifications .notification {
 		width: 400px;
+		max-width: 400px;
 	}
 	
 	.notifications .notification a.close {
