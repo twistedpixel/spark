@@ -22,7 +22,7 @@
 .modal header {
 	padding: 20px;
 	text-align: center;
-	background-color: @modal-header-back;
+	background-color: @modal-header-background;
 }
 
 .modal header h1,
@@ -38,7 +38,11 @@
 .modal section {
 	padding: 16px;
 	color: @modal-color;
-	background-color: @modal-body-back;
+	background-color: @modal-body-background;
+}
+
+.modal section p {
+	color: @modal-color;
 }
 
 .modal footer {
@@ -46,7 +50,7 @@
 	font-size: 80%;
 	color: @modal-footer-color;
 	border-top: 1px solid @modal-footer-top-border-color;
-	background-color: @modal-footer-back;
+	background-color: @modal-footer-background;
 }
 
 .modal footer a {
@@ -78,6 +82,84 @@
 	.border-radius-corners(2px, 2px, 0, 0);
 }
 
+.modal.flat {
+	.box-shadow-none();
+}
+
+.modal.flat section {
+	background-color: @modal-flat-background;
+}
+
+.modal.flat footer {
+	background-color: @modal-flat-footer-background;
+}
+
+
+
+/* Colors */
+
+
+
+.modal.dark header,
+.modal.dark footer {
+	background-color: @modal-dark-header-background;
+	border: none;
+	color: @white;
+}
+
+.modal.dark section {
+	color: @modal-dark-color;
+	background-color: @modal-dark-body-background;
+}
+
+.modal.dark section p {
+	color: @modal-dark-color;
+}
+
+.modal.dark footer a {
+	color: @white;
+	font-weight: 600;
+}
+
+.modal.dark footer a:hover {
+	color: darken(@white, 20%);
+	font-weight: 600;
+}
+
+.modal.blue header {
+	background-color: @blue;
+}
+
+.modal.green header {
+	background-color: @green;
+}
+
+.modal.orange header {
+	background-color: @orange;
+}
+
+.modal.red header {
+	background-color: @red;
+}
+
+.modal.purple header {
+	background-color: @purple;
+}
+
+.modal.lime header {
+	background-color: @lime;
+}
+
+.modal.dragonfruit header {
+	background-color: @dragonfruit;
+}
+
+.modal.cosmic header {
+	background-color: @cosmic;
+}
+
+
+
 /* Blackout Curtain */
 
 #blackout {
@@ -96,18 +178,6 @@
 
 #blackout.show {
 	opacity: 1;
-}
-
-.modal.flat {
-	.box-shadow-none();
-}
-
-.modal.flat section {
-	background-color: @modal-flat-background;
-}
-
-.modal.flat footer {
-	background-color: @modal-flat-footer-background;
 }
 
 @media only screen and (min-width: 769px) {
