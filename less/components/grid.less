@@ -42,8 +42,11 @@
 }
 
 .container.hero {
-	padding: 40px 30px;
-	background-color: #f9f9f9;
+	padding: 100px 30px;
+}
+
+.container.hero:not(.trans) {
+	background-color: @hero-background;
 }
 
 .container > :last-child,
