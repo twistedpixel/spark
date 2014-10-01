@@ -10,7 +10,7 @@
 	text-decoration: none;
 	text-align: center;
 	word-wrap: break-word;
-	color: @black;
+	color: @btn-color;
 	line-height: 1.5;
 	border: none;
 	.background-size(100%, 170%);
@@ -229,7 +229,7 @@
 
 .btn:disabled,
 .btn.disabled {
-	background-color: #747474 !important;
+	background: #747474 !important;
 	color: #a7a7a7 !important;
 }
 
@@ -241,6 +241,7 @@
 .btn-touch.disabled .bar {
 	background-color: #b8b8b8 !important;
 }
+
 
 /* Button Groups */
 
@@ -391,10 +392,6 @@
 	padding: 4px;
 }
 
-
-
-
-
 .btn-touch-round.white .circle,
 .btn-touch-round.white.active .circle {
 	border-color: @white;
@@ -513,30 +510,32 @@
 
 /* Button sizes */
 
-.btn.btn-small,
-.btn-group.btn-small .btn {
-	padding: .2em .6em;
-	.border-radius(3px);
+.btn.small,
+.btn-group.small .btn {
+	padding: 2px 8px;
+	.border-radius(2px);
+	font-size: inherit;
 }
 
-.btn.btn-hero,
-.btn-group.btn-hero .btn {
+.btn.hero,
+.btn-group.hero .btn {
 	max-width: 100%;
-	padding: .6em .9em;
+	padding: 10px 14px;
 	font-size: 130%;
 	.border-radius(3px);
 }
 
 @media only screen and (min-width: 769px) {
 	
-	.btn.btn-small,
-	.btn-group.btn-small .btn {
+	.btn.small,
+	.btn-group.small .btn {
 		font-size: 70%;
+		padding: 4px 8px;
 	}
 	
-	.btn.btn-hero,
-	.btn-group.btn-hero .btn {
-		padding: .4em 1em;
+	.btn.hero,
+	.btn-group.hero .btn {
+		padding: 10px 20px;
 		font-size: 180%;
 	}
 }
