@@ -2,7 +2,7 @@
 	margin: 20px 0;
 }
 
-.breadcrumbs ul {
+.breadcrumbs ol {
 	overflow: auto;
 	padding: 5px 10px;
 	list-style: none;
@@ -11,140 +11,140 @@
 	.border-radius(2px);
 }
 
-.breadcrumbs ul li {
+.breadcrumbs ol li {
 	float: left;
 	margin-right: 10px;
 	font-size: 70%;
 }
 
-.breadcrumbs ul li:after {
+.breadcrumbs ol li:after {
 	content: '::';
 	margin-left: 10px;
 	color: @breadcrumbs-default-separator;
 }
 
-.breadcrumbs ul li:last-child:after {
+.breadcrumbs ol li:last-child:after {
 	content: '';
 	margin: 0;
 	display: none;
 }
 
-.breadcrumbs ul li a {
+.breadcrumbs ol li a {
 	color: @breadcrumbs-default-link;
 }
 
-.breadcrumbs ul li a:hover {
+.breadcrumbs ol li a:hover {
 	color: @breadcrumbs-default-link-hover;
 }
 
-.breadcrumbs.caps ul {
+.breadcrumbs.caps ol {
 	text-transform: uppercase;
 }
 
-.breadcrumbs.round ul {
+.breadcrumbs.round ol {
 	.border-radius(20px);
 }
 
 /* White */
 
-.breadcrumbs.white ul {
+.breadcrumbs.white ol {
 	background-color: @white;
 }
 
 /* Dark */
 
-.breadcrumbs.dark ul {
+.breadcrumbs.dark ol {
 	color: @breadcrumbs-dark;
 	background-color: @breadcrumbs-dark-background;
 }
 
-.breadcrumbs.dark ul li a {
+.breadcrumbs.dark ol li a {
 	color: @breadcrumbs-dark-link;
 }
 
-.breadcrumbs.dark ul li a:hover {
+.breadcrumbs.dark ol li a:hover {
 	color: @breadcrumbs-dark-link-hover;
 }
 
 /* Colored */
 
-.breadcrumbs.blue ul,
-.breadcrumbs.green ul,
-.breadcrumbs.orange ul,
-.breadcrumbs.red ul,
-.breadcrumbs.purple ul,
-.breadcrumbs.lime ul,
-.breadcrumbs.dragonfruit ul,
-.breadcrumbs.cosmic ul {
+.breadcrumbs.blue ol,
+.breadcrumbs.green ol,
+.breadcrumbs.orange ol,
+.breadcrumbs.red ol,
+.breadcrumbs.purple ol,
+.breadcrumbs.lime ol,
+.breadcrumbs.dragonfruit ol,
+.breadcrumbs.cosmic ol {
 	color: @breadcrumbs-colored-color;
 }
 
-.breadcrumbs.blue ul li:after,
-.breadcrumbs.green ul li:after,
-.breadcrumbs.orange ul li:after,
-.breadcrumbs.red ul li:after,
-.breadcrumbs.purple ul li:after,
-.breadcrumbs.lime ul li:after,
-.breadcrumbs.dragonfruit ul li:after,
-.breadcrumbs.cosmic ul li:after {
+.breadcrumbs.blue ol li:after,
+.breadcrumbs.green ol li:after,
+.breadcrumbs.orange ol li:after,
+.breadcrumbs.red ol li:after,
+.breadcrumbs.purple ol li:after,
+.breadcrumbs.lime ol li:after,
+.breadcrumbs.dragonfruit ol li:after,
+.breadcrumbs.cosmic ol li:after {
 	color: @breadcrumbs-colored-separator;
 }
 
-.breadcrumbs.blue ul li a,
-.breadcrumbs.green ul li a,
-.breadcrumbs.orange ul li a,
-.breadcrumbs.red ul li a,
-.breadcrumbs.purple ul li a,
-.breadcrumbs.lime ul li a,
-.breadcrumbs.dragonfruit ul li a,
-.breadcrumbs.cosmic ul li a {
+.breadcrumbs.blue ol li a,
+.breadcrumbs.green ol li a,
+.breadcrumbs.orange ol li a,
+.breadcrumbs.red ol li a,
+.breadcrumbs.purple ol li a,
+.breadcrumbs.lime ol li a,
+.breadcrumbs.dragonfruit ol li a,
+.breadcrumbs.cosmic ol li a {
 	color: @breadcrumbs-colored-link;
 }
 
-.breadcrumbs.blue ul li a:hover,
-.breadcrumbs.green ul li a:hover,
-.breadcrumbs.orange ul li a:hover,
-.breadcrumbs.red ul li a:hover,
-.breadcrumbs.purple ul li a:hover,
-.breadcrumbs.lime ul li a:hover,
-.breadcrumbs.dragonfruit ul li a:hover,
-.breadcrumbs.cosmic ul li a:hover {
+.breadcrumbs.blue ol li a:hover,
+.breadcrumbs.green ol li a:hover,
+.breadcrumbs.orange ol li a:hover,
+.breadcrumbs.red ol li a:hover,
+.breadcrumbs.purple ol li a:hover,
+.breadcrumbs.lime ol li a:hover,
+.breadcrumbs.dragonfruit ol li a:hover,
+.breadcrumbs.cosmic ol li a:hover {
 	color: @breadcrumbs-colored-link-hover;
 }
 
-.breadcrumbs.blue ul {
+.breadcrumbs.blue ol {
 	background-color: @blue;
 }
 
-.breadcrumbs.green ul {
+.breadcrumbs.green ol {
 	background-color: @green;
 }
 
-.breadcrumbs.orange ul {
+.breadcrumbs.orange ol {
 	background-color: @orange;
 }
 
-.breadcrumbs.red ul {
+.breadcrumbs.red ol {
 	background-color: @red;
 }
 
-.breadcrumbs.purple ul {
+.breadcrumbs.purple ol {
 	background-color: @purple;
 }
 
-.breadcrumbs.lime ul {
+.breadcrumbs.lime ol {
 	background-color: @lime;
 }
 
-.breadcrumbs.dragonfruit ul {
+.breadcrumbs.dragonfruit ol {
 	background-color: @dragonfruit;
 }
 
-.breadcrumbs.cosmic ul {
+.breadcrumbs.cosmic ol {
 	background-color: @cosmic;
 	color: lighten(@breadcrumbs-default-color, 50%);
 }
 
-.breadcrumbs.cosmic ul li:after {
+.breadcrumbs.cosmic ol li:after {
 	color: lighten(@breadcrumbs-colored-separator, 30%);
 }
