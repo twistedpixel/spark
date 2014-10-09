@@ -12,7 +12,7 @@
  * Functions: Your Spark Notifier object (if you assigned it to a variable) has some functions
  * which you can call. This allows you to manipulate the notifications within it.
  * 
- *    add(title, imgsrc, text, autoRemoveMs, href)
+ *    add(title, imgSrc, text, autoRemoveMs, href)
  *    remove(notification)
  * 
  * See http://www.codewithspark.com for full documentation.
@@ -44,22 +44,30 @@
 		
 		// Closures (user available functions)
 		return {
-			add: function(title, imgsrc, text, autoRemoveMs, href) {
+			add: function(opts) {
+				
+				var nopts = $.extend({
+					title			: '',
+					imgSrc			: '',
+					text			: '',
+					autoRemoveMs	: 8000,
+					href			: ''
+		        }, opts)
 				
 				var allowAutoRemove = true
 				
-				if(typeof href != 'undefined') {
-					$notification = $('<a>', {'class':settings.notificationClasses, 'href':href})
+				if(typeof nopts.href != 'undefined') {
+					$notification = $('<a>', {'class':settings.notificationClasses, 'href':nopts.href})
 				}
 				else {
 					$notification = $('<div>', {'class':settings.notificationClasses})
 				}		
 				
 				$imgContainer = $('<div>', {'class':'thumb'})
-				$img = $('<img>', {'src':imgsrc})
+				$img = $('<img>', {'src':nopts.imgSrc})
 				
-				$title = $('<div>', {'class':'title', 'html':title})
-				$summary = $('<div>', {'class':'summary', 'html':text})
+				$title = $('<div>', {'class':'title', 'html':nopts.title})
+				$summary = $('<div>', {'class':'summary', 'html':nopts.text})
 				
 				$close = $('<a>', {'class':'close', 'href':'#'})
 				$timesIcon = $('<i>', {'class':'fa fa-times'})
@@ -75,8 +83,8 @@
 					$(this).addClass('show').dequeue()
 				})
 				
-				if(typeof autoRemoveMs != 'undefined' && !isNaN(parseFloat(autoRemoveMs)) && isFinite(autoRemoveMs)) {
-					$notification.delay(autoRemoveMs).queue(function() {
+				if(typeof nopts.autoRemoveMs != 'undefined' && !isNaN(parseFloat(nopts.autoRemoveMs)) && isFinite(nopts.autoRemoveMs)) {
+					$notification.delay(nopts.autoRemoveMs).queue(function() {
 						if(allowAutoRemove) {
 							removeNotification($(this))
 						}
