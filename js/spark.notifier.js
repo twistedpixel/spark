@@ -51,7 +51,7 @@
 					imgSrc			: '',
 					text			: '',
 					autoRemoveMs	: 8000,
-					href			: ''
+					href			: null
 		        }, opts)
 				
 				var allowAutoRemove = true
