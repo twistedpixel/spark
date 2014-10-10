@@ -172,22 +172,16 @@ img.float-left {
 
 .push-300 {margin-bottom: 300px !important}
 
-.push-5,
-.push-10,
-.push-15,
-.push-20,
-.push-30,
-.push-40,
-.push-50,
-.push-60,
-.push-70,
-.push-80,
-.push-90,
-.push-100,
-.push-150,
-.push-200,
-.push-300 {
-	clear: both;
+@media only screen and (max-width: 768px) {
+	.push-only-desktop {
+		margin-bottom: 0 !important;
+	}
+}
+
+@media only screen and (min-width: 769px) {
+	.push-only-mobile {
+		margin-bottom: 0 !important;
+	}
 }
 
 body .screen-readers {
