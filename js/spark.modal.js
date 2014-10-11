@@ -2,24 +2,10 @@
  * Plugin: Spark Modal
  * Copyright: Pixelbend Studios LTD.
  * License: MIT
+ * Internal Version: 1.0
  * 
- * Usage: Spark Modal needs to be initilized on a modal’s id.
- * 
- * Options:
- *   “trigger” : element which can trigger the modal to open.
- *   “close” : element which will close the modal.
- *   “escapeToClose” : boolean value for the Escape key triggering modal close.
- *   “clickToClose” : boolean value for clicking the blackout curtain triggering modal close.
- * 
- * Functions: Your Spark Modal object (if you assigned it to a variable) has some
- * functions which you can call. This is useful if you prefer to hook into the
- * modal yourself to trigger its functionality.
- * 
- *    openModal()
- *    closeModal()
- *    toggleModal()
  *
- * See http://www.codewithspark.com for full documentation.
+ * See http://www.codewithspark.com for documentation.
  * 
  */
 
@@ -41,7 +27,7 @@
 		var curtain = $('#blackout');
 		
 		if(!curtain.length) {
-			var curtain = $('<div>', {'id':'blackout'})
+			curtain = $('<div>', {'id':'blackout'})
 			$('body').append(curtain)
 		}
 		
@@ -129,18 +115,21 @@
 			}, 500);
 		}
 		
-		// Closures (user available functions)
+		// Closures
 		return {
-			showModal: function() {
+			open: function() {
 				showModal(modal)
+				showCurtain(curtain)
 			},
 			
-			hideModal: function() {
+			close: function() {
 				hideModal(modal)
+				hideCurtain(curtain)
 			},
 			
-			toggleModal: function() {
+			toggle: function() {
 				toggleModal(modal)
+				toggleCurtain(curtain)
 			}
 		} 
 		
