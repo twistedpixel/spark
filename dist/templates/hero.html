@@ -1,106 +1,225 @@
 <!DOCTYPE html>
 
-<!--[if lt IE 9]> <html class="lt-ie9" lang="en"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="" lang="en"> <!--<![endif]-->
+<!--[if lt IE 9]> <html class="lt-ie9" lang="en" dir="ltr"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="" lang="en" dir="ltr"> <!--<![endif]-->
 
 <head>
 	<meta charset="utf-8">
-	<title>Template</title>
+	<title>Hero Template | Spark</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta name="description" content="">
 	<meta name="author" content="">
 	<link rel="shortcut icon" href="../ico/favicon.png">
 	
 	<!-- CSS -->
-	<link href="../css/spark.min.css" rel="stylesheet">
+	<link href="../css/spark.css" rel="stylesheet">
 	
 	<!-- JS -->
 	<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
 	<script src="../js/spark.min.js"></script>
+	
 	<!-- Support for IE8 HTML5 elements -->
 	<!--[if lt IE 9]>
 		<script src="../js/html5shiv.js"></script>
 	<![endif]-->
+	
+	<style type="text/css">
+		
+		#big-ol-hero {
+			background-color: #5b566c;
+		}
+		
+		footer#page-footer {
+			padding: 40px 0;
+			background-color: #746175;
+			color: #f7f7f7;
+		}
+		
+		@media only screen and (min-width: 769px) {
+			
+			.container {
+				padding: 80px 0;
+			}
+		
+			#big-ol-hero {
+				padding: 180px 0;
+			}
+			
+			#tel {
+				text-align: right;
+			}
+		}
+		
+	</style>
+	
 </head>
 
-<body class="">
+<body>
 
-<header class="container limit navigation nav-light">
-	<nav id="primary-nav" class="key" role="primary">
-		<div class="nav-container">
-			<a href="#" class="nav-link btn-touch">
-				<span class="bar"></span>
-				<span class="bar"></span>
-				<span class="bar"></span>
-			</a>
+
+<a href="#main" class="screen-readers hide-til-focus">Skip to main content</a>
+
+<nav class="bar limit center" role="navigation">
+	
+	<a class="brand" href="#">Hero</a>
+	
+	<button type="button" href="#" class="nav-link btn-touch-round cosmic" aria-label="navigation">
+		<span class="circle">
+			<span class="inner-circle"></span>
+		</span>
+	</button>
+	
+	<ul>
+		<li class="active"><a href="#">Lorem</a></li>
+		<li><a href="#">Ipsum</a></li>
+		<li><a href="#">Dolor</a></li>
+		<li class="drop">
+			<a href="#">Sit</a>
+			<div class="box">
+				<ul class="inner">
+					<li><a href="#">Buy</a></li>
+					<li><a href="#">Sell</a></li>
+				</ul>
+			</div>
+		</li>
+		<li><a href="#">Amet</a></li>
+	</ul>
+	
+</nav>
+
+<main id="main">
+	
+	<header class="container limit hero" id="big-ol-hero" role="banner">
 		
-			<ul class="nav-brand">
-				<li class="name"><h1><a href="<?=$site_root?>">Hero</a></h1></li>
-			</ul>
-			
-			<ul class="nav-list">
-				<li class="active"><a href="#">A Page</a></li>
-				<li><a href="#">Another Page</a></li>
-				<li><a href="#">3rd One</a></li>
-				<li class="dd-container"><a href="#">A Dropdown</a>
-					<ul class="dd">
-						<li><a href="#">Some Link</a></li>
-						<li><a href="#">Some Link</a></li>
-						<li><a href="#">Some Link</a></li>
-						<li><a href="#">Some Link</a></li>
-						<li><a href="#">Some Link</a></li>
-					</ul>
-				</li>
-				<li><a href="#">The End</a></li>
-			</ul>
-		</div>
-	</nav>
-</header>
-
-<div class="spacer50">
-</div>
-
-<div class="container limit hero">
-	<h1 class="herotype">He's the hero <span class="alt">Gotham deserves</span></h1>
-	<p>But not the one it needs right now</p>
-	<a class="btn btn-dragonfruit btn-hero" href="#">Show me the money</a>
-</div>
-
-<div class="container limit">
-	<div class="row">
+		<h1 class="center push-60"><span class="white">Buy our product.</span> <span class="alt">It’s freaking awesome.</span></h1>
 		
-		<div class="col of-6">
-			<h2>A Heading</h2>
-			<p>Lorem ipsum dolor sit amet, tota congue quaestio has et. Id alii graece sea, facete lobortis repudiare pri in, accusam dignissim cu vel. Mel erat elitr ut. Mei in reque oportere. Ius habeo iudico sensibus ei, probo vivendum abhorreant usu ad. Doming nostro consetetur ea has.</p>
-			<blockquote class="bq">
-				<p>Mei in reque oportere. Ius habeo iudico sensibus ei, probo vivendum abhorreant usu ad.</p>
-			</blockquote>
-			<p>Ne utinam aliquid sea, nonumy necessitatibus te mea, ad qui veritus vivendum. Has modus aliquando ut, qui eleifend efficiantur ea. Paulo option consulatu ut sit, te erant oportere sit. Eum ex alia tantas scribentur. Cu aperiri ponderum inimicus vel, mel alii causae recteque te.</p>
+		<div class="center">
+			<a class="btn green hero shadow-inset" href="#">BUY NOW</a>
 		</div>
-		<div class="col of-3">
-			<h3>A Heading</h3>
-			<p>Ei vivendo facilisis mei. Mea alterum gubergren id, justo labitur interesset id his. Ius eros conclusionemque ut. Te dicunt abhorreant cum. Cu vel mucius definiebas, et pri mutat admodum deleniti.</p>
-			<p>Vivendum vituperata his te, justo laoreet patrioque duo ad, ut utinam fabulas comprehensam duo. Cum utinam fuisset ut, cu sea mazim soleat partiendo, no pro erant commodo adversarium. Labores deseruisse et nec. Ex quando debitis quo. Tempor feugiat et vel, everti feugait ex pri.</p>
-		</div>
-		<div class="col of-3">
-			<h3>A Heading</h3>
-			<p>Usu dicta iuvaret accommodare ad, sed ea posse erant nullam. An summo definitionem delicatissimi eos. Per delectus prodesset instructior ex, in iriure facilisi nominati pri. Mazim praesent per an. Vis an fastidii quaestio dissentiet, sit delectus expetendis cotidieque ne.</p>
-		</div>
-	</div>
-</div>
-
-<div class="spacer50">
-</div>
-
-<div class="container limit">
-	<footer>
+		
+	</header>
+	
+	<section class="container limit">
 		<div class="row">
-			<div class="col of-12">
-				<small class="disabled">Hello, I am a footer. Small but mighty.</small>
+			<div class="col of-6">
+				
+				<h2 class="green">Top Dolor</h2>
+				
+				<p>Lorem ipsum dolor sit amet, tota congue quaestio has et. Id alii graece sea, facete lobortis repudiare pri in, accusam dignissim cu vel. Mel erat elitr ut. Mei in reque oportere. Ius habeo iudico sensibus ei, probo vivendum abhorreant usu ad. Doming nostro consetetur ea has.</p>
+				
+				<blockquote class="bq push-60">
+					<p>Mei in reque oportere. Ius habeo iudico sensibus ei, probo vivendum abhorreant usu ad.</p>
+				</blockquote>
+				
+				<h3>Order Form</h3>
+				
+				<div class="alert orange warning-light push-20">
+					Warning, warning, warning!!
+					<a class="close" href="#"><i class="fa fa-times"></i></a>
+				</div>
+				
+				<form role="form" class="form tight push-20">
+				    <div class="form-row">
+				
+				        <div class="input-container tight-50">
+				            <label for="first-name-tight">First name</label>
+				            <input type="text" name="first-name-tight" id="first-name-tight">
+				        </div>
+				
+				        <div class="input-container tight-50">
+				            <label for="last-name-tight">Last name</label>
+				            <input type="text" name="last-name-tight" id="last-name-tight">
+				        </div>
+				    </div>
+				
+				    <div class="form-row">
+				        <div class="input-container tight-20">
+				            <label for="flat-num-tight">Flat</label>
+				            <input type="text" name="flat-num-tight" id="flat-num-tight" disabled="">
+				        </div>
+				
+				        <div class="input-container tight-80">
+				            <label for="address-line-1-tight">Address Line 1</label>
+				            <input type="text" name="address-line-1-tight" id="address-line-1-tight">
+				        </div>
+				    </div>
+				
+				    <div class="form-row">
+				        <div class="input-container tight-50">
+				            <label for="address-line-2-tight">Address Line 2</label>
+				            <input type="text" name="address-line-2-tight" id="address-line-2-tight">
+				        </div>
+				        
+				        <div class="input-container tight-30">
+				            <label for="country-tight">Country</label>
+				            <input type="text" name="country-tight" id="country-tight">
+				        </div>
+				
+				        <div class="input-container tight-20">
+				            <label for="zip-tight">Zip</label>
+				            <input type="text" name="zip-tight" id="zip-tight">
+				        </div>
+				    </div>
+				
+				    <div class="form-row controls">
+				        <div class="input-container buttons">
+				            <button type="submit" class="btn green">Order</button>
+				        </div>
+				    </div>
+				</form>
+				
+			</div>
+			
+			<div class="col of-6">
+				<div class="row push-20">
+					<div class="col of-6">
+						
+						<h3>Sit Down</h3>
+						
+						<p>Ei vivendo facilisis mei. Mea alterum gubergren id, justo labitur interesset id his. Ius eros conclusionemque ut. Te dicunt abhorreant cum. Cu vel mucius definiebas, et pri mutat admodum deleniti. At mea bonorum detracto, mei justo atqui dolorem et. Albucius mentitum vim et, ex mel quas disputationi. Eu vero lorem munere vis, falli antiopam periculis ei qui. Mazim praesent per an.</p>
+					
+					</div>
+					
+					<div class="col of-6">
+						
+						<h3>Amet A Girl</h3>
+						
+						<p>Usu dicta iuvaret accommodare ad, sed ea posse erant nullam. An summo definitionem delicatissimi eos. Per delectus prodesset instructior ex, in iriure facilisi nominati pri. Mazim praesent per an. Vis an fastidii quaestio dissentiet, sit delectus expetendis cotidieque ne.</p>
+						
+						<p class="">An quidam scripta detraxit vix, decore eirmod ei nam. Te euismod reprimique interesset vix.</p>
+					
+					</div>
+				</div>
+				
+				<div class="row">
+					<div class="col of-12">
+						
+						<p class="leading">Vivendum vituperata his te, <span class="blue">justo</span> laoreet patrioque duo ad, ut utinam fabulas comprehensam duo. Cum utinam fuisset ut, cu sea mazim soleat partiendo.</p>
+						
+						<p class="leading">No pro erant commodo adversarium. <span class="green">Labores deseruisse</span> et nec. Ex quando debitis quo. Tempor feugiat et vel, everti feugait ex pri.</p>
+						
+					</div>
+				</div>
+				
 			</div>
 		</div>
-	</footer>
-</div>
+	</section>
+</main>
+
+<footer id="page-footer" class="container limit" role="contentinfo">
+	<div class="row">
+		<div class="col of-6">
+			
+			<small class="text-shadow">Something about cats.</small>
+		
+		</div>
+		<div class="col of-6 white heavier" id="tel">
+			
+			+1 (547) 555 7365
+		
+		</div>
+	</div>
+</footer>
 
 </body>
 </html>
