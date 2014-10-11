@@ -83,7 +83,7 @@
 					$(this).addClass('show').dequeue()
 				})
 				
-				if(typeof nopts.autoRemoveMs != 'undefined' && !isNaN(parseFloat(nopts.autoRemoveMs)) && isFinite(nopts.autoRemoveMs)) {
+				if(!isNaN(parseFloat(nopts.autoRemoveMs)) && isFinite(nopts.autoRemoveMs)) {
 					$notification.delay(nopts.autoRemoveMs).queue(function() {
 						if(allowAutoRemove) {
 							removeNotification($(this))
