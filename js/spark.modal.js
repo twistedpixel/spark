@@ -17,7 +17,7 @@
 		
         var settings = $.extend({
 			trigger			: null,
-			close			:null,
+			close			: null,
 			escapeToClose	: true,
 			clickToClose	: true
         }, options);
