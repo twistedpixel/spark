@@ -2,20 +2,10 @@
  * Plugin: Spark Notifier
  * Copyright: Pixelbend Studios LTD.
  * License: MIT
+ * Internal Version: 1.0
  * 
- * Usage:  Initilize Spark Notifier on a container element that has the class “notifications”.
  * 
- * Options:
- *   “notificationClasses” : classes to be applied to each notification.
- *   “hoverPreventsFade” : boolean value to prevent automatic removal of a notification on hover.
- * 
- * Functions: Your Spark Notifier object (if you assigned it to a variable) has some functions
- * which you can call. This allows you to manipulate the notifications within it.
- * 
- *    add(title, imgSrc, text, autoRemoveMs, href)
- *    remove(notification)
- * 
- * See http://www.codewithspark.com for full documentation.
+ * See http://www.codewithspark.com for documentation.
  * 
  */
 
@@ -42,7 +32,7 @@
 			
         }
 		
-		// Closures (user available functions)
+		// Closures
 		return {
 			add: function(opts) {
 				
