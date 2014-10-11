@@ -56,7 +56,7 @@
 				
 				var allowAutoRemove = true
 				
-				if(typeof nopts.href != 'undefined') {
+				if(nopts.href != null) {
 					$notification = $('<a>', {'class':settings.notificationClasses, 'href':nopts.href})
 				}
 				else {
