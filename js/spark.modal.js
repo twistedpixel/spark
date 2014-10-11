@@ -16,10 +16,10 @@
 		var modal = this
 		
         var settings = $.extend({
-            trigger					: this.data('open-trigger'),
-            close					: this.data('close-trigger'),
-            escapeToClose			: true,
-            clickToClose			: true
+			trigger			: null,
+			close			:null,
+			escapeToClose	: true,
+			clickToClose	: true
         }, options);
 		
         var trigger = $(settings.trigger)
