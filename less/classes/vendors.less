@@ -140,10 +140,11 @@
 	@end: darken(white, 10%),
 	@default: darken(white, 10%)) {
 	background-color: @default;
-	background-image: -webkit-radial-gradient(@pos-x @pos-y, @kind @size, @start 0%, @end 100%); /* New WebKit syntax */
-	background-image: -moz-radial-gradient(@pos-x @pos-y, @kind @size, @start 0%, @end 100%);  
-    background-image: -ms-radial-gradient(@pos-x @pos-y, @kind @size, @start 0%, @end 100%); /* IE10+ */  
-    background-image: -o-radial-gradient(@pos-x @pos-y, @kind @size, @start 0%, @end 100%); /* Opera (13?) */
+	background-image: -webkit-radial-gradient(@pos-x @pos-y, @kind @size, @start 0%, @end 100%);
+	background-image: -moz-radial-gradient(@pos-x @pos-y, @kind @size, @start 0%, @end 100%);
+    background-image: -ms-radial-gradient(@pos-x @pos-y, @kind @size, @start 0%, @end 100%);
+    background-image: -o-radial-gradient(@pos-x @pos-y, @kind @size, @start 0%, @end 100%);
+    background-image: radial-gradient(@pos-x @pos-y, @kind @size, @start 0%, @end 100%);
 }
 
 .columns(@count: 3, @gap: 40) {
