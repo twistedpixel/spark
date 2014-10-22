@@ -10,13 +10,19 @@
 .row:after,
 .col:after,
 form:after,
-form.form:not(.tight) .input-container:after,
 form.tight .form-row:after,
 .btn-group:after,
 .modal header:after,
 .modal section:after,
 .modal footer:after,
 .paginate ul:after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+// I hate IE8..
+form.form:not(.tight) .input-container:after {
 	content: "";
 	display: table;
 	clear: both;
@@ -142,46 +148,74 @@ img.float-left {
 	margin-left: @left-gutter;
 }
 
-.push-5 {margin-bottom: 5px !important}
-
-.push-10 {margin-bottom: 10px !important}
-
-.push-15 {margin-bottom: 15px !important}
-
-.push-20 {margin-bottom: 20px !important}
-
-.push-30 {margin-bottom: 30px !important}
-
-.push-40 {margin-bottom: 40px !important}
-
-.push-50 {margin-bottom: 50px !important}
-
-.push-60 {margin-bottom: 60px !important}
-
-.push-70 {margin-bottom: 70px !important}
-
-.push-80 {margin-bottom: 80px !important}
-
-.push-90 {margin-bottom: 90px !important}
-
-.push-100 {margin-bottom: 100px !important}
-
-.push-150 {margin-bottom: 150px !important}
-
-.push-200 {margin-bottom: 200px !important}
-
-.push-300 {margin-bottom: 300px !important}
-
 @media only screen and (max-width: 768px) {
-	.push-only-desktop {
-		margin-bottom: 0 !important;
-	}
+
+	.push-0:not(.push-only-desktop) {margin-bottom: 0 !important}
+	
+	.push-5:not(.push-only-desktop) {margin-bottom: 5px !important}
+	
+	.push-10:not(.push-only-desktop) {margin-bottom: 10px !important}
+	
+	.push-15:not(.push-only-desktop) {margin-bottom: 15px !important}
+	
+	.push-20:not(.push-only-desktop) {margin-bottom: 20px !important}
+	
+	.push-30:not(.push-only-desktop) {margin-bottom: 30px !important}
+	
+	.push-40:not(.push-only-desktop) {margin-bottom: 40px !important}
+	
+	.push-50:not(.push-only-desktop) {margin-bottom: 50px !important}
+	
+	.push-60:not(.push-only-desktop) {margin-bottom: 60px !important}
+	
+	.push-70:not(.push-only-desktop) {margin-bottom: 70px !important}
+	
+	.push-80:not(.push-only-desktop) {margin-bottom: 80px !important}
+	
+	.push-90:not(.push-only-desktop) {margin-bottom: 90px !important}
+	
+	.push-100:not(.push-only-desktop) {margin-bottom: 100px !important}
+	
+	.push-150:not(.push-only-desktop) {margin-bottom: 150px !important}
+	
+	.push-200:not(.push-only-desktop) {margin-bottom: 200px !important}
+	
+	.push-300:not(.push-only-desktop) {margin-bottom: 300px !important}
+
 }
 
 @media only screen and (min-width: 769px) {
-	.push-only-mobile {
-		margin-bottom: 0 !important;
-	}
+	.push-0:not(.push-only-mobile) {margin-bottom: 0 !important}
+
+	.push-5:not(.push-only-mobile) {margin-bottom: 5px !important}
+	
+	.push-10:not(.push-only-mobile) {margin-bottom: 10px !important}
+	
+	.push-15:not(.push-only-mobile) {margin-bottom: 15px !important}
+	
+	.push-20:not(.push-only-mobile) {margin-bottom: 20px !important}
+	
+	.push-30:not(.push-only-mobile) {margin-bottom: 30px !important}
+	
+	.push-40:not(.push-only-mobile) {margin-bottom: 40px !important}
+	
+	.push-50:not(.push-only-mobile) {margin-bottom: 50px !important}
+	
+	.push-60:not(.push-only-mobile) {margin-bottom: 60px !important}
+	
+	.push-70:not(.push-only-mobile) {margin-bottom: 70px !important}
+	
+	.push-80:not(.push-only-mobile) {margin-bottom: 80px !important}
+	
+	.push-90:not(.push-only-mobile) {margin-bottom: 90px !important}
+	
+	.push-100:not(.push-only-mobile) {margin-bottom: 100px !important}
+	
+	.push-150:not(.push-only-mobile) {margin-bottom: 150px !important}
+	
+	.push-200:not(.push-only-mobile) {margin-bottom: 200px !important}
+	
+	.push-300:not(.push-only-mobile) {margin-bottom: 300px !important}
 }
 
 body .screen-readers {
@@ -201,6 +235,12 @@ body a.screen-readers.hide-til-focus:focus {
 	height: auto;
 	overflow: visible;
 	outline-color: @cosmic;
+}
+
+body a.screen-readers.fixed-nav:focus {
+	position: fixed;
+	top: 100px;
+	z-index: 9999;
 }
 
 /* Pagination */
