@@ -24,6 +24,10 @@
 	margin-bottom: 60px;
 }
 
+.container .row.flush {
+	margin-bottom: 0;
+}
+
 .container .row .col {
 	float: left;
 	padding: 0 @right-gutter 0 @left-gutter;
@@ -49,8 +53,6 @@
 }
 
 .container > :last-child,
-.container .row > :last-child,
-.container .row .col > :last-child,
 .container .row .col:empty {
 	margin-bottom: 0;
 }
@@ -102,5 +104,10 @@
 	
 	.container .row.reverse-stack > .col:last-of-type {
 		padding-right: @right-gutter;
+	}
+	
+	.container .row > :last-child,
+	.container .row .col > :last-child {
+		margin-bottom: 0;
 	}
 }
