@@ -104,6 +104,12 @@ nav.bar.heavier ul li.active > a {
 	font-weight: 500;
 }
 
+nav.bar li.drop > a[href="#"],
+nav.bar li.drop:hover > a[href="#"] {
+	color: @nav-drop-hash-href;
+	cursor: default;
+}
+
 @media only screen and (min-width: 769px) {
 	
 	.stickyglue > nav.bar.limit {
@@ -134,7 +140,7 @@ nav.bar.heavier ul li.active > a {
 	}
 		
 	nav.bar ul li {
-		cursor: pointer;
+		//cursor: pointer;
 	}
 	
 	nav.bar > ul > li {
@@ -148,6 +154,7 @@ nav.bar.heavier ul li.active > a {
 	}
 	
 	nav.bar li:hover > a,
+	nav.bar li > a:hover,
 	nav.bar li > a:focus {
 		color: @nav-basic-hover-color;
 		outline: none;
