@@ -61,11 +61,6 @@
 	color: @modal-footer-link-hover-color;
 }
 
-// Round the bottom corners of the last item
-.modal section:last-child,
-.modal footer:last-child {
-	.border-radius-corners(0, 0, 2px, 2px);
-}
 
 .modal.static {
 	position: relative;
@@ -193,5 +188,11 @@
 	
 	.modal section {
 		padding: 20px;
+	}
+	
+	// Round the bottom corners of the last item
+	.modal section:last-child,
+	.modal footer:last-child {
+		.border-radius-corners(0, 0, 2px, 2px);
 	}
 }
