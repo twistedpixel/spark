@@ -2,6 +2,10 @@
 
 Spark is a lightweight, responsive, front-end web design framework with multiple colors and styles and a little Javascript icing.
 
+# Update 24/01/2017
+
+The Spark project isn't dead, I've just been busy with a million and one other things. I've started to put together a plan for Spark version 3 and will hopefully begin working on it soon.
+
 ## Styles
 The framework comes pre-baked with several color themes that are interchangeable.
 Currently, the base colors are __silver__ (default), __blue__, __green__, __orange__, __red__, __purple__, __lime__,  __dragonfruit__ and new to v2.0: __cosmic__.
